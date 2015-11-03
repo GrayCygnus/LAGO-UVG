@@ -1,0 +1,19 @@
+# BITACORA LAGO UVG - Módulo de Computación
+
+#------------Links Relevantes-------------#
+
+https://www.raspberrypi.org/forums/viewtopic.php?f=36&t=79967
+
+http://blog.initialstate.com/stream-temperature-from-pi/
+
+#------------------------------------------#
+3/10/2015
+
+Se inicia a investigar sobre cómo transferir (Stream) datos de una Raspberry Pi a una computadora. Las opciones encontradas fueron:
+
+	Uso de TCP/IP para la comunicación. Implica Programa en la RPi y también en el computador receptor (que "bombee" a la RPi).
+
+	Uso de Initial State para recolectar información de IoT y centralizarla, para luego de alguna forma extraerla para análisis. 
+
+Se pidió prestado al Depto. de Computación una Raspberry Pi para el propósito. 
+
