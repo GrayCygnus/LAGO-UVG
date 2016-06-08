@@ -1,0 +1,61 @@
+  // Mundo
+  G4double roomsolid_x = 4.0*m;
+  G4double roomsolid_y = 4.0*m;
+  G4double roomsolid_z = 4.0*m;
+
+  G4Box* room_solid
+     = new G4Box("room_solid",roomsolid_x,roomsolid_y,roomsolid_z);
+
+  // Tanque
+  G4double innerRadiusOfTheTube = 42.*cm;
+  G4double outerRadiusOfTheTube = 44.*cm;
+  G4double hightOfTheTube = 114.*cm;
+  G4double startAngleOfTheTube = 0.*deg;
+  G4double spanningAngleOfTheTube = 360.*deg;
+
+  G4Tubs* tracker_tube
+    = new G4Tubs("tracker_tube",
+                 innerRadiusOfTheTube, 
+                 outerRadiusOfTheTube,
+                 hightOfTheTube,
+                 startAngleOfTheTube, 
+                 spanningAngleOfTheTube);
+
+  // Logical
+
+ 
+ G4LogicalVolume* room_log
+    = new G4LogicalVolume(room_solid,Ar,"room_log")
+
+  G4LogicalVolume* experimentalHall_log
+    = new G4LogicalVolume(tracker_tube,Ar,"tube_log")
+
+  // Place room
+  G4double room_x =  0.0*meter;
+  G4double room_y =  0.0*meter;
+  G4double room_z =  0.0*meter;
+
+  G4VPhysicalVolume* room_phys
+    = new G4PVPlacement(0,                       // no rotation
+                        G4ThreeVector(room_x,room_y,room_z),
+                                                 // translation position
+                        room_log,             // its logical volume
+                        "room",               // its name
+                        0,    // its mother (logical) volume
+                        false,                   // no boolean operations
+                        0);                      // its copy number  
+
+  // Place
+  G4double trackerPos_x =  0.0*meter;
+  G4double trackerPos_y =  0.0*meter;
+  G4double trackerPos_z =  0.0*meter;
+
+  G4VPhysicalVolume* tracker_phys
+    = new G4PVPlacement(0,                       // no rotation
+                        G4ThreeVector(trackerPos_x,trackerPos_y,trackerPos_z),
+                                                 // translation position
+                        tube_log,             // its logical volume
+                        "tube",               // its name
+                        room_log,    // its mother (logical) volume
+                        false,                   // no boolean operations
+                        0);                      // its copy number
