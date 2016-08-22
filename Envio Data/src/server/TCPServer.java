@@ -34,6 +34,7 @@ public class TCPServer {
                 }catch(Exception e)
                 {
                     e.printStackTrace();
+                    output.writeBytes("ERROR");
                 }    
                 recibido += fragmento;
 			}	                       
