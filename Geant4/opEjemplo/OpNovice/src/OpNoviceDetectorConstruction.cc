@@ -69,6 +69,15 @@ G4VPhysicalVolume* OpNoviceDetectorConstruction::Construct()
   G4double a, z, density;
   G4int nelements;
 
+// Air
+//
+  G4Element* N = new G4Element("Nitrogen", "N", z=7 , a=14.01*g/mole);
+  G4Element* O = new G4Element("Oxygen"  , "O", z=8 , a=16.00*g/mole);
+
+  G4Material* air = new G4Material("Air", density=1.29*mg/cm3, nelements=2);
+  air->AddElement(N, 70.*perCent);
+  air->AddElement(O, 30.*perCent);
+
 // Water
 //
   G4Element* H = new G4Element("Hydrogen", "H", z=1 , a=1.01*g/mole);
@@ -95,8 +104,6 @@ G4VPhysicalVolume* OpNoviceDetectorConstruction::Construct()
 //
 // Water
 //
-
- // Por determinar experimentalmente
   G4double refractiveIndex1[] =
             { 1.3435, 1.344,  1.3445, 1.345,  1.3455,
               1.346,  1.3465, 1.347,  1.3475, 1.348,
@@ -125,38 +132,13 @@ G4VPhysicalVolume* OpNoviceDetectorConstruction::Construct()
   myMPT1->AddProperty("ABSLENGTH",    photonEnergy, absorption,     nEntries)
         ->SetSpline(true);
 
-  myMPT1->AddConstProperty("RESOLUTIONSCALE",1.0);
-  myMPT1->AddConstProperty("FASTTIMECONSTANT", 1.*ns);
-  myMPT1->AddConstProperty("SLOWTIMECONSTANT",10.*ns);
-  myMPT1->AddConstProperty("YIELDRATIO",0.8);
-
-  G4double energy_water[] = {
-     1.56962*eV, 1.58974*eV, 1.61039*eV, 1.63157*eV,
-     1.65333*eV, 1.67567*eV, 1.69863*eV, 1.72222*eV,
-     1.74647*eV, 1.77142*eV, 1.7971 *eV, 1.82352*eV,
-     1.85074*eV, 1.87878*eV, 1.90769*eV, 1.93749*eV,
-     1.96825*eV, 1.99999*eV, 2.03278*eV, 2.06666*eV,
-     2.10169*eV, 2.13793*eV, 2.17543*eV, 2.21428*eV,
-     2.25454*eV, 2.29629*eV, 2.33962*eV, 2.38461*eV,
-     2.43137*eV, 2.47999*eV, 2.53061*eV, 2.58333*eV,
-     2.63829*eV, 2.69565*eV, 2.75555*eV, 2.81817*eV,
-     2.88371*eV, 2.95237*eV, 3.02438*eV, 3.09999*eV,
-     3.17948*eV, 3.26315*eV, 3.35134*eV, 3.44444*eV,
-     3.54285*eV, 3.64705*eV, 3.75757*eV, 3.87499*eV,
-     3.99999*eV, 4.13332*eV, 4.27585*eV, 4.42856*eV,
-     4.59258*eV, 4.76922*eV, 4.95999*eV, 5.16665*eV,
-     5.39129*eV, 5.63635*eV, 5.90475*eV, 6.19998*eV
-  };
-
-  const G4int numentries_water = sizeof(energy_water)/sizeof(G4double);
-
   G4cout << "Water G4MaterialPropertiesTable" << G4endl;
   myMPT1->DumpTable();
 
   water->SetMaterialPropertiesTable(myMPT1);
 
 //
-// Cambiar esto a propiedades del Tyvek
+// Air
 //
   G4double refractiveIndex2[] =
             { 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00,
@@ -176,6 +158,10 @@ G4VPhysicalVolume* OpNoviceDetectorConstruction::Construct()
 //
 // ------------- Volumes --------------
 
+// 
+
+G4bool checkOverlaps = true;
+
 // The experimental Hall
 //
   G4Box* expHall_box = new G4Box("World",fExpHall_x,fExpHall_y,fExpHall_z);
@@ -186,83 +172,48 @@ G4VPhysicalVolume* OpNoviceDetectorConstruction::Construct()
   G4VPhysicalVolume* expHall_phys
     = new G4PVPlacement(0,G4ThreeVector(),expHall_log,"World",0,false,0);
 
-// The Water Tank
-//
-// Water
+  // Rotacion
   G4ThreeVector pos1 = G4ThreeVector(0.*cm,0.*cm,0.*cm);
-  G4RotationMatrix rotm  = G4RotationMatrix();
-  rotm.rotateX(90.*deg);
+  G4RotationMatrix rotm  = G4RotationMatrix();       
+  rotm.rotateZ(90.*deg);
   G4Transform3D transform = G4Transform3D(rotm,pos1);
+
+  // Tykev, cilindro
+  G4double tyvek1_rmina =  0.*cm, tyvek1_rmaxa = 40.2*cm;
+  G4double tyvek1_rminb =  0.*cm, tyvek1_rmaxb = 40.2*cm;
+  G4double tyvek1_hz = 57.2*cm;
+  G4double tyvek1_phimin = 0.*deg, tyvek1_phimax = 360.*deg;
+  
+  G4Cons* Tyvek_solid =    
+    new G4Cons("Tyvek_solid", 
+    tyvek1_rmina, tyvek1_rmaxa, tyvek1_rminb, tyvek1_rmaxb, tyvek1_hz,
+    tyvek1_phimin, tyvek1_phimax);
+                      
+  G4LogicalVolume* Tyvek_log =                         
+    new G4LogicalVolume(Tyvek_solid, tyvek_mat, "Tyvek_log");
+               
+  G4VPhysicalVolume* Tyvek_phys =
+    new G4PVPlacement(transform, Tyvek_log, "Tyvek_phys", expHall_log, false, 0, checkOverlaps);
+
+// The Water Tank
+
   G4double water1_rmina =  0.*cm, water1_rmaxa = 40.*cm;
   G4double water1_rminb =  0.*cm, water1_rmaxb = 40.*cm;
   G4double water1_hz = 57.*cm;
   G4double water1_phimin = 0.*deg, water1_phimax = 360.*deg;
-  G4Cons* waterTank_box =
-    new G4Cons("Water",
+
+  G4Cons* Water_solid =    
+    new G4Cons("Water", 
     water1_rmina, water1_rmaxa, water1_rminb, water1_rmaxb, water1_hz,
     water1_phimin, water1_phimax);
-
-  G4LogicalVolume* waterTank_log=
-    new G4LogicalVolume(waterTank_box,         //its solid
+                      
+  G4LogicalVolume* Water_log =                         
+    new G4LogicalVolume(Water_solid,         //its solid
                         water,          //its material
-                        "waterTank_box",0,0,0);           //its name
-
-  G4VPhysicalVolume* waterTank_phys =
-	new G4PVPlacement(transform, waterTank_log, "WaterTank_box", expHall_log, false, 0);
-
-  // Tykev, cilindro
-  G4double tyvek1_rmina =  40.*cm, tyvek1_rmaxa = 40.1*cm;
-  G4double tyvek1_rminb =  40.*cm, tyvek1_rmaxb = 40.1*cm;
-  G4double tyvek1_hz = 57.*cm;
-  G4double tyvek1_phimin = 0.*deg, tyvek1_phimax = 360.*deg;
-  G4Cons* solidTyvek1 =
-    new G4Cons("Tyvek",
-    tyvek1_rmina, tyvek1_rmaxa, tyvek1_rminb, tyvek1_rmaxb, tyvek1_hz,
-    tyvek1_phimin, tyvek1_phimax);
-
-  G4LogicalVolume* logicShape1 =
-    new G4LogicalVolume(solidTyvek1, tyvek_mat, "Tyvek1");
-
-  G4VPhysicalVolume* TyvekCil1_phys =
-    new G4PVPlacement(transform, logicShape1, "TyvekTapaCil1", expHall_log, false, 0);
-
-  // Tapa superior Tykev
-  G4ThreeVector pos2 = G4ThreeVector(0.*cm,57.05*cm,0.*cm);
-  G4RotationMatrix rotm2  = G4RotationMatrix();
-  rotm2.rotateX(90.*deg);
-  G4Transform3D transform2 = G4Transform3D(rotm2,pos2);
-  G4double tyvek2_rmina =  0.*cm, tyvek2_rmaxa = 40.1*cm;
-  G4double tyvek2_rminb =  0.*cm, tyvek2_rmaxb = 40.1*cm;
-  G4double tyvek2_hz = 0.1*cm;
-  G4double tyvek2_phimin = 0.*deg, tyvek2_phimax = 360.*deg;
-  G4Cons* solidTyvek2 =
-    new G4Cons("Tyvek2",
-    tyvek2_rmina, tyvek2_rmaxa, tyvek2_rminb, tyvek2_rmaxb, tyvek2_hz,
-    tyvek2_phimin, tyvek2_phimax);
-
-  G4LogicalVolume* logicShape2 =
-    new G4LogicalVolume(solidTyvek2, tyvek_mat, "Tyvek2");
-
-  G4VPhysicalVolume* TyvekTapaSup_phys =
-    new G4PVPlacement(transform2, logicShape2, "TyvekTapaSup", expHall_log, false, 0);
-
-  // Tapa inferior Tykev
-  G4ThreeVector pos3 = G4ThreeVector(0.*cm,-57.05*cm,0.*cm);
-  G4Transform3D transform3 = G4Transform3D(rotm2,pos3);
-  G4double tyvek3_rmina = 0.*cm, tyvek3_rmaxa =  40.1*cm;
-  G4double tyvek3_rminb = 0.*cm, tyvek3_rmaxb =  40.1*cm;
-  G4double tyvek3_hz = 0.1*cm;
-  G4double tyvek3_phimin = 0.*deg, tyvek3_phimax = 360.*deg;
-  G4Cons* solidTyvek3 =
-    new G4Cons("Tyvek3",
-    tyvek3_rmina, tyvek3_rmaxa, tyvek3_rminb, tyvek3_rmaxb, tyvek3_hz,
-    tyvek3_phimin, tyvek3_phimax);
-
-  G4LogicalVolume* logicShape3 =
-    new G4LogicalVolume(solidTyvek3, tyvek_mat, "Tyvek3");
-
-  G4VPhysicalVolume* TyvekTapaInf_phys =
-    new G4PVPlacement(transform3, logicShape3, "TyvekTapaInf", expHall_log, false, 0);
+                        "water_log");           //its name
+               
+  G4VPhysicalVolume* Water_phys = 
+	new G4PVPlacement(transform, Water_log, "Water_phys", Tyvek_log, false, 0, checkOverlaps);
 
 // ------------- Surfaces --------------
 //
@@ -272,45 +223,18 @@ G4VPhysicalVolume* OpNoviceDetectorConstruction::Construct()
   opWaterSurface->SetType(dielectric_metal);
   opWaterSurface->SetFinish(ground);
   opWaterSurface->SetModel(unified);
-
-  new G4LogicalBorderSurface("waterSurface1",
-                                 waterTank_phys,TyvekCil1_phys,opWaterSurface);
-
-  new G4LogicalBorderSurface("waterSurface2",
-                                 waterTank_phys,TyvekTapaSup_phys,opWaterSurface);
-
-  new G4LogicalBorderSurface("waterSurface3",
-                                 waterTank_phys,TyvekTapaInf_phys,opWaterSurface);
+  
+  new G4LogicalBorderSurface("waterSurface1", Water_phys,Tyvek_phys,opWaterSurface);
 
 //
 // Tyvek Cil
 //
-  G4OpticalSurface* opTyvekCilSurface = new G4OpticalSurface("TyvekCilSurface");
-  opWaterSurface->SetType(dielectric_dielectric);
-  opWaterSurface->SetFinish(ground);
+//  G4OpticalSurface* opTyvekCilSurface = new G4OpticalSurface("TyvekCilSurface");
+//  opWaterSurface->SetType(dielectric_dielectric);
+//  opWaterSurface->SetFinish(ground);
 
-  new G4LogicalBorderSurface("TyvekCilSurface",
-                                 TyvekCil1_phys,waterTank_phys,opTyvekCilSurface);
-
-//
-// Tyvek Sup
-//
-  G4OpticalSurface* opTyvekTapaSupSurface = new G4OpticalSurface("TyvekTapaSupSurface");
-  opWaterSurface->SetType(dielectric_dielectric);
-  opWaterSurface->SetFinish(ground);
-
-  new G4LogicalBorderSurface("TyvekTapaSupSurface",
-                                 TyvekTapaSup_phys,waterTank_phys,opTyvekTapaSupSurface);
-
-//
-// Tyvek Inf
-//
-  G4OpticalSurface* opTyvekTapaInfSurface = new G4OpticalSurface("TyvekTapaInfSurface");
-  opWaterSurface->SetType(dielectric_dielectric);
-  opWaterSurface->SetFinish(ground);
-
-  new G4LogicalBorderSurface("TyvekTapaInfSurface",
-                                 TyvekTapaInf_phys,waterTank_phys,opTyvekTapaInfSurface);
+//  new G4LogicalBorderSurface("TyvekCilSurface",
+//                                 TyvekCil1_phys,waterTank_phys,opTyvekCilSurface);
 
 //
 // Generate & Add Material Properties Table attached to the optical surfaces
@@ -318,39 +242,41 @@ G4VPhysicalVolume* OpNoviceDetectorConstruction::Construct()
   const G4int num = 2;
   G4double ephoton[num] = {2.034*eV, 4.136*eV};
 
-  //OpticalWaterSurface
+  // Water surface material properties table
+
+  G4double reflectivity[]       = {0.50, 0.50};
+  G4double efficiency[]         = {0.0, 0.0};
   G4double refractiveIndex[num] = {1.35, 1.40};
   G4double specularLobe[num]    = {0.3, 0.3};
   G4double specularSpike[num]   = {0.2, 0.2};
   G4double backScatter[num]     = {0.2, 0.2};
 
-  G4MaterialPropertiesTable* myST1 = new G4MaterialPropertiesTable();
+  G4MaterialPropertiesTable* WaterSurfaceMPT
+  	  = new G4MaterialPropertiesTable();
 
-  myST1->AddProperty("RINDEX",                ephoton, refractiveIndex, num);
-  myST1->AddProperty("SPECULARLOBECONSTANT",  ephoton, specularLobe,    num);
-  myST1->AddProperty("SPECULARSPIKECONSTANT", ephoton, specularSpike,   num);
-  myST1->AddProperty("BACKSCATTERCONSTANT",   ephoton, backScatter,     num);
+  WaterSurfaceMPT->AddProperty("REFLECTIVITY",          ephoton, reflectivity,    num);
+  WaterSurfaceMPT->AddProperty("EFFICIENCY",            ephoton, efficiency,      num);
+  WaterSurfaceMPT->AddProperty("RINDEX",                ephoton, refractiveIndex, num);
+  WaterSurfaceMPT->AddProperty("SPECULARLOBECONSTANT",  ephoton, specularLobe,    num);
+  WaterSurfaceMPT->AddProperty("SPECULARSPIKECONSTANT", ephoton, specularSpike,   num);
+  WaterSurfaceMPT->AddProperty("BACKSCATTERCONSTANT",   ephoton, backScatter,     num);
 
   G4cout << "Water Surface G4MaterialPropertiesTable" << G4endl;
-  myST1->DumpTable();
+  WaterSurfaceMPT->DumpTable();
 
-  opWaterSurface->SetMaterialPropertiesTable(myST1);
+  opWaterSurface->SetMaterialPropertiesTable(WaterSurfaceMPT);
 
-  //OpticalTyvek
-  G4double reflectivity[num] = {0.95, 0.95};
-  G4double efficiency[num]   = {0.95, 0.95};
+  //OpticalAirSurface
+  G4double reflectivity1[num] = {0.3, 0.5};
+  G4double efficiency1[num]   = {0.0, 0.0};
 
   G4MaterialPropertiesTable *myST2 = new G4MaterialPropertiesTable();
 
-  myST2->AddProperty("REFLECTIVITY", ephoton, reflectivity, num);
-  myST2->AddProperty("EFFICIENCY",   ephoton, efficiency,   num);
+  myST2->AddProperty("REFLECTIVITY", ephoton, reflectivity1, num);
+  myST2->AddProperty("EFFICIENCY",   ephoton, efficiency1,   num);
 
   G4cout << "Air Surface G4MaterialPropertiesTable" << G4endl;
   myST2->DumpTable();
-
- opTyvekCilSurface->SetMaterialPropertiesTable(myST2);
- opTyvekTapaSupSurface->SetMaterialPropertiesTable(myST2);
- opTyvekTapaInfSurface->SetMaterialPropertiesTable(myST2);
 
 //always return the physical World
   return expHall_phys;

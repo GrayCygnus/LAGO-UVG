@@ -1,7 +1,7 @@
-/home/daniel/Desktop/OpNovice-build/CMakeFiles/edit_cache.dir
-/home/daniel/Desktop/OpNovice-build/CMakeFiles/rebuild_cache.dir
-/home/daniel/Desktop/OpNovice-build/CMakeFiles/list_install_components.dir
-/home/daniel/Desktop/OpNovice-build/CMakeFiles/install.dir
-/home/daniel/Desktop/OpNovice-build/CMakeFiles/install/local.dir
-/home/daniel/Desktop/OpNovice-build/CMakeFiles/install/strip.dir
-/home/daniel/Desktop/OpNovice-build/CMakeFiles/OpNovice.dir
+/home/daniel/.ssh/LAGO-UVG/Geant4/opEjemplo/OpNovice-build/CMakeFiles/edit_cache.dir
+/home/daniel/.ssh/LAGO-UVG/Geant4/opEjemplo/OpNovice-build/CMakeFiles/rebuild_cache.dir
+/home/daniel/.ssh/LAGO-UVG/Geant4/opEjemplo/OpNovice-build/CMakeFiles/list_install_components.dir
+/home/daniel/.ssh/LAGO-UVG/Geant4/opEjemplo/OpNovice-build/CMakeFiles/install.dir
+/home/daniel/.ssh/LAGO-UVG/Geant4/opEjemplo/OpNovice-build/CMakeFiles/install/local.dir
+/home/daniel/.ssh/LAGO-UVG/Geant4/opEjemplo/OpNovice-build/CMakeFiles/install/strip.dir
+/home/daniel/.ssh/LAGO-UVG/Geant4/opEjemplo/OpNovice-build/CMakeFiles/OpNovice.dir
