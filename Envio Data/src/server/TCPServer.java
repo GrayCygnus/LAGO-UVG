@@ -9,7 +9,8 @@ public class TCPServer {
 	{
 		String recibido = "";
 		String enviar;		
-		System.out.println("Iniciando Socket - Protocolo TCP");
+		//System.out.println("Iniciando Socket - Protocolo TCP");
+		System.out.println("LAGOUVG - Kinich Ahau");
 		ServerSocket s = new ServerSocket(1111); //inicializa un nuevo socket
 		
 		while(true)
@@ -33,10 +34,11 @@ public class TCPServer {
                 }catch(Exception e)
                 {
                     e.printStackTrace();
+                    output.writeBytes("ERROR");
                 }    
                 recibido += fragmento;
 			}	                       
-			String[] datos = recibido.split("\\$"); //separador $ entre datos
+			String[] datos = recibido.split("\\$\\$"); //separador $ entre datos
             for(String ch : datos)
             {
                 System.out.println(ch);
