@@ -158,7 +158,7 @@ G4VPhysicalVolume* OpNoviceDetectorConstruction::Construct()
 //
 // ------------- Volumes --------------
 
-// 
+//
 
 G4bool checkOverlaps = true;
 
@@ -174,7 +174,7 @@ G4bool checkOverlaps = true;
 
   // Rotacion
   G4ThreeVector pos1 = G4ThreeVector(0.*cm,0.*cm,0.*cm);
-  G4RotationMatrix rotm  = G4RotationMatrix();       
+  G4RotationMatrix rotm  = G4RotationMatrix();
   rotm.rotateZ(90.*deg);
   G4Transform3D transform = G4Transform3D(rotm,pos1);
 
@@ -183,15 +183,15 @@ G4bool checkOverlaps = true;
   G4double tyvek1_rminb =  0.*cm, tyvek1_rmaxb = 40.2*cm;
   G4double tyvek1_hz = 57.2*cm;
   G4double tyvek1_phimin = 0.*deg, tyvek1_phimax = 360.*deg;
-  
-  G4Cons* Tyvek_solid =    
-    new G4Cons("Tyvek_solid", 
+
+  G4Cons* Tyvek_solid =
+    new G4Cons("Tyvek_solid",
     tyvek1_rmina, tyvek1_rmaxa, tyvek1_rminb, tyvek1_rmaxb, tyvek1_hz,
     tyvek1_phimin, tyvek1_phimax);
-                      
-  G4LogicalVolume* Tyvek_log =                         
+
+  G4LogicalVolume* Tyvek_log =
     new G4LogicalVolume(Tyvek_solid, tyvek_mat, "Tyvek_log");
-               
+
   G4VPhysicalVolume* Tyvek_phys =
     new G4PVPlacement(transform, Tyvek_log, "Tyvek_phys", expHall_log, false, 0, checkOverlaps);
 
@@ -202,18 +202,43 @@ G4bool checkOverlaps = true;
   G4double water1_hz = 57.*cm;
   G4double water1_phimin = 0.*deg, water1_phimax = 360.*deg;
 
-  G4Cons* Water_solid =    
-    new G4Cons("Water", 
+  G4Cons* Water_solid =
+    new G4Cons("Water",
     water1_rmina, water1_rmaxa, water1_rminb, water1_rmaxb, water1_hz,
     water1_phimin, water1_phimax);
-                      
-  G4LogicalVolume* Water_log =                         
+
+  G4LogicalVolume* Water_log =
     new G4LogicalVolume(Water_solid,         //its solid
                         water,          //its material
                         "water_log");           //its name
-               
-  G4VPhysicalVolume* Water_phys = 
+
+  G4VPhysicalVolume* Water_phys =
 	new G4PVPlacement(transform, Water_log, "Water_phys", Tyvek_log, false, 0, checkOverlaps);
+
+  //****************** Build PMTs
+  G4double innerRadius_pmt = 0.*cm;
+  G4double height_pmt = 0.03175*cm;
+  G4double startAngle_pmt = 0.*deg;
+  G4double spanningAngle_pmt = 360.*deg;
+
+  fPmt = new G4Tubs("pmt_tube",innerRadius_pmt,fOuterRadius_pmt,
+                    height_pmt,startAngle_pmt,spanningAngle_pmt);
+
+  //the "photocathode" is a metal slab at the back of the glass that
+  //is only a very rough approximation of the real thing since it only
+  //absorbs or detects the photons based on the efficiency set below
+  fPhotocath = new G4Tubs("photocath_tube",innerRadius_pmt,fOuterRadius_pmt,
+                          height_pmt/2,startAngle_pmt,spanningAngle_pmt);
+
+  fPmt_log = new G4LogicalVolume(fPmt,G4Material::GetMaterial("Glass"),
+                                 "pmt_log");
+  fPhotocath_log = new G4LogicalVolume(fPhotocath,
+                                       G4Material::GetMaterial("Al"),
+                                       "photocath_log");
+
+  new G4PVPlacement(0,G4ThreeVector(0,0,56*cm),
+                                    fPhotocath_log,"photocath",
+                                    fPmt_log,false,0);
 
 // ------------- Surfaces --------------
 //
@@ -223,7 +248,7 @@ G4bool checkOverlaps = true;
   opWaterSurface->SetType(dielectric_metal);
   opWaterSurface->SetFinish(ground);
   opWaterSurface->SetModel(unified);
-  
+
   new G4LogicalBorderSurface("waterSurface1", Water_phys,Tyvek_phys,opWaterSurface);
 
 //
@@ -277,6 +302,25 @@ G4bool checkOverlaps = true;
 
   G4cout << "Air Surface G4MaterialPropertiesTable" << G4endl;
   myST2->DumpTable();
+
+  //**Photocathode surface properties
+  G4double photocath_EFF[]={1.,1.}; //Enables 'detection' of photons
+  assert(sizeof(photocath_EFF) == sizeof(ephoton));
+  G4double photocath_ReR[]={1.92,1.92};
+  assert(sizeof(photocath_ReR) == sizeof(ephoton));
+  G4double photocath_ImR[]={1.69,1.69};
+  assert(sizeof(photocath_ImR) == sizeof(ephoton));
+  G4MaterialPropertiesTable* photocath_mt = new G4MaterialPropertiesTable();
+  photocath_mt->AddProperty("EFFICIENCY",ephoton,photocath_EFF,num);
+  photocath_mt->AddProperty("REALRINDEX",ephoton,photocath_ReR,num);
+  photocath_mt->AddProperty("IMAGINARYRINDEX",ephoton,photocath_ImR,num);
+  G4OpticalSurface* photocath_opsurf=
+    new G4OpticalSurface("photocath_opsurf",glisur,polished,
+                         dielectric_metal);
+  photocath_opsurf->SetMaterialPropertiesTable(photocath_mt);
+
+  //**Create logical skin surfaces
+  new G4LogicalSkinSurface("photocath_surf",fPhotocath_log,photocath_opsurf);
 
 //always return the physical World
   return expHall_phys;
