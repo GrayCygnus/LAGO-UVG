@@ -13,6 +13,11 @@ import java.util.Map;
 public class CosmicDictionary {
 	//WORD BAG
 	
+	public Map<String,Integer> EM = new HashMap<String,Integer>();
+	public Map<String,Integer> MUON = new HashMap<String,Integer>();
+	public Map<String,Integer> VMUON = new HashMap<String,Integer>();
+	public Map<String,Integer> RAINS = new HashMap<String,Integer>();
+	
 	public Map<String,Integer> SPAM = new HashMap<String,Integer>();
 	public Map<String,Integer> HAM = new HashMap<String,Integer>();
 	public int totalWords = 0;
