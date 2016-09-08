@@ -1,6 +1,8 @@
 package cosmicfilter;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileReader;
 import java.io.IOException;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
@@ -10,42 +12,30 @@ import java.util.List;
 
 public class BestClassifier {
 	
-	public static void main(String[] args)
+	public static void main(String[] args) throws IOException
 	{
 		//Iterar incrementando  K en +-0.01 en el rango de K's deseado
 		//encontrar K con mejor performace en cross Validation
 		//retornar la K que maximiza el performance
 		double K = 0.0;
+		double deltaK = 0.5;
 		double bestK = 0.0;
-		double maxK = 10.0;
+		double maxK = 20.0;
 		double bestScore = 0.0;
-		CosmicDictionary dictionary = new CosmicDictionary("C:\\Users\\Anai\\workspace\\Inteligencia Artificial\\src\\sms\\trainCorpus.txt");
 		
-		//Corpus de Cross Validation
-		List<String> CVLines = null;
-		try {
-			CVLines = Files.readAllLines(Paths.get("C:\\Users\\Anai\\workspace\\Inteligencia Artificial\\src\\sms\\CVCorpus.txt"), Charset.forName("ISO-8859-1")); //cv.txt			
-			System.out.println("CV OK");
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		System.out.println("Creando Diccionario con Train");
+		CosmicLog dictionary = new CosmicLog("C:\\Users\\Anai\\Desktop\\Miguel\\LAGO\\LAGO-AI\\src\\cosmicfilter\\CosmicTrain.txt");
 		
-		//Corpust de TEST FINAL
-		List<String> TestLines = null;
-		try {
-			TestLines = Files.readAllLines(Paths.get("C:\\Users\\Anai\\workspace\\Inteligencia Artificial\\src\\sms\\TESTCORPUS.txt"), Charset.forName("ISO-8859-1")); //cv.txt			
-			System.out.println("CV OK");
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
+		//Corpus de Cross Validation		
 		//Maximizar eficiencia de K
-		while(K <= maxK)
-		{
-			Classifier c = new Classifier(dictionary, K);
-			double score = crossValidate(CVLines, c);
+		System.out.println("Realizando Cross Validation; maximizar K");
+		double score;
+		
+		CosmicClassifier c = new CosmicClassifier(dictionary, K);
+		do
+		{		
+			c.setK(K);
+			score = crossValidate(c);
 			if(score > bestScore)
 			{
 				bestScore = score;
@@ -54,55 +44,92 @@ public class BestClassifier {
 			//System.out.println("K: "+K+", "+score+" %");
 			System.out.println(K+" , "+score);
 			
-			K = K + 0.01;
-		}
+			K = K + deltaK;
+		}while(K <= maxK);	
 		
 		System.out.println("La K que maximiza el CV es: "+bestK+" con puntaje: "+bestScore);
 		
+		
+		//Corpust de TEST FINAL
+		/*List<String> TestLines = null;
+		try {
+			System.out.println("Guardando lineas de test q fijo no veras este mensaje mongo y si si q crack");
+			TestLines = Files.readAllLines(Paths.get("C:\\Users\\Anai\\Desktop\\Miguel\\LAGO\\LAGO-AI\\src\\cosmicfilter\\CosmicTest.txt"), Charset.forName("ISO-8859-1")); //cv.txt			
+			System.out.println("CV OK");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}*/
+		
+		
+		
 		//Probar con TEST
-		Classifier bestClassifier = new Classifier(dictionary, bestK);
-		FINAL_TEST(TestLines, bestClassifier);
+		System.out.println("Probando Test Final...");
+		CosmicClassifier bestClassifier = new CosmicClassifier(dictionary, bestK);
+		FINAL_TEST(bestClassifier);
 		
 	}
 	
-	public static double crossValidate(List<String> CVLines, Classifier c)
+	public static double crossValidate(CosmicClassifier c) throws IOException
 	{
 		double CVScore = 0.0;
-		for(String line : CVLines)
-		{
-			String[] lineSplit = line.split("\\s+");
-			String[] message = Arrays.copyOfRange(lineSplit, 1, lineSplit.length);
-			String answer = lineSplit[0];
+		double CVLines = 0.0;
+		BufferedReader reader = new BufferedReader(new FileReader("C:\\Users\\Anai\\Desktop\\Miguel\\LAGO\\LAGO-AI\\src\\cosmicfilter\\CosmicCV.txt"));
+		
+		String line;
+		while ((line = reader.readLine()) != null)	//DIVIDIR LOS eventos EM correspondientemente
+	    {
 			
-			String Y = c.ARG_MAX(message);
+			String[] taggedEvent = line.split("-"); //separar
+			String answer = taggedEvent[1].trim();	//obtener tipo de evento
+			String[] rawEvent = taggedEvent[0].split("\\s+");	//separar puslo del evento
+			String[] event = Arrays.copyOfRange(rawEvent, 0, rawEvent.length);
+			
+			//String[] lineSplit = line.split("\\s+");
+			//String[] message = Arrays.copyOfRange(lineSplit, 1, lineSplit.length);
+			//String answer = lineSplit[1];
+			
+			String Y = c.ARG_MAX(event);
 			if(Y.equals(answer))
 			{
 				CVScore += 1.0;
 			}
+			CVLines++;
 		}
 		
-		CVScore = CVScore / CVLines.size();		
+		CVScore = CVScore / CVLines;		
 		//CVScore = CVScore / totalLines (132)
 		return CVScore;
 	}
 	
-	public static void FINAL_TEST(List<String> test, Classifier c)
+	public static void FINAL_TEST(CosmicClassifier c) throws IOException
 	{
 		double TestScore = 0.0;
-		for(String line : test)
-		{
-			String[] lineSplit = line.split("\\s+");
-			String[] message = Arrays.copyOfRange(lineSplit, 1, lineSplit.length);
-			String answer = lineSplit[0];
+		double totalTest = 0.0;
+		BufferedReader reader = new BufferedReader(new FileReader("C:\\Users\\Anai\\Desktop\\Miguel\\LAGO\\LAGO-AI\\src\\cosmicfilter\\CosmicTest.txt"));
+		
+		String line;
+		while ((line = reader.readLine()) != null)	//DIVIDIR LOS eventos EM correspondientemente
+	    {
 			
-			String Y = c.ARG_MAX(message);
+			String[] taggedEvent = line.split("-"); //separar
+			String answer = taggedEvent[1].trim();	//obtener tipo de evento
+			String[] rawEvent = taggedEvent[0].split("\\s+");	//separar puslo del evento
+			String[] event = Arrays.copyOfRange(rawEvent, 0, rawEvent.length);
+			
+			//String[] lineSplit = line.split("\\s+");
+			//String[] message = Arrays.copyOfRange(lineSplit, 1, lineSplit.length);
+			//String answer = lineSplit[0];
+			
+			String Y = c.ARG_MAX(event);
 			if(Y.equals(answer))
 			{
 				TestScore += 1.0;
 			}
+			totalTest++;
 		}
 		
-		TestScore = TestScore / test.size();		
+		TestScore = TestScore / totalTest;		
 		//CVScore = CVScore / totalLines (132)
 		System.out.println("Performance Final: "+TestScore+" %");
 	}
