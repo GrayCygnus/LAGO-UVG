@@ -23,13 +23,13 @@ bin_size = 10
 max_adc = 1200
 cal_files = 12
 name = "Kinich Ahau"
-cal_name = "CalibracionMuones-Bin"+str(bin_size)+"-File"+str(cal_files)
+cal_name = "CalibracionesTotales-Bin"+str(bin_size)+"-File"+str(cal_files)
 
 total_bins = max_adc/bin_size
 Data = np.zeros((total_bins))
 
 for i in range(cal_files):
-    #print(i)
+    print(i)
     with open('Cal'+str(i+1)+'.cal') as f:
         lines = f.readlines()
         for l in lines:

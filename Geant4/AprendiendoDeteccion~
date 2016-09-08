@@ -1,0 +1,75 @@
+Aquí reuniré información que considero importante para aprender a hacer la detección
+
+Preguntas sin resolver:
+1.	Necesito hacer los volúmenes Touchables? O solo tengo que usar 
+	"myEMcal = new MyEMcal("/myDet/myCal/myEMcal");" para hacer detec-
+	tores sensibles?
+2.	Estoy tratando de buscar en dónde está la parte del código que he
+	puesto abajo del LXe en los archivos pero no lo encuentro. Al pare-
+	cer las propiedades de la superficie del PMT no tienen por qué estar
+	en detectorConstruction.cc
+3.	No necesito hacer el ReadoutGeometry, vd?
+4.	Estoy inspeccionando los archivos del ejemplo LXe y el B5 y al parecer
+	el código de los hits los debo de hacer bajo la carpeta "include" en
+	archivos .hh. Sin embargo, antes nunca me preocupé, por ejemplo del
+	archivo .hh del detectorConstruction.
+
+Explicación del PMT en el README de LXe
+--------------------------------------------------------------------------------
+
+************************
+*PMT sensitive detector*
+************************
+The PMT sensitive detector cannot be triggered like a normal sensitive detector
+because the sensitive volume does not allow photons to pass through it. Rather,
+it detects them in the OpBoundary process based on an efficiency set on the
+skin of the volume.
+
+------
+
+  G4OpticalSurface* photocath_opsurf=
+     new G4OpticalSurface("photocath_opsurf",glisur,polished,
+                           dielectric_metal);
+  G4double photocath_EFF[num]={1.,1.};
+  G4double photocath_REFL[num]={0.,0.};
+  G4MaterialPropertiesTable* photocath_mt = new G4MaterialPropertiesTable();
+  photocath_mt->AddProperty("EFFICIENCY",Ephoton,photocath_EFF,num);
+  photocath_mt->AddProperty("REFLECTIVITY",Ephoton,photocath_REFL,num);
+  photocath_opsurf->SetMaterialPropertiesTable(photocath_mt);
+  new G4LogicalSkinSurface("photocath_surf",photocath_log,photocath_opsurf);
+
+------
+
+A normal sensitive detector would have its ProcessHits 
+function called for each step by a particle inside the volume. So, to record
+these hits with a sensitive detector we watched the status of the OpBoundary
+process from the stepping manager whenever a photon hit the sensitive volume
+of the pmt. If the status was 'Detection', we retrieve the sensitive detector
+from G4SDManager and call its ProcessHits function.
+
+------
+
+  boundaryStatus=boundary->GetStatus();
+  //Check to see if the particle was actually at a boundary
+  //Otherwise the boundary status may not be valid
+  //Prior to Geant4.6.0-p1 this would not have been enough to check
+  if(thePostPoint->GetStepStatus()==fGeomBoundary){
+    switch(boundaryStatus){
+    //...    
+      case Detection: //Note, this assumes that the volume causing detection
+                      //is the photocathode because it is the only one with
+	              //non-zero efficiency
+	{
+	  //Trigger sensitive detector manually since photon is
+	  //absorbed but status was Detection
+	  G4SDManager* SDman = G4SDManager::GetSDMpointer();
+	  G4String sdName="/LXeDet/pmtSD";
+	  LXePMTSD* pmtSD = (LXePMTSD*)SDman
+	    ->FindSensitiveDetector(sdName);
+	  if(pmtSD)
+	    pmtSD->ProcessHits_constStep(theStep,NULL);
+	  break;
+	}
+      //...
+    }
+--------------------------------------------------------------------------------
