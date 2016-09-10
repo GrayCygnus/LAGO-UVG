@@ -18,9 +18,9 @@ public class BestClassifier {
 		//encontrar K con mejor performace en cross Validation
 		//retornar la K que maximiza el performance
 		double K = 0.0;
-		double deltaK = 0.5;
+		double deltaK = 1.0;
 		double bestK = 0.0;
-		double maxK = 20.0;
+		double maxK = 50.0;
 		double bestScore = 0.0;
 		
 		System.out.println("Creando Diccionario con Train");
@@ -48,18 +48,6 @@ public class BestClassifier {
 		}while(K <= maxK);	
 		
 		System.out.println("La K que maximiza el CV es: "+bestK+" con puntaje: "+bestScore);
-		
-		
-		//Corpust de TEST FINAL
-		/*List<String> TestLines = null;
-		try {
-			System.out.println("Guardando lineas de test q fijo no veras este mensaje mongo y si si q crack");
-			TestLines = Files.readAllLines(Paths.get("C:\\Users\\Anai\\Desktop\\Miguel\\LAGO\\LAGO-AI\\src\\cosmicfilter\\CosmicTest.txt"), Charset.forName("ISO-8859-1")); //cv.txt			
-			System.out.println("CV OK");
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}*/
 		
 		
 		

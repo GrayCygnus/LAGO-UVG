@@ -13,6 +13,8 @@ Created on Fri Aug 26 14:26:56 2016
 
 #LAGO muestrea a 40MHz, por lo que cada feature es 1/40,000,000
 #1 micro segundo = 40 Sigmas (cuentas de LAGO)
+# 1 Sigma = 25 nanosegundos
+#1 evento = 300 ns
 
 #La carga se obtiene con np.trapz(data), restandole 50 a cada feature
 
