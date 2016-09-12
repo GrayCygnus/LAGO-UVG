@@ -29,18 +29,20 @@ import matplotlib.pyplot as plt
 def riseTime(f):
     """
     Funcion que calcula el rise time (10%-90%) de un evento cosmico
+    Puede tambien aproximarse al 100%
     """
-    rise = 0
-    max90 = max(f)*0.9
-    i=argmax(f)
     
-    for z in range(i):
-        if(final[i]<= max90):
-            rise = i
-            break
-        i = i-1
+    #rise = 0
+    #max90 = max(f)*0.9
+    #i=argmax(f)
     
-    return rise
+    #for z in range(i):
+    #    if(final[i]<= max90):
+    #        rise = i
+    #        break
+    #    i = i-1
+    
+    #return rise
 
 def gaussian(x, amp, cen, wid):
     "1-d gaussian: gaussian(x, amp, cen, wid)"
@@ -70,10 +72,10 @@ x2 = linspace(0.0, 11.0, num=300)   #variable ind para fit
 gmod = Model(gaussian)  #Generar un Modelo Gaussiano
 
 #Iterar el Corpus de datos para realizar un archivo con los features en tuplas
-
+#sampled_data = []
 
 with open("C:\Users\Anai\Desktop\Miguel\LAGO\LAGO-AI\src\cosmicfilter\CosmicTrain.txt", "r") as f:
-    with open("OutputCluster3.txt", "a") as output:
+    with open("OutputClusterReduced.txt", "w") as output:
         for l in f:
             data = l.split("-")
             raw_data = data[0].strip().split(" ")
@@ -82,7 +84,11 @@ with open("C:\Users\Anai\Desktop\Miguel\LAGO\LAGO-AI\src\cosmicfilter\CosmicTrai
             peak = max(y)
             result = gmod.fit(y, x=x, amp=peak, cen=3, wid=1)
             final = gmod.eval(x=x2, amp=result.best_values['amp'], cen=result.best_values['cen'], wid=result.best_values['wid'])
-            output.write("["+str(riseTime(final))+","+str(float(peak))+"]\n")
+            rtime = argmax(final)
+            dummy = str(rtime)+"-"+str(peak)
+            #if dummy not in sampled_data:
+            output.write("["+str(rtime)+","+str(float(peak))+"]\n")
+            #sampled_data.append(str(rtime)+"-"+str(peak))
             
 print("Finished...")       
 #amp_result = result.best_values['amp']
