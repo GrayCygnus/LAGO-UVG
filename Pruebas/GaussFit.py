@@ -68,7 +68,7 @@ def prueba():
 print("Running...")
 #y = array([50.0, 50.0 ,247.0, 152.0, 88.0, 62.0, 58.0, 54.0, 52.0, 52.0, 50.0, 51.0])
 x = linspace(0.0, 11.0, num=12) #variable ind para evento
-x2 = linspace(0.0, 11.0, num=300)   #variable ind para fit
+x2 = linspace(0.0, 11.0, num=300)   #variable ind para fit, 300 asi el eje x esta en 1ns
 gmod = Model(gaussian)  #Generar un Modelo Gaussiano
 
 #Iterar el Corpus de datos para realizar un archivo con los features en tuplas
