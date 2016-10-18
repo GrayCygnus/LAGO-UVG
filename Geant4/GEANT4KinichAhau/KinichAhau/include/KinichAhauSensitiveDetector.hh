@@ -32,8 +32,7 @@
 #define KinichAhauSensitiveDetector_h 1
 
 #include "G4VSensitiveDetector.hh"
-
-#include "KinichAhauSensitiveDetectorHit.hh"
+#include "KinichAhauPMTHit.hh"
 
 #include <vector>
 
@@ -43,14 +42,12 @@ class G4HCofThisEvent;
 class KinichAhauSensitiveDetector : public G4VSensitiveDetector
 {
   public:
-    KinichAhauSensitiveDetector(const G4String& name, 
-                const G4String& hitsCollectionName);
+    KinichAhauSensitiveDetector(const G4String& name);
     virtual ~KinichAhauSensitiveDetector();
   
     // methods from base class
     virtual void   Initialize(G4HCofThisEvent* hitCollection);
     virtual G4bool ProcessHits(G4Step* step, G4TouchableHistory* history);
-    virtual void   EndOfEvent(G4HCofThisEvent* hitCollection);
 
     virtual void EndOfEvent(G4HCofThisEvent* );
     virtual void clear();
@@ -58,7 +55,7 @@ class KinichAhauSensitiveDetector : public G4VSensitiveDetector
     void PrintAll();
 
   private:
-    KinichAhauSensitiveDetectorHitsCollection* KinichAhaufHitsCollection;
+    KinichAhauPMTHit* KinichAhauSDHits;
 };
 
 #endif

@@ -177,9 +177,33 @@ CMakeFiles/KinichAhau.dir/src/KinichAhauPrimaryGeneratorAction.cc.o.provides: CM
 CMakeFiles/KinichAhau.dir/src/KinichAhauPrimaryGeneratorAction.cc.o.provides.build: CMakeFiles/KinichAhau.dir/src/KinichAhauPrimaryGeneratorAction.cc.o
 
 
+CMakeFiles/KinichAhau.dir/src/KinichAhauRun.cc.o: CMakeFiles/KinichAhau.dir/flags.make
+CMakeFiles/KinichAhau.dir/src/KinichAhauRun.cc.o: /home/daniel/.ssh/LAGO-UVG/Geant4/GEANT4KinichAhau/KinichAhau/src/KinichAhauRun.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/daniel/.ssh/LAGO-UVG/Geant4/GEANT4KinichAhau/KinichAhau-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/KinichAhau.dir/src/KinichAhauRun.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/KinichAhau.dir/src/KinichAhauRun.cc.o -c /home/daniel/.ssh/LAGO-UVG/Geant4/GEANT4KinichAhau/KinichAhau/src/KinichAhauRun.cc
+
+CMakeFiles/KinichAhau.dir/src/KinichAhauRun.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/KinichAhau.dir/src/KinichAhauRun.cc.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/daniel/.ssh/LAGO-UVG/Geant4/GEANT4KinichAhau/KinichAhau/src/KinichAhauRun.cc > CMakeFiles/KinichAhau.dir/src/KinichAhauRun.cc.i
+
+CMakeFiles/KinichAhau.dir/src/KinichAhauRun.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/KinichAhau.dir/src/KinichAhauRun.cc.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/daniel/.ssh/LAGO-UVG/Geant4/GEANT4KinichAhau/KinichAhau/src/KinichAhauRun.cc -o CMakeFiles/KinichAhau.dir/src/KinichAhauRun.cc.s
+
+CMakeFiles/KinichAhau.dir/src/KinichAhauRun.cc.o.requires:
+
+.PHONY : CMakeFiles/KinichAhau.dir/src/KinichAhauRun.cc.o.requires
+
+CMakeFiles/KinichAhau.dir/src/KinichAhauRun.cc.o.provides: CMakeFiles/KinichAhau.dir/src/KinichAhauRun.cc.o.requires
+	$(MAKE) -f CMakeFiles/KinichAhau.dir/build.make CMakeFiles/KinichAhau.dir/src/KinichAhauRun.cc.o.provides.build
+.PHONY : CMakeFiles/KinichAhau.dir/src/KinichAhauRun.cc.o.provides
+
+CMakeFiles/KinichAhau.dir/src/KinichAhauRun.cc.o.provides.build: CMakeFiles/KinichAhau.dir/src/KinichAhauRun.cc.o
+
+
 CMakeFiles/KinichAhau.dir/src/KinichAhauStackingAction.cc.o: CMakeFiles/KinichAhau.dir/flags.make
 CMakeFiles/KinichAhau.dir/src/KinichAhauStackingAction.cc.o: /home/daniel/.ssh/LAGO-UVG/Geant4/GEANT4KinichAhau/KinichAhau/src/KinichAhauStackingAction.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/daniel/.ssh/LAGO-UVG/Geant4/GEANT4KinichAhau/KinichAhau-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/KinichAhau.dir/src/KinichAhauStackingAction.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/daniel/.ssh/LAGO-UVG/Geant4/GEANT4KinichAhau/KinichAhau-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/KinichAhau.dir/src/KinichAhauStackingAction.cc.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/KinichAhau.dir/src/KinichAhauStackingAction.cc.o -c /home/daniel/.ssh/LAGO-UVG/Geant4/GEANT4KinichAhau/KinichAhau/src/KinichAhauStackingAction.cc
 
 CMakeFiles/KinichAhau.dir/src/KinichAhauStackingAction.cc.i: cmake_force
@@ -203,7 +227,7 @@ CMakeFiles/KinichAhau.dir/src/KinichAhauStackingAction.cc.o.provides.build: CMak
 
 CMakeFiles/KinichAhau.dir/src/KinichAhauPhysicsListMessenger.cc.o: CMakeFiles/KinichAhau.dir/flags.make
 CMakeFiles/KinichAhau.dir/src/KinichAhauPhysicsListMessenger.cc.o: /home/daniel/.ssh/LAGO-UVG/Geant4/GEANT4KinichAhau/KinichAhau/src/KinichAhauPhysicsListMessenger.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/daniel/.ssh/LAGO-UVG/Geant4/GEANT4KinichAhau/KinichAhau-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/KinichAhau.dir/src/KinichAhauPhysicsListMessenger.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/daniel/.ssh/LAGO-UVG/Geant4/GEANT4KinichAhau/KinichAhau-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/KinichAhau.dir/src/KinichAhauPhysicsListMessenger.cc.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/KinichAhau.dir/src/KinichAhauPhysicsListMessenger.cc.o -c /home/daniel/.ssh/LAGO-UVG/Geant4/GEANT4KinichAhau/KinichAhau/src/KinichAhauPhysicsListMessenger.cc
 
 CMakeFiles/KinichAhau.dir/src/KinichAhauPhysicsListMessenger.cc.i: cmake_force
@@ -227,7 +251,7 @@ CMakeFiles/KinichAhau.dir/src/KinichAhauPhysicsListMessenger.cc.o.provides.build
 
 CMakeFiles/KinichAhau.dir/src/KinichAhauDetectorConstruction.cc.o: CMakeFiles/KinichAhau.dir/flags.make
 CMakeFiles/KinichAhau.dir/src/KinichAhauDetectorConstruction.cc.o: /home/daniel/.ssh/LAGO-UVG/Geant4/GEANT4KinichAhau/KinichAhau/src/KinichAhauDetectorConstruction.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/daniel/.ssh/LAGO-UVG/Geant4/GEANT4KinichAhau/KinichAhau-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/KinichAhau.dir/src/KinichAhauDetectorConstruction.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/daniel/.ssh/LAGO-UVG/Geant4/GEANT4KinichAhau/KinichAhau-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/KinichAhau.dir/src/KinichAhauDetectorConstruction.cc.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/KinichAhau.dir/src/KinichAhauDetectorConstruction.cc.o -c /home/daniel/.ssh/LAGO-UVG/Geant4/GEANT4KinichAhau/KinichAhau/src/KinichAhauDetectorConstruction.cc
 
 CMakeFiles/KinichAhau.dir/src/KinichAhauDetectorConstruction.cc.i: cmake_force
@@ -251,7 +275,7 @@ CMakeFiles/KinichAhau.dir/src/KinichAhauDetectorConstruction.cc.o.provides.build
 
 CMakeFiles/KinichAhau.dir/src/KinichAhauSteppingVerbose.cc.o: CMakeFiles/KinichAhau.dir/flags.make
 CMakeFiles/KinichAhau.dir/src/KinichAhauSteppingVerbose.cc.o: /home/daniel/.ssh/LAGO-UVG/Geant4/GEANT4KinichAhau/KinichAhau/src/KinichAhauSteppingVerbose.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/daniel/.ssh/LAGO-UVG/Geant4/GEANT4KinichAhau/KinichAhau-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/KinichAhau.dir/src/KinichAhauSteppingVerbose.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/daniel/.ssh/LAGO-UVG/Geant4/GEANT4KinichAhau/KinichAhau-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/KinichAhau.dir/src/KinichAhauSteppingVerbose.cc.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/KinichAhau.dir/src/KinichAhauSteppingVerbose.cc.o -c /home/daniel/.ssh/LAGO-UVG/Geant4/GEANT4KinichAhau/KinichAhau/src/KinichAhauSteppingVerbose.cc
 
 CMakeFiles/KinichAhau.dir/src/KinichAhauSteppingVerbose.cc.i: cmake_force
@@ -275,7 +299,7 @@ CMakeFiles/KinichAhau.dir/src/KinichAhauSteppingVerbose.cc.o.provides.build: CMa
 
 CMakeFiles/KinichAhau.dir/src/KinichAhauPMTHit.cc.o: CMakeFiles/KinichAhau.dir/flags.make
 CMakeFiles/KinichAhau.dir/src/KinichAhauPMTHit.cc.o: /home/daniel/.ssh/LAGO-UVG/Geant4/GEANT4KinichAhau/KinichAhau/src/KinichAhauPMTHit.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/daniel/.ssh/LAGO-UVG/Geant4/GEANT4KinichAhau/KinichAhau-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/KinichAhau.dir/src/KinichAhauPMTHit.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/daniel/.ssh/LAGO-UVG/Geant4/GEANT4KinichAhau/KinichAhau-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/KinichAhau.dir/src/KinichAhauPMTHit.cc.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/KinichAhau.dir/src/KinichAhauPMTHit.cc.o -c /home/daniel/.ssh/LAGO-UVG/Geant4/GEANT4KinichAhau/KinichAhau/src/KinichAhauPMTHit.cc
 
 CMakeFiles/KinichAhau.dir/src/KinichAhauPMTHit.cc.i: cmake_force
@@ -295,30 +319,6 @@ CMakeFiles/KinichAhau.dir/src/KinichAhauPMTHit.cc.o.provides: CMakeFiles/KinichA
 .PHONY : CMakeFiles/KinichAhau.dir/src/KinichAhauPMTHit.cc.o.provides
 
 CMakeFiles/KinichAhau.dir/src/KinichAhauPMTHit.cc.o.provides.build: CMakeFiles/KinichAhau.dir/src/KinichAhauPMTHit.cc.o
-
-
-CMakeFiles/KinichAhau.dir/src/KinichAhauPMTSD.cc.o: CMakeFiles/KinichAhau.dir/flags.make
-CMakeFiles/KinichAhau.dir/src/KinichAhauPMTSD.cc.o: /home/daniel/.ssh/LAGO-UVG/Geant4/GEANT4KinichAhau/KinichAhau/src/KinichAhauPMTSD.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/daniel/.ssh/LAGO-UVG/Geant4/GEANT4KinichAhau/KinichAhau-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/KinichAhau.dir/src/KinichAhauPMTSD.cc.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/KinichAhau.dir/src/KinichAhauPMTSD.cc.o -c /home/daniel/.ssh/LAGO-UVG/Geant4/GEANT4KinichAhau/KinichAhau/src/KinichAhauPMTSD.cc
-
-CMakeFiles/KinichAhau.dir/src/KinichAhauPMTSD.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/KinichAhau.dir/src/KinichAhauPMTSD.cc.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/daniel/.ssh/LAGO-UVG/Geant4/GEANT4KinichAhau/KinichAhau/src/KinichAhauPMTSD.cc > CMakeFiles/KinichAhau.dir/src/KinichAhauPMTSD.cc.i
-
-CMakeFiles/KinichAhau.dir/src/KinichAhauPMTSD.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/KinichAhau.dir/src/KinichAhauPMTSD.cc.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/daniel/.ssh/LAGO-UVG/Geant4/GEANT4KinichAhau/KinichAhau/src/KinichAhauPMTSD.cc -o CMakeFiles/KinichAhau.dir/src/KinichAhauPMTSD.cc.s
-
-CMakeFiles/KinichAhau.dir/src/KinichAhauPMTSD.cc.o.requires:
-
-.PHONY : CMakeFiles/KinichAhau.dir/src/KinichAhauPMTSD.cc.o.requires
-
-CMakeFiles/KinichAhau.dir/src/KinichAhauPMTSD.cc.o.provides: CMakeFiles/KinichAhau.dir/src/KinichAhauPMTSD.cc.o.requires
-	$(MAKE) -f CMakeFiles/KinichAhau.dir/build.make CMakeFiles/KinichAhau.dir/src/KinichAhauPMTSD.cc.o.provides.build
-.PHONY : CMakeFiles/KinichAhau.dir/src/KinichAhauPMTSD.cc.o.provides
-
-CMakeFiles/KinichAhau.dir/src/KinichAhauPMTSD.cc.o.provides.build: CMakeFiles/KinichAhau.dir/src/KinichAhauPMTSD.cc.o
 
 
 CMakeFiles/KinichAhau.dir/src/KinichAhauPhysicsList.cc.o: CMakeFiles/KinichAhau.dir/flags.make
@@ -393,6 +393,30 @@ CMakeFiles/KinichAhau.dir/src/KinichAhauSteppingAction.cc.o.provides: CMakeFiles
 CMakeFiles/KinichAhau.dir/src/KinichAhauSteppingAction.cc.o.provides.build: CMakeFiles/KinichAhau.dir/src/KinichAhauSteppingAction.cc.o
 
 
+CMakeFiles/KinichAhau.dir/src/KinichAhauSensitiveDetector.cc.o: CMakeFiles/KinichAhau.dir/flags.make
+CMakeFiles/KinichAhau.dir/src/KinichAhauSensitiveDetector.cc.o: /home/daniel/.ssh/LAGO-UVG/Geant4/GEANT4KinichAhau/KinichAhau/src/KinichAhauSensitiveDetector.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/daniel/.ssh/LAGO-UVG/Geant4/GEANT4KinichAhau/KinichAhau-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/KinichAhau.dir/src/KinichAhauSensitiveDetector.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/KinichAhau.dir/src/KinichAhauSensitiveDetector.cc.o -c /home/daniel/.ssh/LAGO-UVG/Geant4/GEANT4KinichAhau/KinichAhau/src/KinichAhauSensitiveDetector.cc
+
+CMakeFiles/KinichAhau.dir/src/KinichAhauSensitiveDetector.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/KinichAhau.dir/src/KinichAhauSensitiveDetector.cc.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/daniel/.ssh/LAGO-UVG/Geant4/GEANT4KinichAhau/KinichAhau/src/KinichAhauSensitiveDetector.cc > CMakeFiles/KinichAhau.dir/src/KinichAhauSensitiveDetector.cc.i
+
+CMakeFiles/KinichAhau.dir/src/KinichAhauSensitiveDetector.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/KinichAhau.dir/src/KinichAhauSensitiveDetector.cc.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/daniel/.ssh/LAGO-UVG/Geant4/GEANT4KinichAhau/KinichAhau/src/KinichAhauSensitiveDetector.cc -o CMakeFiles/KinichAhau.dir/src/KinichAhauSensitiveDetector.cc.s
+
+CMakeFiles/KinichAhau.dir/src/KinichAhauSensitiveDetector.cc.o.requires:
+
+.PHONY : CMakeFiles/KinichAhau.dir/src/KinichAhauSensitiveDetector.cc.o.requires
+
+CMakeFiles/KinichAhau.dir/src/KinichAhauSensitiveDetector.cc.o.provides: CMakeFiles/KinichAhau.dir/src/KinichAhauSensitiveDetector.cc.o.requires
+	$(MAKE) -f CMakeFiles/KinichAhau.dir/build.make CMakeFiles/KinichAhau.dir/src/KinichAhauSensitiveDetector.cc.o.provides.build
+.PHONY : CMakeFiles/KinichAhau.dir/src/KinichAhauSensitiveDetector.cc.o.provides
+
+CMakeFiles/KinichAhau.dir/src/KinichAhauSensitiveDetector.cc.o.provides.build: CMakeFiles/KinichAhau.dir/src/KinichAhauSensitiveDetector.cc.o
+
+
 # Object files for target KinichAhau
 KinichAhau_OBJECTS = \
 "CMakeFiles/KinichAhau.dir/KinichAhau.cc.o" \
@@ -400,15 +424,16 @@ KinichAhau_OBJECTS = \
 "CMakeFiles/KinichAhau.dir/src/KinichAhauPrimaryGeneratorMessenger.cc.o" \
 "CMakeFiles/KinichAhau.dir/src/KinichAhauRunAction.cc.o" \
 "CMakeFiles/KinichAhau.dir/src/KinichAhauPrimaryGeneratorAction.cc.o" \
+"CMakeFiles/KinichAhau.dir/src/KinichAhauRun.cc.o" \
 "CMakeFiles/KinichAhau.dir/src/KinichAhauStackingAction.cc.o" \
 "CMakeFiles/KinichAhau.dir/src/KinichAhauPhysicsListMessenger.cc.o" \
 "CMakeFiles/KinichAhau.dir/src/KinichAhauDetectorConstruction.cc.o" \
 "CMakeFiles/KinichAhau.dir/src/KinichAhauSteppingVerbose.cc.o" \
 "CMakeFiles/KinichAhau.dir/src/KinichAhauPMTHit.cc.o" \
-"CMakeFiles/KinichAhau.dir/src/KinichAhauPMTSD.cc.o" \
 "CMakeFiles/KinichAhau.dir/src/KinichAhauPhysicsList.cc.o" \
 "CMakeFiles/KinichAhau.dir/src/KinichAhauUserTrackInformation.cc.o" \
-"CMakeFiles/KinichAhau.dir/src/KinichAhauSteppingAction.cc.o"
+"CMakeFiles/KinichAhau.dir/src/KinichAhauSteppingAction.cc.o" \
+"CMakeFiles/KinichAhau.dir/src/KinichAhauSensitiveDetector.cc.o"
 
 # External object files for target KinichAhau
 KinichAhau_EXTERNAL_OBJECTS =
@@ -418,15 +443,16 @@ KinichAhau: CMakeFiles/KinichAhau.dir/src/KinichAhauActionInitialization.cc.o
 KinichAhau: CMakeFiles/KinichAhau.dir/src/KinichAhauPrimaryGeneratorMessenger.cc.o
 KinichAhau: CMakeFiles/KinichAhau.dir/src/KinichAhauRunAction.cc.o
 KinichAhau: CMakeFiles/KinichAhau.dir/src/KinichAhauPrimaryGeneratorAction.cc.o
+KinichAhau: CMakeFiles/KinichAhau.dir/src/KinichAhauRun.cc.o
 KinichAhau: CMakeFiles/KinichAhau.dir/src/KinichAhauStackingAction.cc.o
 KinichAhau: CMakeFiles/KinichAhau.dir/src/KinichAhauPhysicsListMessenger.cc.o
 KinichAhau: CMakeFiles/KinichAhau.dir/src/KinichAhauDetectorConstruction.cc.o
 KinichAhau: CMakeFiles/KinichAhau.dir/src/KinichAhauSteppingVerbose.cc.o
 KinichAhau: CMakeFiles/KinichAhau.dir/src/KinichAhauPMTHit.cc.o
-KinichAhau: CMakeFiles/KinichAhau.dir/src/KinichAhauPMTSD.cc.o
 KinichAhau: CMakeFiles/KinichAhau.dir/src/KinichAhauPhysicsList.cc.o
 KinichAhau: CMakeFiles/KinichAhau.dir/src/KinichAhauUserTrackInformation.cc.o
 KinichAhau: CMakeFiles/KinichAhau.dir/src/KinichAhauSteppingAction.cc.o
+KinichAhau: CMakeFiles/KinichAhau.dir/src/KinichAhauSensitiveDetector.cc.o
 KinichAhau: CMakeFiles/KinichAhau.dir/build.make
 KinichAhau: /home/daniel/Documents/geant4.10.2-install/lib/libG4Tree.so
 KinichAhau: /home/daniel/Documents/geant4.10.2-install/lib/libG4GMocren.so
@@ -473,7 +499,7 @@ KinichAhau: /home/daniel/Documents/geant4.10.2-install/lib/libG4intercoms.so
 KinichAhau: /home/daniel/Documents/geant4.10.2-install/lib/libG4global.so
 KinichAhau: /home/daniel/Documents/geant4.10.2-install/lib/libG4clhep.so
 KinichAhau: CMakeFiles/KinichAhau.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/daniel/.ssh/LAGO-UVG/Geant4/GEANT4KinichAhau/KinichAhau-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX executable KinichAhau"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/daniel/.ssh/LAGO-UVG/Geant4/GEANT4KinichAhau/KinichAhau-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Linking CXX executable KinichAhau"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/KinichAhau.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -486,15 +512,16 @@ CMakeFiles/KinichAhau.dir/requires: CMakeFiles/KinichAhau.dir/src/KinichAhauActi
 CMakeFiles/KinichAhau.dir/requires: CMakeFiles/KinichAhau.dir/src/KinichAhauPrimaryGeneratorMessenger.cc.o.requires
 CMakeFiles/KinichAhau.dir/requires: CMakeFiles/KinichAhau.dir/src/KinichAhauRunAction.cc.o.requires
 CMakeFiles/KinichAhau.dir/requires: CMakeFiles/KinichAhau.dir/src/KinichAhauPrimaryGeneratorAction.cc.o.requires
+CMakeFiles/KinichAhau.dir/requires: CMakeFiles/KinichAhau.dir/src/KinichAhauRun.cc.o.requires
 CMakeFiles/KinichAhau.dir/requires: CMakeFiles/KinichAhau.dir/src/KinichAhauStackingAction.cc.o.requires
 CMakeFiles/KinichAhau.dir/requires: CMakeFiles/KinichAhau.dir/src/KinichAhauPhysicsListMessenger.cc.o.requires
 CMakeFiles/KinichAhau.dir/requires: CMakeFiles/KinichAhau.dir/src/KinichAhauDetectorConstruction.cc.o.requires
 CMakeFiles/KinichAhau.dir/requires: CMakeFiles/KinichAhau.dir/src/KinichAhauSteppingVerbose.cc.o.requires
 CMakeFiles/KinichAhau.dir/requires: CMakeFiles/KinichAhau.dir/src/KinichAhauPMTHit.cc.o.requires
-CMakeFiles/KinichAhau.dir/requires: CMakeFiles/KinichAhau.dir/src/KinichAhauPMTSD.cc.o.requires
 CMakeFiles/KinichAhau.dir/requires: CMakeFiles/KinichAhau.dir/src/KinichAhauPhysicsList.cc.o.requires
 CMakeFiles/KinichAhau.dir/requires: CMakeFiles/KinichAhau.dir/src/KinichAhauUserTrackInformation.cc.o.requires
 CMakeFiles/KinichAhau.dir/requires: CMakeFiles/KinichAhau.dir/src/KinichAhauSteppingAction.cc.o.requires
+CMakeFiles/KinichAhau.dir/requires: CMakeFiles/KinichAhau.dir/src/KinichAhauSensitiveDetector.cc.o.requires
 
 .PHONY : CMakeFiles/KinichAhau.dir/requires
 

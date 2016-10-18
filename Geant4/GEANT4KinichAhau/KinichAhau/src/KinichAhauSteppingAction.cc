@@ -42,8 +42,7 @@
 KinichAhauSteppingAction::KinichAhauSteppingAction()
 : G4UserSteppingAction()
 { 
-  fScintillationCounter = 0;
-  fCerenkovCounter      = 0;
+  fPhotons = 0;
   fEventNumber = -1;
 }
 
@@ -61,8 +60,7 @@ void KinichAhauSteppingAction::UserSteppingAction(const G4Step* step)
 
   if (eventNumber != fEventNumber) {
      fEventNumber = eventNumber;
-     fScintillationCounter = 0;
-     fCerenkovCounter = 0;
+     fPhotons = 0;
   }
 
   G4Track* track = step->GetTrack();
@@ -81,9 +79,7 @@ void KinichAhauSteppingAction::UserSteppingAction(const G4Step* step)
            if(secondaries->at(i)->GetDynamicParticle()->GetParticleDefinition()
                == G4OpticalPhoton::OpticalPhotonDefinition()){
               if (secondaries->at(i)->GetCreatorProcess()->GetProcessName()
-               == "Scintillation")fScintillationCounter++;
-              if (secondaries->at(i)->GetCreatorProcess()->GetProcessName()
-               == "Cerenkov")fCerenkovCounter++;
+               == "Cerenkov")fPhotons++;
            }
         }
      }

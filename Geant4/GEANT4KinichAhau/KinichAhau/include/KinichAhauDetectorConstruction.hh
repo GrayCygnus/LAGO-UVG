@@ -33,6 +33,7 @@
 
 #include "globals.hh"
 #include "G4VUserDetectorConstruction.hh"
+#include "KinichAhauSensitiveDetector.hh"
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
@@ -45,6 +46,10 @@ class KinichAhauDetectorConstruction : public G4VUserDetectorConstruction
   public:
     virtual G4VPhysicalVolume* Construct();
     virtual void ConstructSDandField();
+
+    //Logical Volume
+
+    G4LogicalVolume* fPhotocath_log;
 
   private:
     G4double fExpHall_x;

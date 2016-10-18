@@ -44,10 +44,9 @@ class KinichAhauRunAction : public G4UserRunAction
   public:
     KinichAhauRunAction();
     virtual ~KinichAhauRunAction();
-
-  public:
-    virtual void BeginOfRunAction(const G4Run* aRun);
-    virtual void EndOfRunAction(const G4Run* aRun);
+    virtual G4Run* GenerateRun();
+    virtual void BeginOfRunAction(const G4Run*);
+    virtual void EndOfRunAction(const G4Run*);
 
   private:
     G4Timer* fTimer;

@@ -51,6 +51,7 @@ KinichAhauDetectorConstruction::KinichAhauDetectorConstruction()
  : G4VUserDetectorConstruction()
 {
   fExpHall_x = fExpHall_y = fExpHall_z = 1.0*m;
+  fPhotocath_log = 0;
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
@@ -221,13 +222,13 @@ G4bool checkOverlaps = true;
 
   // Build PMTs
   G4double innerRadius_pmt = 0.*cm;
-  G4double height_pmt = 0.03175*cm;
+  G4double height_pmt = 0.036*cm;
   G4double startAngle_pmt = 0.*deg;
   G4double spanningAngle_pmt = 360.*deg;
   G4double fOuterRadius_pmt = 15.*cm;
 
-  G4Tubs* fPmt = new G4Tubs("pmt_tube",innerRadius_pmt,fOuterRadius_pmt,
-                    height_pmt,startAngle_pmt,spanningAngle_pmt);
+//  G4Tubs* fPmt = new G4Tubs("pmt_tube",innerRadius_pmt,fOuterRadius_pmt,
+//                    height_pmt,startAngle_pmt,spanningAngle_pmt);
 
   //the "photocathode" is a metal slab at the back of the glass that
   //is only a very rough approximation of the real thing since it only
@@ -235,13 +236,13 @@ G4bool checkOverlaps = true;
   G4Tubs* fPhotocath = new G4Tubs("photocath_tube",innerRadius_pmt,fOuterRadius_pmt,
                           height_pmt/2,startAngle_pmt,spanningAngle_pmt);
 
-  G4LogicalVolume* fPmt_log = new G4LogicalVolume(fPmt,G4Material::GetMaterial("Glass"),
-                                 "pmt_log");
-  G4LogicalVolume* fPhotocath_log = new G4LogicalVolume(fPhotocath,
+//  G4LogicalVolume* fPmt_log = new G4LogicalVolume(fPmt,G4Material::GetMaterial("Glass"),
+//                                 "pmt_log");
+  fPhotocath_log = new G4LogicalVolume(fPhotocath,
                                        fAl,
                                        "photocath_log");
 
-  G4VPhysicalVolume * fPhotocath_phys = new G4PVPlacement(0,G4ThreeVector(0,0,55.*cm),
+  G4VPhysicalVolume * fPhotocath_phys = new G4PVPlacement(0,G4ThreeVector(0,0,56.*cm),
                                     fPhotocath_log,"photocath",
                                     Water_log,false,0, checkOverlaps);
 

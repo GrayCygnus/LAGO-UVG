@@ -32,7 +32,9 @@
 #include "G4Timer.hh"
 
 #include "KinichAhauRunAction.hh"
+#include "KinichAhauRun.hh"
 
+#include "G4RunManager.hh"
 #include "G4Run.hh"
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
@@ -42,6 +44,13 @@ KinichAhauRunAction::KinichAhauRunAction()
    fTimer(0)
 {
   fTimer = new G4Timer;
+}
+
+//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+
+G4Run* KinichAhauRunAction::GenerateRun()
+{
+  return new KinichAhauRun;
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......

@@ -5,7 +5,9 @@ CMakeFiles/KinichAhau.dir/KinichAhau.cc.o
  /home/daniel/.ssh/LAGO-UVG/Geant4/GEANT4KinichAhau/KinichAhau/KinichAhau.cc
  /home/daniel/.ssh/LAGO-UVG/Geant4/GEANT4KinichAhau/KinichAhau/include/KinichAhauActionInitialization.hh
  /home/daniel/.ssh/LAGO-UVG/Geant4/GEANT4KinichAhau/KinichAhau/include/KinichAhauDetectorConstruction.hh
+ /home/daniel/.ssh/LAGO-UVG/Geant4/GEANT4KinichAhau/KinichAhau/include/KinichAhauPMTHit.hh
  /home/daniel/.ssh/LAGO-UVG/Geant4/GEANT4KinichAhau/KinichAhau/include/KinichAhauPhysicsList.hh
+ /home/daniel/.ssh/LAGO-UVG/Geant4/GEANT4KinichAhau/KinichAhau/include/KinichAhauSensitiveDetector.hh
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Geometry/BasicVector3D.h
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Geometry/Normal3D.h
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Geometry/Plane3D.h
@@ -90,6 +92,7 @@ CMakeFiles/KinichAhau.dir/KinichAhau.cc.o
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4BlockingList.hh
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4BlockingList.icc
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4ClassificationOfNewTrack.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4CollectionNameVector.hh
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Color.hh
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Colour.hh
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4DAWNFILE.hh
@@ -208,6 +211,7 @@ CMakeFiles/KinichAhau.dir/KinichAhau.cc.o
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Scene.icc
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4SceneHandlerList.hh
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4SceneList.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4SensitiveVolumeList.hh
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4SmartTrackStack.hh
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4SmartVoxelHeader.hh
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4SmartVoxelHeader.icc
@@ -279,8 +283,11 @@ CMakeFiles/KinichAhau.dir/KinichAhau.cc.o
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4VProcess.hh
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4VRML1File.hh
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4VRML2File.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4VReadOutGeometry.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4VSDFilter.hh
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4VSceneHandler.hh
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4VSceneHandler.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4VSensitiveDetector.hh
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4VSolid.hh
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4VSolid.icc
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4VStateDependent.hh
@@ -499,6 +506,8 @@ CMakeFiles/KinichAhau.dir/src/KinichAhauActionInitialization.cc.o
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/windefs.hh
 CMakeFiles/KinichAhau.dir/src/KinichAhauDetectorConstruction.cc.o
  /home/daniel/.ssh/LAGO-UVG/Geant4/GEANT4KinichAhau/KinichAhau/include/KinichAhauDetectorConstruction.hh
+ /home/daniel/.ssh/LAGO-UVG/Geant4/GEANT4KinichAhau/KinichAhau/include/KinichAhauPMTHit.hh
+ /home/daniel/.ssh/LAGO-UVG/Geant4/GEANT4KinichAhau/KinichAhau/include/KinichAhauSensitiveDetector.hh
  /home/daniel/.ssh/LAGO-UVG/Geant4/GEANT4KinichAhau/KinichAhau/src/KinichAhauDetectorConstruction.cc
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Geometry/BasicVector3D.h
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Geometry/Normal3D.h
@@ -525,20 +534,29 @@ CMakeFiles/KinichAhau.dir/src/KinichAhauDetectorConstruction.cc.o
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Vector/RotationZ.icc
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Vector/ThreeVector.h
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Vector/ThreeVector.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4AffineTransform.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4AffineTransform.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Allocator.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4AllocatorPool.hh
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4AutoLock.hh
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Box.hh
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Box.icc
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4CSGSolid.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4CollectionNameVector.hh
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Cons.hh
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Cons.icc
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4DataVector.hh
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4DataVector.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4DynamicParticle.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4DynamicParticle.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4ElectronOccupancy.hh
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Element.hh
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4ElementTable.hh
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4ElementVector.hh
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4ExceptionSeverity.hh
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Exp.hh
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4GeomSplitter.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4HCofThisEvent.hh
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4IonisParamElm.hh
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4IonisParamMat.hh
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Isotope.hh
@@ -552,20 +570,33 @@ CMakeFiles/KinichAhau.dir/src/KinichAhauDetectorConstruction.cc.o
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4LogicalSurface.icc
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4LogicalVolume.hh
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4LogicalVolume.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4LorentzVector.hh
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Material.hh
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4MaterialPropertiesTable.hh
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4MaterialPropertiesTable.icc
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4MaterialPropertyVector.hh
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4MaterialTable.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4NavigationHistory.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4NavigationHistory.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4NavigationHistoryPool.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4NavigationLevel.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4NavigationLevel.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4NavigationLevelRep.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4NavigationLevelRep.icc
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4NistElementBuilder.hh
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4NistManager.hh
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4NistMaterialBuilder.hh
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Normal3D.hh
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4OpticalSurface.hh
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4OrderedTable.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4PDefSplitter.hh
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4PVPlacement.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4ParticleDefinition.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4ParticleDefinition.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4ParticleMomentum.hh
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Physics2DVector.hh
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Physics2DVector.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4PhysicsModelCatalog.hh
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4PhysicsOrderedFreeVector.hh
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4PhysicsOrderedFreeVector.icc
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4PhysicsVector.hh
@@ -574,16 +605,32 @@ CMakeFiles/KinichAhau.dir/src/KinichAhauDetectorConstruction.cc.o
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Point3D.hh
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Polyhedron.hh
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Pow.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4ReferenceCountedHandle.hh
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Region.hh
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Region.icc
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4RotationMatrix.hh
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4SandiaTable.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4SensitiveVolumeList.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Step.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Step.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4StepPoint.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4StepPoint.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4StepStatus.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4SteppingControl.hh
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4String.hh
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4String.icc
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4SurfaceProperty.hh
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4SystemOfUnits.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4THitsCollection.hh
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Threading.hh
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4ThreeVector.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4TouchableHandle.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4TouchableHistory.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4TouchableHistory.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Track.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Track.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4TrackStatus.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4TrackVector.hh
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Transform3D.hh
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Tubs.hh
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Tubs.icc
@@ -592,11 +639,19 @@ CMakeFiles/KinichAhau.dir/src/KinichAhauDetectorConstruction.cc.o
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4UCons.hh
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4USolid.hh
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4UTubs.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4VHit.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4VHitsCollection.hh
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4VPhysicalVolume.hh
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4VPhysicalVolume.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4VReadOutGeometry.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4VSDFilter.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4VSensitiveDetector.hh
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4VSolid.hh
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4VSolid.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4VTouchable.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4VTouchable.icc
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4VUserDetectorConstruction.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4VUserTrackInformation.hh
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Visible.hh
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Visible.icc
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4ios.hh
@@ -604,8 +659,10 @@ CMakeFiles/KinichAhau.dir/src/KinichAhauDetectorConstruction.cc.o
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/geomdefs.hh
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/geomwdefs.hh
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/globals.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/pwdefs.hh
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/templates.hh
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/tls.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/trkdefs.hh
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/windefs.hh
 CMakeFiles/KinichAhau.dir/src/KinichAhauPMTHit.cc.o
  /home/daniel/.ssh/LAGO-UVG/Geant4/GEANT4KinichAhau/KinichAhau/include/KinichAhauPMTHit.hh
@@ -667,225 +724,6 @@ CMakeFiles/KinichAhau.dir/src/KinichAhauPMTHit.cc.o
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/globals.hh
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/templates.hh
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/tls.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/windefs.hh
-CMakeFiles/KinichAhau.dir/src/KinichAhauPMTSD.cc.o
- /home/daniel/.ssh/LAGO-UVG/Geant4/GEANT4KinichAhau/KinichAhau/include/KinichAhauDetectorConstruction.hh
- /home/daniel/.ssh/LAGO-UVG/Geant4/GEANT4KinichAhau/KinichAhau/include/KinichAhauPMTHit.hh
- /home/daniel/.ssh/LAGO-UVG/Geant4/GEANT4KinichAhau/KinichAhau/include/KinichAhauPMTSD.hh
- /home/daniel/.ssh/LAGO-UVG/Geant4/GEANT4KinichAhau/KinichAhau/include/KinichAhauUserTrackInformation.hh
- /home/daniel/.ssh/LAGO-UVG/Geant4/GEANT4KinichAhau/KinichAhau/src/KinichAhauPMTSD.cc
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Units/PhysicalConstants.h
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Units/SystemOfUnits.h
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Utility/defs.h
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Vector/AxisAngle.h
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Vector/AxisAngle.icc
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Vector/LorentzVector.h
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Vector/LorentzVector.icc
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Vector/Rotation.h
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Vector/Rotation.icc
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Vector/RotationInterfaces.h
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Vector/RotationInterfaces.icc
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Vector/RotationX.h
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Vector/RotationX.icc
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Vector/RotationY.h
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Vector/RotationY.icc
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Vector/RotationZ.h
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Vector/RotationZ.icc
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Vector/ThreeVector.h
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Vector/ThreeVector.icc
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4AffineTransform.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4AffineTransform.icc
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Allocator.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4AllocatorPool.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Alpha.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4AntiAlpha.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4AntiBMesonZero.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4AntiBsMesonZero.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4AntiDMesonZero.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4AntiDeuteron.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4AntiHe3.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4AntiKaonZero.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4AntiLambda.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4AntiLambdab.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4AntiLambdacPlus.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4AntiNeutrinoE.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4AntiNeutrinoMu.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4AntiNeutrinoTau.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4AntiNeutron.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4AntiOmegaMinus.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4AntiOmegabMinus.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4AntiOmegacZero.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4AntiProton.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4AntiSigmaMinus.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4AntiSigmaPlus.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4AntiSigmaZero.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4AntiSigmabMinus.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4AntiSigmabPlus.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4AntiSigmabZero.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4AntiSigmacPlus.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4AntiSigmacPlusPlus.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4AntiSigmacZero.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4AntiTriton.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4AntiXiMinus.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4AntiXiZero.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4AntiXibMinus.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4AntiXibZero.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4AntiXicPlus.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4AntiXicZero.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4AutoLock.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4BMesonMinus.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4BMesonPlus.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4BMesonZero.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4BsMesonZero.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4ChargedGeantino.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4CollectionNameVector.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4DMesonMinus.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4DMesonPlus.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4DMesonZero.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4DataVector.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4DataVector.icc
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Deuteron.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4DsMesonMinus.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4DsMesonPlus.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4DynamicParticle.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4DynamicParticle.icc
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Electron.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4ElectronOccupancy.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Element.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4ElementTable.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4ElementVector.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Eta.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4EtaPrime.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Etac.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4ExceptionSeverity.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Exp.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Gamma.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Geantino.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4GenericIon.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4GeomSplitter.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4HCofThisEvent.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4He3.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4IonisParamElm.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4IonisParamMat.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Ions.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Isotope.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4IsotopeVector.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4JPsi.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4KaonMinus.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4KaonPlus.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4KaonZero.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4KaonZeroLong.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4KaonZeroShort.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Lambda.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Lambdab.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4LambdacPlus.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Log.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4LogicalVolume.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4LogicalVolume.icc
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4LorentzVector.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Material.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4MaterialPropertiesTable.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4MaterialPropertiesTable.icc
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4MaterialPropertyVector.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4MaterialTable.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4MuonMinus.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4MuonPlus.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4NavigationHistory.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4NavigationHistory.icc
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4NavigationHistoryPool.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4NavigationLevel.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4NavigationLevel.icc
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4NavigationLevelRep.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4NavigationLevelRep.icc
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4NeutrinoE.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4NeutrinoMu.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4NeutrinoTau.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Neutron.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4OmegaMinus.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4OmegabMinus.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4OmegacZero.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4OpticalPhoton.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4OrderedTable.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4PDefSplitter.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4ParticleDefinition.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4ParticleDefinition.icc
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4ParticleMomentum.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4ParticleTypes.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4PhysicsModelCatalog.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4PhysicsOrderedFreeVector.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4PhysicsOrderedFreeVector.icc
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4PhysicsVector.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4PhysicsVector.icc
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4PhysicsVectorType.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4PionMinus.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4PionPlus.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4PionZero.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Positron.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Proton.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4ReferenceCountedHandle.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Region.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Region.icc
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4RotationMatrix.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4SandiaTable.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4SensitiveVolumeList.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4SigmaMinus.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4SigmaPlus.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4SigmaZero.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4SigmabMinus.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4SigmabPlus.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4SigmabZero.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4SigmacPlus.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4SigmacPlusPlus.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4SigmacZero.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Step.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Step.icc
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4StepPoint.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4StepPoint.icc
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4StepStatus.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4SteppingControl.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4String.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4String.icc
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4THitsCollection.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4TauMinus.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4TauPlus.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Threading.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4ThreeVector.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4TouchableHandle.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4TouchableHistory.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4TouchableHistory.icc
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Track.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Track.icc
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4TrackStatus.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4TrackVector.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Triton.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Types.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4UnknownParticle.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Upsilon.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4VHit.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4VHitsCollection.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4VPhysicalVolume.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4VPhysicalVolume.icc
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4VReadOutGeometry.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4VSDFilter.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4VSensitiveDetector.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4VTouchable.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4VTouchable.icc
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4VUserDetectorConstruction.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4VUserTrackInformation.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4XiMinus.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4XiZero.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4XibMinus.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4XibZero.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4XicPlus.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4XicZero.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4ios.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/geomdefs.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/geomwdefs.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/globals.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/pwdefs.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/templates.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/tls.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/trkdefs.hh
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/windefs.hh
 CMakeFiles/KinichAhau.dir/src/KinichAhauPhysicsList.cc.o
  /home/daniel/.ssh/LAGO-UVG/Geant4/GEANT4KinichAhau/KinichAhau/include/KinichAhauPhysicsList.hh
@@ -1458,21 +1296,477 @@ CMakeFiles/KinichAhau.dir/src/KinichAhauPrimaryGeneratorMessenger.cc.o
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/globals.hh
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/templates.hh
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/tls.hh
-CMakeFiles/KinichAhau.dir/src/KinichAhauRunAction.cc.o
- /home/daniel/.ssh/LAGO-UVG/Geant4/GEANT4KinichAhau/KinichAhau/include/KinichAhauRunAction.hh
- /home/daniel/.ssh/LAGO-UVG/Geant4/GEANT4KinichAhau/KinichAhau/src/KinichAhauRunAction.cc
+CMakeFiles/KinichAhau.dir/src/KinichAhauRun.cc.o
+ /home/daniel/.ssh/LAGO-UVG/Geant4/GEANT4KinichAhau/KinichAhau/include/KinichAhauRun.hh
+ /home/daniel/.ssh/LAGO-UVG/Geant4/GEANT4KinichAhau/KinichAhau/src/KinichAhauRun.cc
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4ExceptionSeverity.hh
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Run.hh
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4String.hh
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4String.icc
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Timer.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Timer.icc
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Types.hh
- /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4UserRunAction.hh
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4ios.hh
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/globals.hh
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/templates.hh
  /home/daniel/Documents/geant4.10.2-install/include/Geant4/tls.hh
+CMakeFiles/KinichAhau.dir/src/KinichAhauRunAction.cc.o
+ /home/daniel/.ssh/LAGO-UVG/Geant4/GEANT4KinichAhau/KinichAhau/include/KinichAhauRun.hh
+ /home/daniel/.ssh/LAGO-UVG/Geant4/GEANT4KinichAhau/KinichAhau/include/KinichAhauRunAction.hh
+ /home/daniel/.ssh/LAGO-UVG/Geant4/GEANT4KinichAhau/KinichAhau/src/KinichAhauRunAction.cc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Random/DualRand.h
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Random/JamesRandom.h
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Random/MTwistEngine.h
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Random/MixMaxRng.h
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Random/RandBinomial.h
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Random/RandBinomial.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Random/RandBit.h
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Random/RandBit.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Random/RandBreitWigner.h
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Random/RandBreitWigner.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Random/RandChiSquare.h
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Random/RandChiSquare.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Random/RandExpZiggurat.h
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Random/RandExponential.h
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Random/RandExponential.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Random/RandFlat.h
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Random/RandFlat.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Random/RandGamma.h
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Random/RandGamma.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Random/RandGauss.h
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Random/RandGauss.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Random/RandGaussQ.h
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Random/RandGaussQ.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Random/RandGaussZiggurat.h
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Random/RandGeneral.h
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Random/RandGeneral.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Random/RandLandau.h
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Random/RandLandau.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Random/RandPoisson.h
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Random/RandPoisson.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Random/RandPoissonQ.h
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Random/RandPoissonQ.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Random/RandStudentT.h
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Random/RandStudentT.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Random/Random.h
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Random/Random.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Random/RandomEngine.h
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Random/RandomEngine.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Random/Randomize.h
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Random/RanecuEngine.h
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Random/Ranlux64Engine.h
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Random/RanluxEngine.h
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Random/RanshiEngine.h
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Random/mixmax.h
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Units/PhysicalConstants.h
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Units/SystemOfUnits.h
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Utility/defs.h
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Utility/memory.h
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Utility/thread_local.h
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Vector/AxisAngle.h
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Vector/AxisAngle.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Vector/LorentzVector.h
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Vector/LorentzVector.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Vector/Rotation.h
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Vector/Rotation.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Vector/RotationInterfaces.h
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Vector/RotationInterfaces.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Vector/RotationX.h
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Vector/RotationX.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Vector/RotationY.h
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Vector/RotationY.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Vector/RotationZ.h
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Vector/RotationZ.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Vector/ThreeVector.h
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Vector/ThreeVector.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4AffineTransform.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4AffineTransform.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Allocator.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4AllocatorPool.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4ApplicationState.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4AutoLock.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4AuxiliaryNavServices.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4AuxiliaryNavServices.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4BlockingList.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4BlockingList.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4ClassificationOfNewTrack.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4DCofThisEvent.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4DataVector.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4DataVector.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4DynamicParticle.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4DynamicParticle.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4ElectronOccupancy.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Element.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4ElementTable.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4ElementVector.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Event.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4EventManager.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4ExceptionSeverity.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Exp.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4FastVector.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4ForceCondition.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4GPILSelection.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4GRSSolid.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4GRSSolid.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4GRSVolume.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4GRSVolume.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4GeomSplitter.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4HCofThisEvent.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4IonisParamElm.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4IonisParamMat.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Isotope.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4IsotopeVector.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Log.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4LogicalVolume.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4LogicalVolume.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4LorentzVector.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Material.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4MaterialPropertiesTable.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4MaterialPropertiesTable.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4MaterialPropertyVector.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4MaterialTable.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4NavigationHistory.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4NavigationHistory.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4NavigationHistoryPool.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4NavigationLevel.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4NavigationLevel.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4NavigationLevelRep.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4NavigationLevelRep.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4NavigationLogger.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Navigator.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Navigator.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4NormalNavigation.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4NormalNavigation.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4OrderedTable.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4PDefSplitter.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4ParameterisedNavigation.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4ParameterisedNavigation.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4ParticleChange.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4ParticleChange.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4ParticleDefinition.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4ParticleDefinition.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4ParticleMomentum.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4ParticleTable.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4ParticleTable.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4ParticleTableIterator.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4PhysicsModelCatalog.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4PhysicsOrderedFreeVector.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4PhysicsOrderedFreeVector.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4PhysicsTable.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4PhysicsTable.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4PhysicsVector.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4PhysicsVector.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4PhysicsVectorType.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4PrimaryParticle.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4PrimaryTransformer.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4PrimaryVertex.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4ProcessManager.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4ProcessManager.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4ProcessType.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4ProcessVector.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4ProcessVector.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4ReferenceCountedHandle.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Region.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Region.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4RegularNavigation.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4ReplicaNavigation.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4ReplicaNavigation.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4RotationMatrix.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Run.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4RunManager.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4RunManagerKernel.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4SandiaTable.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4SmartTrackStack.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4SmartVoxelHeader.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4SmartVoxelHeader.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4SmartVoxelNode.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4SmartVoxelNode.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4SmartVoxelProxy.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4SmartVoxelProxy.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4StackManager.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4StackedTrack.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Step.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Step.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4StepPoint.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4StepPoint.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4StepStatus.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4SteppingControl.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4SteppingManager.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4String.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4String.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Threading.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4ThreeVector.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Timer.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Timer.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4TouchableHandle.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4TouchableHistory.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4TouchableHistory.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4TouchableHistoryHandle.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Track.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Track.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4TrackFastVector.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4TrackStack.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4TrackStatus.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4TrackVector.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4TrackingManager.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4TrackingMessenger.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4TrajectoryContainer.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Types.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4UIcommand.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4UIdirectory.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4UImessenger.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4UIparameter.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4UItokenNum.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4UserRunAction.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4UserStackingAction.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4UserSteppingAction.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4UserTrackingAction.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4VDigiCollection.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4VHitsCollection.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4VPVParameterisation.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4VParticleChange.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4VParticleChange.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4VPhysicalVolume.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4VPhysicalVolume.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4VProcess.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4VSolid.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4VSolid.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4VSteppingVerbose.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4VTouchable.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4VTouchable.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4VTrajectory.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4VUserEventInformation.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4VUserTrackInformation.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4VVolumeMaterialScanner.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4VoxelNavigation.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4VoxelNavigation.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4ios.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/Randomize.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/evmandefs.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/evtdefs.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/geomdefs.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/geomwdefs.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/globals.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/pwdefs.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/templates.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/tls.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/trajectoryControl.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/trkdefs.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/windefs.hh
+CMakeFiles/KinichAhau.dir/src/KinichAhauSensitiveDetector.cc.o
+ /home/daniel/.ssh/LAGO-UVG/Geant4/GEANT4KinichAhau/KinichAhau/include/KinichAhauPMTHit.hh
+ /home/daniel/.ssh/LAGO-UVG/Geant4/GEANT4KinichAhau/KinichAhau/include/KinichAhauSensitiveDetector.hh
+ /home/daniel/.ssh/LAGO-UVG/Geant4/GEANT4KinichAhau/KinichAhau/src/KinichAhauSensitiveDetector.cc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Units/PhysicalConstants.h
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Units/SystemOfUnits.h
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Utility/defs.h
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Vector/AxisAngle.h
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Vector/AxisAngle.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Vector/LorentzVector.h
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Vector/LorentzVector.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Vector/Rotation.h
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Vector/Rotation.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Vector/RotationInterfaces.h
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Vector/RotationInterfaces.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Vector/RotationX.h
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Vector/RotationX.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Vector/RotationY.h
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Vector/RotationY.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Vector/RotationZ.h
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Vector/RotationZ.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Vector/ThreeVector.h
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/CLHEP/Vector/ThreeVector.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4AffineTransform.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4AffineTransform.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Allocator.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4AllocatorPool.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Alpha.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4AntiAlpha.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4AntiBMesonZero.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4AntiBsMesonZero.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4AntiDMesonZero.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4AntiDeuteron.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4AntiHe3.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4AntiKaonZero.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4AntiLambda.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4AntiLambdab.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4AntiLambdacPlus.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4AntiNeutrinoE.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4AntiNeutrinoMu.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4AntiNeutrinoTau.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4AntiNeutron.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4AntiOmegaMinus.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4AntiOmegabMinus.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4AntiOmegacZero.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4AntiProton.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4AntiSigmaMinus.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4AntiSigmaPlus.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4AntiSigmaZero.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4AntiSigmabMinus.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4AntiSigmabPlus.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4AntiSigmabZero.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4AntiSigmacPlus.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4AntiSigmacPlusPlus.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4AntiSigmacZero.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4AntiTriton.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4AntiXiMinus.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4AntiXiZero.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4AntiXibMinus.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4AntiXibZero.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4AntiXicPlus.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4AntiXicZero.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4AutoLock.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4BMesonMinus.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4BMesonPlus.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4BMesonZero.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4BsMesonZero.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4ChargedGeantino.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4CollectionNameVector.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4DMesonMinus.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4DMesonPlus.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4DMesonZero.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4DataVector.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4DataVector.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Deuteron.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4DsMesonMinus.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4DsMesonPlus.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4DynamicParticle.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4DynamicParticle.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Electron.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4ElectronOccupancy.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Element.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4ElementTable.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4ElementVector.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Eta.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4EtaPrime.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Etac.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4ExceptionSeverity.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Exp.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Gamma.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Geantino.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4GenericIon.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4GeomSplitter.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4HCofThisEvent.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4He3.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4IonisParamElm.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4IonisParamMat.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Ions.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Isotope.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4IsotopeVector.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4JPsi.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4KaonMinus.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4KaonPlus.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4KaonZero.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4KaonZeroLong.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4KaonZeroShort.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Lambda.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Lambdab.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4LambdacPlus.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Log.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4LogicalVolume.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4LogicalVolume.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4LorentzVector.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Material.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4MaterialPropertiesTable.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4MaterialPropertiesTable.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4MaterialPropertyVector.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4MaterialTable.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4MuonMinus.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4MuonPlus.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4NavigationHistory.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4NavigationHistory.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4NavigationHistoryPool.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4NavigationLevel.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4NavigationLevel.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4NavigationLevelRep.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4NavigationLevelRep.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4NeutrinoE.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4NeutrinoMu.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4NeutrinoTau.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Neutron.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4OmegaMinus.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4OmegabMinus.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4OmegacZero.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4OpticalPhoton.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4OrderedTable.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4PDefSplitter.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4ParticleDefinition.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4ParticleDefinition.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4ParticleMomentum.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4ParticleTypes.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4PhysicsModelCatalog.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4PhysicsOrderedFreeVector.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4PhysicsOrderedFreeVector.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4PhysicsVector.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4PhysicsVector.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4PhysicsVectorType.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4PionMinus.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4PionPlus.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4PionZero.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Positron.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Proton.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4ReferenceCountedHandle.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Region.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Region.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4RotationMatrix.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4SandiaTable.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4SensitiveVolumeList.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4SigmaMinus.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4SigmaPlus.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4SigmaZero.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4SigmabMinus.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4SigmabPlus.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4SigmabZero.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4SigmacPlus.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4SigmacPlusPlus.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4SigmacZero.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Step.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Step.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4StepPoint.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4StepPoint.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4StepStatus.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4SteppingControl.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4String.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4String.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4THitsCollection.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4TauMinus.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4TauPlus.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Threading.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4ThreeVector.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4TouchableHandle.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4TouchableHistory.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4TouchableHistory.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Track.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Track.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4TrackStatus.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4TrackVector.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Triton.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Types.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4UnknownParticle.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4Upsilon.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4VHit.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4VHitsCollection.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4VPhysicalVolume.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4VPhysicalVolume.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4VReadOutGeometry.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4VSDFilter.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4VSensitiveDetector.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4VTouchable.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4VTouchable.icc
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4VUserTrackInformation.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4XiMinus.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4XiZero.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4XibMinus.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4XibZero.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4XicPlus.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4XicZero.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/G4ios.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/geomdefs.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/geomwdefs.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/globals.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/pwdefs.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/templates.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/tls.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/trkdefs.hh
+ /home/daniel/Documents/geant4.10.2-install/include/Geant4/windefs.hh
 CMakeFiles/KinichAhau.dir/src/KinichAhauStackingAction.cc.o
  /home/daniel/.ssh/LAGO-UVG/Geant4/GEANT4KinichAhau/KinichAhau/include/KinichAhauStackingAction.hh
  /home/daniel/.ssh/LAGO-UVG/Geant4/GEANT4KinichAhau/KinichAhau/src/KinichAhauStackingAction.cc

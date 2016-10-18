@@ -47,9 +47,9 @@ class KinichAhauSteppingAction : public G4UserSteppingAction
     virtual void UserSteppingAction(const G4Step*);
 
   private:
-    G4int fScintillationCounter;
     G4int fCerenkovCounter;
     G4int fEventNumber;
+    G4int fPhotons;
 };
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......

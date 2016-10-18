@@ -54,14 +54,13 @@ class KinichAhauPMTHit : public G4VHit
     inline void *operator new(size_t);
     inline void operator delete(void *aHit);
  
-    virtual void Draw();
     virtual void Print();
 
     inline void IncPhotonCount(){fPhotons++;}
     inline G4int GetPhotonCount(){return fPhotons;}
 
   private:
-
+    G4int fEventNumber;
     G4int fPhotons;
 
 };

@@ -275,33 +275,6 @@ src/KinichAhauPMTHit.cc.s:
 	$(MAKE) -f CMakeFiles/KinichAhau.dir/build.make CMakeFiles/KinichAhau.dir/src/KinichAhauPMTHit.cc.s
 .PHONY : src/KinichAhauPMTHit.cc.s
 
-src/KinichAhauPMTSD.o: src/KinichAhauPMTSD.cc.o
-
-.PHONY : src/KinichAhauPMTSD.o
-
-# target to build an object file
-src/KinichAhauPMTSD.cc.o:
-	$(MAKE) -f CMakeFiles/KinichAhau.dir/build.make CMakeFiles/KinichAhau.dir/src/KinichAhauPMTSD.cc.o
-.PHONY : src/KinichAhauPMTSD.cc.o
-
-src/KinichAhauPMTSD.i: src/KinichAhauPMTSD.cc.i
-
-.PHONY : src/KinichAhauPMTSD.i
-
-# target to preprocess a source file
-src/KinichAhauPMTSD.cc.i:
-	$(MAKE) -f CMakeFiles/KinichAhau.dir/build.make CMakeFiles/KinichAhau.dir/src/KinichAhauPMTSD.cc.i
-.PHONY : src/KinichAhauPMTSD.cc.i
-
-src/KinichAhauPMTSD.s: src/KinichAhauPMTSD.cc.s
-
-.PHONY : src/KinichAhauPMTSD.s
-
-# target to generate assembly for a file
-src/KinichAhauPMTSD.cc.s:
-	$(MAKE) -f CMakeFiles/KinichAhau.dir/build.make CMakeFiles/KinichAhau.dir/src/KinichAhauPMTSD.cc.s
-.PHONY : src/KinichAhauPMTSD.cc.s
-
 src/KinichAhauPhysicsList.o: src/KinichAhauPhysicsList.cc.o
 
 .PHONY : src/KinichAhauPhysicsList.o
@@ -410,6 +383,33 @@ src/KinichAhauPrimaryGeneratorMessenger.cc.s:
 	$(MAKE) -f CMakeFiles/KinichAhau.dir/build.make CMakeFiles/KinichAhau.dir/src/KinichAhauPrimaryGeneratorMessenger.cc.s
 .PHONY : src/KinichAhauPrimaryGeneratorMessenger.cc.s
 
+src/KinichAhauRun.o: src/KinichAhauRun.cc.o
+
+.PHONY : src/KinichAhauRun.o
+
+# target to build an object file
+src/KinichAhauRun.cc.o:
+	$(MAKE) -f CMakeFiles/KinichAhau.dir/build.make CMakeFiles/KinichAhau.dir/src/KinichAhauRun.cc.o
+.PHONY : src/KinichAhauRun.cc.o
+
+src/KinichAhauRun.i: src/KinichAhauRun.cc.i
+
+.PHONY : src/KinichAhauRun.i
+
+# target to preprocess a source file
+src/KinichAhauRun.cc.i:
+	$(MAKE) -f CMakeFiles/KinichAhau.dir/build.make CMakeFiles/KinichAhau.dir/src/KinichAhauRun.cc.i
+.PHONY : src/KinichAhauRun.cc.i
+
+src/KinichAhauRun.s: src/KinichAhauRun.cc.s
+
+.PHONY : src/KinichAhauRun.s
+
+# target to generate assembly for a file
+src/KinichAhauRun.cc.s:
+	$(MAKE) -f CMakeFiles/KinichAhau.dir/build.make CMakeFiles/KinichAhau.dir/src/KinichAhauRun.cc.s
+.PHONY : src/KinichAhauRun.cc.s
+
 src/KinichAhauRunAction.o: src/KinichAhauRunAction.cc.o
 
 .PHONY : src/KinichAhauRunAction.o
@@ -436,6 +436,33 @@ src/KinichAhauRunAction.s: src/KinichAhauRunAction.cc.s
 src/KinichAhauRunAction.cc.s:
 	$(MAKE) -f CMakeFiles/KinichAhau.dir/build.make CMakeFiles/KinichAhau.dir/src/KinichAhauRunAction.cc.s
 .PHONY : src/KinichAhauRunAction.cc.s
+
+src/KinichAhauSensitiveDetector.o: src/KinichAhauSensitiveDetector.cc.o
+
+.PHONY : src/KinichAhauSensitiveDetector.o
+
+# target to build an object file
+src/KinichAhauSensitiveDetector.cc.o:
+	$(MAKE) -f CMakeFiles/KinichAhau.dir/build.make CMakeFiles/KinichAhau.dir/src/KinichAhauSensitiveDetector.cc.o
+.PHONY : src/KinichAhauSensitiveDetector.cc.o
+
+src/KinichAhauSensitiveDetector.i: src/KinichAhauSensitiveDetector.cc.i
+
+.PHONY : src/KinichAhauSensitiveDetector.i
+
+# target to preprocess a source file
+src/KinichAhauSensitiveDetector.cc.i:
+	$(MAKE) -f CMakeFiles/KinichAhau.dir/build.make CMakeFiles/KinichAhau.dir/src/KinichAhauSensitiveDetector.cc.i
+.PHONY : src/KinichAhauSensitiveDetector.cc.i
+
+src/KinichAhauSensitiveDetector.s: src/KinichAhauSensitiveDetector.cc.s
+
+.PHONY : src/KinichAhauSensitiveDetector.s
+
+# target to generate assembly for a file
+src/KinichAhauSensitiveDetector.cc.s:
+	$(MAKE) -f CMakeFiles/KinichAhau.dir/build.make CMakeFiles/KinichAhau.dir/src/KinichAhauSensitiveDetector.cc.s
+.PHONY : src/KinichAhauSensitiveDetector.cc.s
 
 src/KinichAhauStackingAction.o: src/KinichAhauStackingAction.cc.o
 
@@ -570,9 +597,6 @@ help:
 	@echo "... src/KinichAhauPMTHit.o"
 	@echo "... src/KinichAhauPMTHit.i"
 	@echo "... src/KinichAhauPMTHit.s"
-	@echo "... src/KinichAhauPMTSD.o"
-	@echo "... src/KinichAhauPMTSD.i"
-	@echo "... src/KinichAhauPMTSD.s"
 	@echo "... src/KinichAhauPhysicsList.o"
 	@echo "... src/KinichAhauPhysicsList.i"
 	@echo "... src/KinichAhauPhysicsList.s"
@@ -585,9 +609,15 @@ help:
 	@echo "... src/KinichAhauPrimaryGeneratorMessenger.o"
 	@echo "... src/KinichAhauPrimaryGeneratorMessenger.i"
 	@echo "... src/KinichAhauPrimaryGeneratorMessenger.s"
+	@echo "... src/KinichAhauRun.o"
+	@echo "... src/KinichAhauRun.i"
+	@echo "... src/KinichAhauRun.s"
 	@echo "... src/KinichAhauRunAction.o"
 	@echo "... src/KinichAhauRunAction.i"
 	@echo "... src/KinichAhauRunAction.s"
+	@echo "... src/KinichAhauSensitiveDetector.o"
+	@echo "... src/KinichAhauSensitiveDetector.i"
+	@echo "... src/KinichAhauSensitiveDetector.s"
 	@echo "... src/KinichAhauStackingAction.o"
 	@echo "... src/KinichAhauStackingAction.i"
 	@echo "... src/KinichAhauStackingAction.s"
