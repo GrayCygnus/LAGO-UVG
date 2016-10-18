@@ -1,0 +1,183 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  
+% "Plantilla para diseño de tesis" versión M.1.0.0
+% 
+% Plantilla para diseño de tesis basándose en la "Guía para la Redacción de Tesis e Informes Académicos", de aquí en 
+% adelante referido como la "Guía"
+% Creado por Michael Morales 
+%                    Licenciado en Física, Universidad del Valle de Guatemala
+%                    mikael.mm@gmail.com
+% Lea el manual que acompaña a este archivo para conocer y manejar eficientemente esta primera versión de la Plantilla
+%
+% Este es uno de dos archivos necesarios para presentar la Tesis, el otro es Caratulas.tex
+%
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+%
+% Aspectos generales:
+%                                   * El archivo cumple con márgenes y espaciados según la Guía
+%                                   * El archivo es para imprimir a doble lado
+%                                   * El archivo, a esta primera versión, cumple con Lista de Figuras, Lista de Cuadros, Lista de 
+%                                      Contenido. Pero aún no la Lista de Gráficas
+%
+% AGRADECIMIENTO: 
+%                                  A Roberto Landaverry por permitirme utilizar partes de su tesis como referencia y ejemplo 
+%                                  durante el diseño de esta plantilla
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%                                        
+\ProvidesPackage{M.1.0.0}
+
+%\documentclass{book}
+\usepackage{graphicx}                % Paquete para la utilización de imágenes
+\usepackage{fancyhdr}                % Paquete para el manejo de los títulos y numeración
+\usepackage{setspace}                % Paquete para modificar el interlineado para lugares específicos -por ejemplo, al citar
+\usepackage[compact]{titlesec}   % Paquete para modificar espacios de las secciones
+\usepackage[super, sort]{natbib} % Paquete para manejo de la bibliografíaa
+\bibpunct{(}{)}{;}{a}{,}{,}           % requerido por natbib        
+
+\oddsidemargin=.5in                     % Definición de márgenes
+\evensidemargin=.5in
+\textwidth=5.9in
+\topmargin=-.5in
+\textheight=9in
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%                                          Renombrando Etiquetas
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\chaptername}{Cap\'itulo}
+\renewcommand{\figurename}{Figura}
+\renewcommand{\contentsname}{\'Indice de contenido}
+\renewcommand{\listfigurename}{Lista de figuras}
+\renewcommand{\listtablename}{Lista de tablas}
+\renewcommand{\indexname}{\'Indice}
+\renewcommand{\bibname}{\thechapter\ Bibliograf\'ia}
+\renewcommand{\appendixname}{Ap\'endice}
+\renewcommand{\tablename}{Cuadro}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%                                               Interlineado 1.5
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\baselinestretch}{1.5}  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%                           Tabulación de las secciones y formato de capítulos
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\titleformat{\chapter}[hang]{\huge \bf \centering}{\textbf{\thechapter}}{1em}{}
+\titlespacing{\chapter}{0pt}{0pt}{1cm}
+
+\titlespacing{\section}{0cm}{*0}{*0}
+\titleformat{\subsection}[runin]{\large\bfseries}{\thesubsection.}{0.5em}{}
+\titlespacing{\subsection}{1.4cm}{*0}{.25cm}
+
+\titleformat{\subsubsection}[runin]{\normalfont\bfseries}{\thesubsubsection.}{0.5em}{}
+\titlespacing{\subsubsection}{3.2cm}{*0}{.25cm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Contador de secciones hasta tres subsecciones, permite que salga la numeración a cada subsección
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setcounter{secnumdepth}{4} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Definici\'on de estilos, quita encabezados y maneja la numeraci\'on seg\'un la Gu\'ia
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\fancypagestyle{plain1}{%
+\fancyhf{} % clear all header and footer fields
+\fancyfoot[C]{ \thepage} % except the center
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}}
+
+\fancypagestyle{cuerpo}{%
+\fancyhf{} % clear all header and footer fields
+\fancyhead[LE,RO]{\thepage}
+}
+
+\fancypagestyle{capitulo}{%
+\fancyhf{} % clear all header and footer fields
+\fancyfoot[C]{ \thepage} % except the center
+%\fancyhead[LE,RO]{\thepage}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%             Nuevo comando \Chapter que agrupa las instrucciones de capítulo y tipo de numeración 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\Chapter}[1]{ 
+\chapter{#1}
+\thispagestyle{capitulo}
+
+%\indent
+}
+
+\newcommand{\Figura}{
+\listoffigures % Lista de Figuras
+\addcontentsline{toc}{chapter}{Lista de Figuras}             %Hace que aparezca en el índice de Contenido
+}
+
+\newcommand{\Cuadros}{
+\listoftables % Lista de Cuadros o tablas
+\addcontentsline{toc}{chapter}{Lista de Cuadros}           %Hace que aparezca en el índice de Contenido
+}
+
+\newcommand{\Res}[1]{
+\chapter*{#1}
+\addcontentsline{toc}{chapter}{#1} %Hace que aparezca en el índice de Contenido
+\thispagestyle{capitulo}                                                    %Siendo inicio de capítulo, la numeración es centrada y abajo
+}
+
+\newcommand{\Ini}{
+
+\pagestyle{plain1}
+
+\pagenumbering{roman}  % Numeraci\'on romana
+\addtocounter{page}{4}
+
+
+%\tableofcontents %Tabla de contenido
+}
+
+\newcommand{\UnoA}{
+
+%\newpage
+\pagestyle{cuerpo}
+\pagenumbering{arabic}  %Se pone únicamente desde aquí esta instrucción y la numeración empieza a ser arábiga
+}
+
+\newcommand{\Citar}[1]{
+\begin{center}
+\begin{spacing}{1}  
+   $\ll$ \textit{#1} $\gg$
+ \end{spacing}
+\end{center}
+}
+
+
+
+\newcommand{\Biblio}{
+\addtocounter{chapter}{1}  %Incrementa el contador de capítulo. De manera estándar, la Bibliografía en Latex no está 
+			          %numerada, por lo que hay que hacerlo manual y aparte.  No modificar
+\bibliographystyle{plainnat} % required for natbib 
+}
+
+\newcommand{\Bibliotoc}{
+\addcontentsline{toc}{chapter}{\thechapter\ \ Bibliograf\'ia} %Hace que aparezca en el índice de contenido. 
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+
+%Algunos sitios utilizados
+%http://stackoverflow.com/questions/2801107/latex-positions-of-page-numbers-position-of-chapter-headings-chapters-and-tab
+%http://www.pages.drexel.edu/~pyo22/students/latexRelated/latexTutorial.html
+%http://en.wikibooks.org/wiki/LaTeX/Bibliography_Management#Bibliography_in_the_table_of_contents
+%http://sumanta679.wordpress.com/2009/05/15/latex-list-of-table-list-of-figures-and-bibliography-in-toc/
+%más los archivos pdf que documentan los paquetes utilizados. Se pueden hallar en línea o en las carpetas de MikTeX

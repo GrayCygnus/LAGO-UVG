@@ -1,0 +1,176 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  
+% "Plantilla para diseño de tesis" versión M.1.0.0
+% Sección de carátulas
+% 
+% Plantilla para diseño de tesis basándose en la "Guía para la Redacción de Tesis e Informes Académicos", de aquí en 
+% adelante referido como la "Guía"
+% Creado por Michael Morales 
+%                    Licenciado en Física, Universidad del Valle de Guatemala
+%                    mikael.mm@gmail.com
+% Lea el manual que acompaña a este archivo para conocer y manejar eficientemente esta primera versión de la Plantilla
+%
+% Este es uno de dos archivos necesarios para presentar la Tesis, el otro es M.1.0.0.tex
+%
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+%
+% Aspectos generales:
+%                                   * El archivo cumple con márgenes y espaciados según la Guía
+%                                   * Este archivo es para imprimir a hoja simple
+%
+% AGRADECIMIENTO: 
+%                                  A Roberto Landaverry por permitirme utilizar partes de su tesis como referencia y ejemplo 
+%                                  durante el diseño de esta plantilla
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%                                        
+
+
+
+\usepackage{graphicx}                % Paquete para utilizar imágenes. Necesario si se utiliza el logo de la Universidad
+
+\oddsidemargin=.5in                     % Definición de márgenes
+\evensidemargin=.5in
+\textwidth=5.9in
+\topmargin=-.5in
+\textheight=9in
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  CARATULA
+%%%%%%%%%%%%%%%%%%%
+% #1 - Facultad del autor \Caratula{1, 2, 3, 4, 5,6}
+%\Caratula{1 - Facultad }{ 2- Departamento }{ 3- autor }{4- año}{5- t\'itulo de la tesis  l\'inea 1}{ 6-t\'itulo de la tesis  l\'inea 2}
+
+\newcommand{\Caratula}[6]
+{
+\begin{center}
+
+\huge{\textbf{Universidad del Valle de Guatemala}}\\        
+\Large{#1}\\                                 %FACULTAD A LA QUE PERTENECE EL AUTOR
+\Large{#2}    %DEPARTAMENTO A LA QUE PERTENECE EL AUTOR
+
+\vspace{0.55in}                
+
+\begin{center}
+ \includegraphics[width=1.22in,height=1.55in]{logoUVGdorado.png}
+\end{center}
+
+ \vspace{0.77in}
+
+
+ \Large{\textbf{#5\\#6}} 
+                                                                                      %TITULO DE LA TESIS 
+							% NECESARIO INCLUIR \\ PARA SEPARAR EL TITULO EN DOS LINEAS
+
+ \vspace{2.05in}
+
+\textbf{#1}      %AUTOR DE LA TESIS
+
+ \vspace{1.8in}
+GUATEMALA\\
+#4
+\end{center}
+
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  HOJA EN BLANCO
+%%%%%%%%%%%%%%%%%%%
+\newcommand{\Blanco}{
+\begin{tabular*}{6in}{c}
+ \vspace{9in} \\    
+\end{tabular*}
+}
+
+\newcommand{\Media}[2]{
+\begin{tabular}{c}
+ \vspace{4in}
+\end{tabular}									%TITULO DE LA TESIS
+\begin{center}
+\Large{\textbf{#1}}
+
+\Large{\textbf{#2}}
+\end{center}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  PORTADA INTERIOR
+%%%%%%%%%%%%%%%%%%%
+\newcommand{\PInterior}[7]{
+\newpage
+\begin{center}
+
+\huge{\textbf{Universidad del Valle de Guatemala}}\\
+
+\Large{#1}\\ 				%FACULTAD A LA QUE PERTENECE EL AUTOR
+
+\Large{#2}			%DEPARTAMENTO A LA QUE PERTENECE EL AUTOR
+
+  \vspace{0.55in}
+
+\begin{center}
+ \includegraphics[width=1.22in,height=1.48in]{logoUVGdorado.png}
+\end{center}
+
+ \vspace{0.85in}
+
+%TITULO DE LA TESIS % NECESARIO INCLUIR \\ PARA SEPARAR EL TITULO EN DOS LINEAS
+ \Large{\textbf{#6\\#7}}
+
+ \vspace{1.22in}
+TRABAJO DE GRADUACI\'ON PRESENTADO POR \\		
+
+\textbf{#3} \\			%NOMBRE DEL AUTOR
+PARA OPTAR AL GRADO \\
+
+DE #5  	%CARRERA
+
+ \vspace{1.7in}
+GUATEMALA\\
+#4
+\end{center}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  HOJA DE FIRMAS
+%%%%%%%%%%%%%%%%%%%
+\newcommand{\Firmas}[6]{
+Vo.Bo.:\\
+\vspace{0.5in}
+
+
+\begin{center}
+   \begin{tabular}{c}
+   \hspace*{3in}\\
+   \hline\\
+    #1   			%NOMBRE DEL ASESOR
+    \end{tabular}
+\end{center}
+
+\vspace{0.5in}
+
+Tribunal Examinador:
+
+\vspace{1in}
+
+
+\begin{center}
+   \begin{tabular}{c}
+   \hspace*{3in}\\
+   \hline\\
+    #2\\		%NOMBRE TERNA 2
+    \vspace{1.3in}\\
+     \hline\\
+    #3\\		%NOMBRE TERNA 2
+    \vspace{1.3in}\\
+     \hline\\
+    #4\\		%NOMBRE TERNA 2
+    \end{tabular}
+\end{center}
+
+\vspace{1in}
+Fecha de aprobaci\'on:
+\begin{center}
+ Guatemala, #5 de #6
+\end{center}
+}

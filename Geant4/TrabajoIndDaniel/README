@@ -1,0 +1,86 @@
+Apuntes sobre tesis:
+
+Quite esto del aux: \providecommand\NAT@force@numbers{}\NAT@force@numbers
+antes de \@writefile{toc}{\contentsline {chapter}{\numberline {10}Anexos}{21}}
+
+Marco teórico:
+	Fuentes de rayos cósmicos (0%)
+	- yunior y asorey ambos tienen bonitos resúmenes
+	Campo magnético
+	- incluir info de la hoja que tiré, ughh,
+	- http://www.arpapress.com/Volumes/Vol15Issue3/IJRRAS_15_3_15.pdf
+	Cascada de rayos extensa
+	- Espectro de energía detallar de:
+		http://www.physics.ucsb.edu/sites/secure.lsit.ucsb.edu.phys.d7/files/sitefiles/education/Nielsen.pdf
+		http://www.osti.gov/scitech/servlets/purl/1006397
+		?? http://iopscience.iop.org/article/10.1088/1674-1137/40/10/100001/pdf
+	CORSIKA:
+	- *gulp*
+	- Usar resúmenes de videoconferencias y tesis de amigos usac y castro
+	- Agregar la info de cómo obtuvieron el espectro de energía
+	Radiación Cerenkov
+	- pues, a darle a la mera teoría con el libro de detectores de Groupens, también
+	Vida media del muón
+	- tomar directo de libros de texto, supongo
+	- tomar del experimento de la universidad
+	WCD
+	- hablar aquí de la calibración por histograma y por scaler
+	- hablar del cálculo de la vida media del muón
+	- hablar del PMT y la electrónica, aquí supongo?
+		- PMT
+		- Tarjeta digitalizadora
+		- Nexys, y todo eso, whaaaaa?
+		- Tyvek
+		- Agua
+	Geant4
+	- revisar trabajo de calderón, asorey y núñez
+		https://arxiv.org/pdf/1503.07270v1.pdf
+
+Antecedentes:
+	Uso de Geant4
+	- revisar trabajo de calderón, asorey y núñez
+		https://arxiv.org/pdf/1503.07270v1.pdf
+	- incluir los análisis que se han hecho y mencionar qué se replicara y en qué se innovará
+
+Metodología:
+- Revisar uso de ANNA y del software de LAGO
+- Detalle de la aplicación de los modos de calibración del WCD
+- Detalle de la configuración de geant4 aquí
+- Agregar obtención de los pulsos de geant4
+
+Resultados:
+- División por bandas de los pulsos (calibración por histogramas)
+- imágenes de la simulación de geant4
+- Histograma de carga integrada de geant4
+- Pulsos experimentales y simulados para diferentes representantes de bandas
+- Regresión de la vida media del muón (experimental y simulada)
+
+\bibitem[Alarc\'on, M. et al (1999)]{ALARCON} Alarc\'on, M. et al. 1999. \textit{Calibration and monitoring of water Cherenkov detectors with stopping and crossing muons}. Nuclear Instruments and Methods in Physics. Research A 420: 39-47. Disponible en: http://www.ung.si/public/pao/bibl/nim\_420\_ma.pdf [con acceso el 16 de noviembre del 2015]
+
+\bibitem[Allison, P. et al. (2005)]{ALLISON} Allison, P. et al. 2005. \textit{Observing muon decays in water Cherenkov detectors at Pierre Auger Observatory}. 29th International Cosmic Ray Conference Pune 00, 101-104. Disponible en: http://arxiv.org/pdf/astro-ph/0509238.pdf [tomado el 16 de noviembre del 2015]
+
+\bibitem[Asorey, H. (2012)]{ASOREY} Asorey, H. 2012. \textit{Los detectores Cherenkov del observatorio Pierre Auger y su aplicaci\'on al estudio de fondos de radiaci\'on}. Tesis Universidad Nacional de Cuyo. 286 p\'aginas.
+
+\bibitem[Asorey, H. y S. Dasso (2015)]{ASOREY2015} Asorey, H. y S. Dasso. 2015. \textit{LAGO: the Latin American Giant Observatory}. The 34th International Cosmic Ray Conference. The Hague, Pa\'ses Bajos.
+
+\bibitem[Calderon, R., H. Asorey y L. N\'u\~nez (2005)]{CALDERON} Calderon, R, H. Asorey y L. N\'u\~nez \textit{Geant4 based simulation of the Water Cherenkov Detectors of the LAGO project}. Disponible en: http://arxiv.org/pdf/1503.07270.pdf [consultado el 4 de julio 2016]
+
+\bibitem[Chen, M. et al. (2006)]{CHEN} Chen, M. et al. 2006. \textit{A study of the water Cherenkov calorimeter}. Preimpresión presentada a Eliver Science. Disponible en: http://arxiv.org/pdf/physics/0602169.pdf [consultado el 15 de marzo del 2016]
+
+\bibitem[Cherenkov, P. (1958)]{CHERENKOV} Cherenkov, P. 1958. \textit{Radiation of particles moving at a velocity exceeding that of light, and some of the possibilities for their use in experimental physics}. Nobel Lecture. P. 15.
+
+\bibitem{DASSO} Dasso, S. y H. Assorey. 2012. {\title The Scaler Mode in Pierre Auger Observatory to study heliospheric modulations of cosmic rays}. arXiv:1204.6196
+
+\bibitem[Geant4 User's Guide (2015)]{GEANT4} Geant4. 2015. \textit{Geant4 User's Guide – For Application Developers -}. Disponible en:\\ http://geant4.web.cern.ch/geant4/G4UsersDocuments/UsersGuides/ForApplicationDeveloper\\/html/index.html [consultado el 15 de mayo del 2016]
+
+\bibitem[Guan et al. (2006)]{GUAN} Guan, M. et al. 2006.  \textit{Muon Simulation at the Daya Bay site}. Disponible en: \\http://www.osti.gov/scitech/servlets/purl/1006397 [con acceso el 17 de octubre del 2016]
+
+\bibitem[Heck, D. et al (1998)]{HECK} Heck, D. 1998. \textit{CORSIKA: A Monte Carlo code to simulate Extensive Air Showers}. Disponible en: https://web.ikp.kit.edu/corsika/physics\_description/corsika\_phys.pdf [con acceso el 18 de marzo del 2016]
+
+\bibitem[Lukens, J., B. Reid y A. Tuggle (2010)]{LUKENS} Lukens, J., B. Reid y A. Tuggle.  2010. \textit{Experiment in muon Decay}. Universidad de Alabama.
+
+\bibitem[Nielsen, C. (2010)]{NIELSEN} Nielsen, C.  2010. \textit{Calibration Through Simulation of a Low-Energy Cherenkov Detector}. Tesis University of California, Santa Barbara. Disponible en: http://www.physics.ucsb.edu/sites\\/secure.lsit.ucsb.edu.phys.d7/files/sitefiles/education/ Nielsen.pdf [con acceso el 2 de junio del 2016]
+
+\bibitem[Suarez (2014)]{SUAREZ} Suarez, M. 2014. \textit{Seminario Cascadas A\'ereas Extensas (EAS) para la colaboraci\'on LAGO, Sesi\'on 2}. Disponible en: https://www.youtube.com/watch?v=AP9i5pdbJNc [con acceso el 2 de septiembre del 2015]
+
+\bibitem[Villase\~nor et al (2011)]{VILLASENOR} Villase\~nor, L. y et al. 2011. \textit{Search for Gamma Ray Bursts and Forbush Decreases in the LAGO Observatory}. International Cosmic Ray Conference, Beijing. $(10)$: 314.

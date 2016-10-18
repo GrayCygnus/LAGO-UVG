@@ -1,0 +1,49 @@
+\contentsline {chapter}{Lista de Figuras}{ix}
+\contentsline {chapter}{Lista de Cuadros}{xi}
+\contentsline {chapter}{T\'itulo del resumen}{xiii}
+\contentsline {chapter}{\numberline {1}Introducci\'on}{1}
+\contentsline {chapter}{\numberline {2}Objetivos}{3}
+\contentsline {section}{\numberline {2.1}Objetivo general}{3}
+\contentsline {section}{\numberline {2.2}Objetivos espec\'ificos}{3}
+\contentsline {chapter}{\numberline {3}Justificaci\'on}{5}
+\contentsline {chapter}{\numberline {4}Marco Te\'orico}{7}
+\contentsline {section}{\numberline {4.1}Rayos c\'osmicos}{7}
+\contentsline {subsection}{\numberline {4.1.1}Generalidades y descubrimiento de los rayos c\'osmicos}{7}
+\contentsline {subsection}{\numberline {4.1.2}Espectro de rayos c\'osmicos}{8}
+\contentsline {section}{\numberline {4.2}Actividad solar y rayos c\'osmicos}{8}
+\contentsline {section}{\numberline {4.3}Cascadas de \'area extensa}{8}
+\contentsline {subsection}{\numberline {4.3.1}Generalidades de las cascadas de \'area extensa}{8}
+\contentsline {subsection}{\numberline {4.3.2}Distribuci\'on de energ\'ia de muones a nivel del suelo}{9}
+\contentsline {subsection}{\numberline {4.3.3}CORSIKA}{9}
+\contentsline {section}{\numberline {4.4}Radiaci\'on de Vavilov-Cerenkov}{10}
+\contentsline {section}{\numberline {4.5}Vida media del mu\'on}{11}
+\contentsline {section}{\numberline {4.6}Detectores Cherenkov en agua (WCD)}{11}
+\contentsline {section}{\numberline {4.7}Geant4}{11}
+\contentsline {chapter}{\numberline {5}Antecedentes}{13}
+\contentsline {section}{\numberline {5.1}Latin American Giant Observatory}{13}
+\contentsline {subsection}{\numberline {5.1.1}Sitios de LAGO}{13}
+\contentsline {subsection}{\numberline {5.1.2}Calibraci\'on de datos en LAGO}{14}
+\contentsline {section}{\numberline {5.2}Observatorio Pierre Auger}{14}
+\contentsline {section}{\numberline {5.3}Uso de Geant4 en LAGO y otros experimentos}{15}
+\contentsline {chapter}{\numberline {6}Metodolog\'ia}{17}
+\contentsline {section}{\numberline {6.1}Instalaci\'on del WCD}{17}
+\contentsline {section}{\numberline {6.2}Calibraci\'on por histograma}{17}
+\contentsline {section}{\numberline {6.3}Geant4}{17}
+\contentsline {subsection}{\numberline {6.3.1}Geometr\'ia}{17}
+\contentsline {subsubsection}{\numberline {6.3.1.1}Objetos y colocaci\'on}{17}
+\contentsline {subsubsection}{\numberline {6.3.1.2}Materiales}{17}
+\contentsline {subsubsection}{\numberline {6.3.1.3}Superficies}{17}
+\contentsline {subsection}{\numberline {6.3.2}Detecci\'on}{17}
+\contentsline {subsubsection}{\numberline {6.3.2.1}Asignaci\'on de superficies sensibles}{17}
+\contentsline {subsubsection}{\numberline {6.3.2.2}Criterio de detecci\'on}{17}
+\contentsline {subsection}{\numberline {6.3.3}Generaci\'on de evento}{17}
+\contentsline {subsubsection}{\numberline {6.3.3.1}Procesos f\'isicos}{17}
+\contentsline {subsubsection}{\numberline {6.3.3.2}Posici\'on y direcci\'on}{17}
+\contentsline {subsubsection}{\numberline {6.3.3.3}Espectro de energ\'ia de muones}{17}
+\contentsline {subsection}{\numberline {6.3.4}Datos de salida}{17}
+\contentsline {subsubsection}{\numberline {6.3.4.1}Forma del pulso}{17}
+\contentsline {subsubsection}{\numberline {6.3.4.2}Histograma de carga para muones}{17}
+\contentsline {chapter}{\numberline {7}Resultados}{19}
+\contentsline {chapter}{\numberline {8}Discusi\'on}{21}
+\contentsline {chapter}{9\ \ Bibliograf\'ia}{23}
+\contentsline {chapter}{\numberline {10}Anexos}{25}
