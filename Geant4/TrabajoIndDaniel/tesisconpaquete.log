@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.11.2)  20 OCT 2016 01:46
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.11.2)  20 OCT 2016 12:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -192,12 +192,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 ] [10
 
 ]
-(./tesisconpaquete.lot
-Missing character: There is no Ã in font cmr10!
-Missing character: There is no ­ in font cmr10!
-Missing character: There is no Ã in font cmr10!
-Missing character: There is no ³ in font cmr10!
-)
+(./tesisconpaquete.lot)
 \tf@lot=\write5
 \openout5 = `tesisconpaquete.lot'.
 
@@ -211,12 +206,12 @@ Cap\'itulo 1.
 
 ]
 Cap\'itulo 2.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 46.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 48.
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 46.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 48.
 Missing character: There is no Ã in font cmr10!
 Missing character: There is no ­ in font cmr10!
 Missing character: There is no Ã in font cmr10!
@@ -302,7 +297,7 @@ Missing character: There is no ­ in font cmr10!
  <GeisserMuon.png, id=66, 403.5075pt x 272.01625pt>
 File: GeisserMuon.png Graphic file (type png)
  <use GeisserMuon.png>
-Package pdftex.def Info: GeisserMuon.png used on input line 100.
+Package pdftex.def Info: GeisserMuon.png used on input line 102.
 (pdftex.def)             Requested size: 403.50652pt x 272.01558pt.
 Missing character: There is no Ã in font cmr10!
 Missing character: There is no ³ in font cmr10!
@@ -404,42 +399,39 @@ Cap\'itulo 5.
 <ASOREY2015.png, id=82, 593.21625pt x 391.4625pt>
 File: ASOREY2015.png Graphic file (type png)
  <use ASOREY2015.png>
-Package pdftex.def Info: ASOREY2015.png used on input line 136.
+Package pdftex.def Info: ASOREY2015.png used on input line 138.
 (pdftex.def)             Requested size: 341.11533pt x 225.1071pt.
  [13 <./ASOREY2015.png>]
 
-Package natbib Warning: Citation `Yunior' on page 14 undefined on input line 14
-9.
+Package natbib Warning: Citation `Yunior' on page 14 undefined on input line 15
+1.
 
 
 Package natbib Warning: Citation `Yunior' on page 14 undefined on input line 15
-1.
+3.
 
 [14] [15] [16
 
 ]
 Cap\'itulo 6.
-Missing character: There is no Ã in font cmr10!
-Missing character: There is no ­ in font cmr10!
-Missing character: There is no Ã in font cmr10!
-Missing character: There is no ³ in font cmr10!
-Missing character: There is no Ã in font cmr10!
-Missing character: There is no ¡ in font cmr10!
-<GeometriaG4.png, id=96, 703.87968pt x 484.81125pt>
+<GeometriaG4.png, id=96, 445.665pt x 377.41pt>
 File: GeometriaG4.png Graphic file (type png)
  <use GeometriaG4.png>
-Package pdftex.def Info: GeometriaG4.png used on input line 197.
-(pdftex.def)             Requested size: 341.11533pt x 234.94823pt.
+Package pdftex.def Info: GeometriaG4.png used on input line 182.
+(pdftex.def)             Requested size: 213.19627pt x 180.5443pt.
 
-[17] [18] [19 <./GeometriaG4.png (PNG copy)>] [20
 
-]
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[17] [18 <./GeometriaG4.png>]
 Cap\'itulo 7.
-[21] [22
+[19
+
+] [20
 
 ]
 Cap\'itulo 8.
-[23] [24
+[21] [22
 
 ]
 Missing character: There is no Ã in font cmr10!
@@ -447,36 +439,44 @@ Missing character: There is no ³ in font cmr10!
 Missing character: There is no â in font cmti10!
 Missing character: There is no € in font cmti10!
 Missing character: There is no “ in font cmti10!
- [25] [26]
+ [23] [24]
 Cap\'itulo 10.
+
+Overfull \hbox (10.361pt too wide) in paragraph at lines 263--277
+ [][] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 
 Package natbib Warning: There were undefined citations.
 
-[27
+[25
 
-] (./tesisconpaquete.aux) ) 
+] [26] (./tesisconpaquete.aux) ) 
 Here is how much of TeX's memory you used:
  2377 strings out of 494966
  32347 string characters out of 6179559
- 95852 words of memory out of 5000000
+ 98852 words of memory out of 5000000
  5577 multiletter control sequences out of 15000+600000
  6110 words of font info for 22 fonts, out of 8000000 for 9000
  40 hyphenation exceptions out of 8191
- 38i,14n,45p,1342b,266s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-ex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf
--dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on tesisconpaquete.pdf (37 pages, 390046 bytes).
+ 38i,14n,49p,1342b,266s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmm
+i10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on tesisconpaquete.pdf (36 pages, 355926 bytes).
 PDF statistics:
- 169 PDF objects out of 1000 (max. 8388607)
- 115 compressed objects within 2 object streams
+ 165 PDF objects out of 1000 (max. 8388607)
+ 111 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  16 words of extra memory for PDF output out of 10000 (max. 10000000)
 

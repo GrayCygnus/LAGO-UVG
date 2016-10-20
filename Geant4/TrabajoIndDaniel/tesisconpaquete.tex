@@ -39,8 +39,10 @@ El m\'odulo de f\'isica en este megaproyecto abarca la caracterizaci\'on de se\~
 
 \Chapter{Objetivos}
 
-\section{Objetivo general}
-Calibrar las se\~nales obtenidas del fototubo dentro del WCD utilizando el modo de histograma y comparando con simulaci\'on Monte Carlo con Geant4.
+\section{Objetivo general del megaproyecto}
+Dise\~nar y construir un detector de radiaci\'on Cherenkov de agua para tomar y procesar datos, en la identificaci\'on de part\'iculas secundarias provenientes de cascadas extensas de rayos c\'osmicos inciden en el detector de radiaci\'on Cherenkov de agua.
+\section{Objetivo general del m\'odulo}
+Calibrar las se\~nales obtenidas del fototubo dentro del WCD utilizando el modo histograma y comparando a resultados de una simulaci\'on Monte Carlo con Geant4.
 \section{Objetivos espec\'ificos}
 \begin{itemize}
  \item Obtener la calibraci\'on por el mu\'on vertical equivalente (VEM) a partir de la simulaci\'on y compararlo con el an\'alisis de primer nivel de los datos de ACQUA del montaje experimental del tanque.
@@ -168,33 +170,16 @@ Para realizar las simulaciones de GEANT4 se siguieron las gu\'ias de desarrollad
 
 \section{Vida media del mu\'on con datos del WCD}
 
-\section{Geant4}
+\section{Simulaci\'on}
+Se instal\'o Geant4 10.2 descargando todos los datos de instalaci\'on y con QT y OpenGL como interfaz gr\'afica. Se utilizaron de referencia los ejemplos que trae la librer\'ia, en particular OpNovice (que implementa la radiaci\'on Cherenkov), HitLXE (que utiliza fotomultiplicadores). El desarrollo del programa fue auxiliado por el trabajo de H\'ector P\'erez durante todo el proceso; ambos programas est\'an disponibles en el repositorio https://github.com/hepfpeh/Geant4-WCD.git.
 \subsection{Geometr\'ia}
 \subsubsection{Objetos y colocaci\'on}
 
-Los objetos de la construcci\'on del detector relevantes para la simulaci\'on son los objetos con los que interact\'uan los fot\'ones \'opticos y los secundarios incidentes dentro del tanque. Estos objetos son el recubrimiento de Tyvek, que se toma como un capa cil\'indrica, el agua dentro del Tyvek, la superficie de vidrio borosilicato del fotomultplicador y el fotoc\'atodo de aluminio, ambos tomados como semiesferas. Geant4 permite organizar objetos seg\'un jerarqu\'ias: el cuadro 6.1 describe la forma, dimensiones y colocaci\'on de los objetos y sus jerarqu\'ias bajo los respectivos vol\'umenes madre. Las dimensiones del Tyvek y de las semiesferas que conforman la parte del fotomultiplicador en contacto con el agua fueron medidas directamente del tanque del experimento. Esta geometr\'ia se ve claramente en la figura 6.1.
+Los objetos de la construcci\'on del detector relevantes para la simulaci\'on son los objetos con los que interact\'uan los fot\'ones \'opticos y los secundarios incidentes dentro del tanque. Estos objetos son el recubrimiento de Tyvek, que se toma como un capa cil\'indrica, el agua dentro del Tyvek, la superficie de vidrio borosilicato del fotomultplicador y el fotoc\'atodo de aluminio, ambos tomados como semiesferas. Geant4 permite organizar objetos seg\'un jerarqu\'ias: el cuadro 10.1 en el cap\'itulo de Anexos describe la forma, dimensiones y colocaci\'on de los objetos y sus jerarqu\'ias bajo los respectivos vol\'umenes madre. Las dimensiones del Tyvek y de las semiesferas que conforman la parte del fotomultiplicador en contacto con el agua fueron medidas directamente del tanque del experimento. Esta geometr\'ia se expone visualmente en la figura 6.1.
 
-\begin{table}[ht]
-\caption{ Descripci\'on de los objetos en la simulaci\'on y sus jerarquías lógicas}
-\centering
-\begin{tabular}{l c c c c }
-\hline
-Nombre & \specialcell{Volumen madre\\(posici\'on)} & Material & Tipo & Dimensiones  \\
-
- \hline
-\hline
-World & ninguno & Aire & G4Box & 1 metro por lado\\
-Tyvek & \specialcell{World\\(0,0,0)} & Tyvek & G4Cons & \specialcell{Radio interno a = 0m\\Radio interno b = 0m\\ Radio externo a = 40.1m\\Radio externo b = 40.1m\\Altura = 57.1cm\\\'Angulo m\'inimo = $0^o$\\\'Angulo m\'aximo = $360^o$}\\
-Agua & \specialcell{Tyvek\\(0,0,0)} & Agua & G4Cons & \specialcell{Radio interno a = 0m\\Radio interno b = 0m\\ Radio externo a = 40.0m\\Radio externo b = 40.0m\\Altura = 57.0cm\\\'Angulo m\'inimo = $0^o$\\\'Angulo m\'aximo = $360^o$}\\
-Vidrio PMT & \specialcell{Agua\\(0,0,57cm)} & Borosilicato & G4Sphere & \specialcell{Radio interno = 0.0m\\Radio externo = 11.4cm\\\'Angulo $\phi$ m\'inimo = $0^o$\\\'Angulo $\phi$ que abarca = $360^o$\\\'Angulo $\theta$ m\'inimo = $0^o$\\\'Angulo $\theta$ que abarca = $360^o$}\\
-Fotocátodo PMT & \specialcell{Vidrio PMT\\(0,0,0)} & Aluminio & G4Sphere & \specialcell{Radio interno = 0.0m\\Radio externo = 11.1cm\\\'Angulo $\phi$ m\'inimo = $0^o$\\\'Angulo $\phi$ que abarca = $360^o$\\\'Angulo $\theta$ m\'inimo = $0^o$\\\'Angulo $\theta$ que abarca = $360^o$}\\
-\hline
-\end{tabular}
-\end{table}
-
-\begin{figure}[ht] %opción h - here pone la imagen aquí en esta posición del documento
+\begin{figure}[h] %opción h - here pone la imagen aquí en esta posición del documento
 \begin{center}
- \includegraphics[width = 0.8\linewidth]{GeometriaG4.png}
+ \includegraphics[width = 0.5\linewidth]{GeometriaG4.png}
  
 (Fuente propia)
 \caption{Esquema de la geometr\'ia general del detector en la simulaci\'on Geant4, mostrando el recubrimiento Tyvek en forma cil\'indrica y las superficies de vidrio y fotoc\'atodo del fotomultiplicador}
@@ -202,6 +187,8 @@ Fotocátodo PMT & \specialcell{Vidrio PMT\\(0,0,0)} & Aluminio & G4Sphere & \spe
 \end{figure}
 
 \subsubsection{Materiales}
+Los materiales se tomaron del cat\'alogo de NIST de Geant4, y con la clase G4MaterialsPropertiesTable se asignaron valores de \'indices de refracci\'on y largo de atenuaci\'on al agua correspondientes a una lista de energ\'ia de fot\'on (para las tablas completas, ver el cuadro 10.2 en Anexos) y el \'indice de refracci\'on del borosilicato que se tom\'o como 1.50. El vac\'io se model\'o como gas hidr\'ogeno a una temperatura de 0.1 kelvin y con la densidad promedio del universo.
+
 \subsubsection{Superficies}
 
 \subsection{Detecci\'on}
@@ -270,6 +257,53 @@ Fotocátodo PMT & \specialcell{Vidrio PMT\\(0,0,0)} & Aluminio & G4Sphere & \spe
  % % % % % % % % % % % % % % % % % % % % % %                                   Ap\'endices
 
 \Chapter{Anexos}
+\begin{table}[h]
+\caption{ Descripci\'on de los objetos en la simulaci\'on y sus jerarqu\'ias l\'ogicas}
+\centering
+\begin{tabular}{l c c c c }
+\hline
+Nombre & \specialcell{Volumen madre\\(posici\'on)} & Material & Tipo & Dimensiones  \\
 
+ \hline
+\hline
+World & ninguno & Aire & G4Box & 1 metro por lado\\ \hline
+Tyvek & \specialcell{World\\(0,0,0)} & Tyvek & G4Cons & \specialcell{Radio interno a = 0m\\Radio interno b = 0m\\ Radio externo a = 40.1m\\Radio externo b = 40.1m\\Altura = 57.1cm\\\'Angulo m\'inimo = $0^o$\\\'Angulo m\'aximo = $360^o$}\\ \hline
+Agua & \specialcell{Tyvek\\(0,0,0)} & Agua & G4Cons & \specialcell{Radio interno a = 0m\\Radio interno b = 0m\\ Radio externo a = 40.0m\\Radio externo b = 40.0m\\Altura = 57.0cm\\\'Angulo m\'inimo = $0^o$\\\'Angulo m\'aximo = $360^o$}\\ \hline
+Vidrio PMT & \specialcell{Agua\\(0,0,57cm)} & Borosilicato & G4Sphere & \specialcell{Radio interno = 0.0m\\Radio externo = 11.4cm\\\'Angulo $\phi$ m\'inimo = $0^o$\\\'Angulo $\phi$ que abarca = $360^o$\\\'Angulo $\theta$ m\'inimo = $0^o$\\\'Angulo $\theta$ que abarca = $360^o$}\\ \hline
+Fotoc\'atodo PMT & \specialcell{Vidrio PMT\\(0,0,0)} & Aluminio & G4Sphere & \specialcell{Radio interno = 0.0m\\Radio externo = 11.1cm\\\'Angulo $\phi$ m\'inimo = $0^o$\\\'Angulo $\phi$ que abarca = $360^o$\\\'Angulo $\theta$ m\'inimo = $0^o$\\\'Angulo $\theta$ que abarca = $360^o$}\\ \hline
+Vac\'io dentro PMT & \specialcell{Fotoc\'atodo PMT\\(0,0,0)} & Vac\'io & G4Sphere & \specialcell{Radio interno = 0.0m\\Radio externo = 11.0cm\\\'Angulo $\phi$ m\'inimo = $0^o$\\\'Angulo $\phi$ que abarca = $360^o$\\\'Angulo $\theta$ m\'inimo = $0^o$\\\'Angulo $\theta$ que abarca = $360^o$}\\ \hline
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\caption{ Propiedades de material asignadas al agua en la simulaci\'on a trav\'es de la clase G4MaterialsPropertiesTable}
+\centering
+\begin{tabular}{c c c | c c c}
+\hline
+\specialcell{Energ\'ia\\del fot\'on (eV)} & \specialcell{\'Indice de\\refracci\'on} & \specialcell{Largo de\\atenuaci\'on (m)} & \specialcell{Energ\'ia\\del fot\'on (eV)} & \specialcell{\'Indice de\\refracci\'on} & \specialcell{Largo de\\atenuaci\'on (m)} \\
+2.034                     & 1.3435                   & 3.448                     & 2.757                     & 1.3522                   & 55.556                    \\
+2.068                     & 1.344                    & 4.082                     & 2.82                      & 1.353                    & 52.632                    \\
+2.103                     & 1.3445                   & 6.329                     & 2.885                     & 1.3535                   & 52.632                    \\
+2.139                     & 1.345                    & 9.174                     & 2.954                     & 1.354                    & 47.619                    \\
+2.177                     & 1.3455                   & 12.346                    & 3.026                     & 1.3545                   & 45.455                    \\
+2.216                     & 1.346                    & 13.889                    & 3.102                     & 1.355                    & 41.667                    \\
+2.256                     & 1.3465                   & 15.152                    & 3.181                     & 1.3555                   & 37.037                    \\
+2.298                     & 1.347                    & 17.241                    & 3.265                     & 1.356                    & 33.333                    \\
+2.341                     & 1.3475                   & 18.868                    & 3.353                     & 1.3568                   & 30                        \\
+2.386                     & 1.348                    & 20                        & 3.446                     & 1.3572                   & 28.5                      \\
+2.433                     & 1.3485                   & 26.316                    & 3.545                     & 1.358                    & 27                        \\
+2.481                     & 1.3492                   & 35.714                    & 3.649                     & 1.3585                   & 24.5                      \\
+2.532                     & 1.35                     & 45.455                    & 3.76                      & 1.359                    & 22                        \\
+2.585                     & 1.3505                   & 47.619                    & 3.877                     & 1.3595                   & 19.5                      \\
+2.64                      & 1.351                    & 52.632                    & 4.002                     & 1.36                     & 17.5                      \\
+2.697                     & 1.3518                   & 52.632                    & 4.136                     & 1.3608                   & 14.5 \\
+
+ \hline
+\hline
+
+\hline
+\end{tabular}
+\end{table}
 \end{document}
 
