@@ -27,23 +27,24 @@
 \contentsline {section}{\numberline {5.3}Uso de Geant4 en LAGO y otros experimentos}{15}
 \contentsline {chapter}{\numberline {6}Metodolog\'ia}{17}
 \contentsline {section}{\numberline {6.1}Instalaci\'on del WCD}{17}
-\contentsline {section}{\numberline {6.2}Calibraci\'on por histograma}{17}
-\contentsline {section}{\numberline {6.3}Geant4}{17}
-\contentsline {subsection}{\numberline {6.3.1}Geometr\'ia}{17}
-\contentsline {subsubsection}{\numberline {6.3.1.1}Objetos y colocaci\'on}{17}
-\contentsline {subsubsection}{\numberline {6.3.1.2}Materiales}{17}
-\contentsline {subsubsection}{\numberline {6.3.1.3}Superficies}{17}
-\contentsline {subsection}{\numberline {6.3.2}Detecci\'on}{17}
-\contentsline {subsubsection}{\numberline {6.3.2.1}Asignaci\'on de superficies sensibles}{17}
-\contentsline {subsubsection}{\numberline {6.3.2.2}Criterio de detecci\'on}{17}
-\contentsline {subsection}{\numberline {6.3.3}Generaci\'on de evento}{17}
-\contentsline {subsubsection}{\numberline {6.3.3.1}Procesos f\'isicos}{17}
-\contentsline {subsubsection}{\numberline {6.3.3.2}Posici\'on y direcci\'on}{17}
-\contentsline {subsubsection}{\numberline {6.3.3.3}Espectro de energ\'ia de muones}{17}
-\contentsline {subsection}{\numberline {6.3.4}Datos de salida}{17}
-\contentsline {subsubsection}{\numberline {6.3.4.1}Forma del pulso}{17}
-\contentsline {subsubsection}{\numberline {6.3.4.2}Histograma de carga para muones}{17}
-\contentsline {chapter}{\numberline {7}Resultados}{19}
-\contentsline {chapter}{\numberline {8}Discusi\'on}{21}
-\contentsline {chapter}{9\ \ Bibliograf\'ia}{23}
-\contentsline {chapter}{\numberline {10}Anexos}{25}
+\contentsline {section}{\numberline {6.2}Calibraci\'on por histograma de datos del WCD}{17}
+\contentsline {section}{\numberline {6.3}Vida media del mu\'on con datos del WCD}{17}
+\contentsline {section}{\numberline {6.4}Geant4}{17}
+\contentsline {subsection}{\numberline {6.4.1}Geometr\'ia}{17}
+\contentsline {subsubsection}{\numberline {6.4.1.1}Objetos y colocaci\'on}{17}
+\contentsline {subsubsection}{\numberline {6.4.1.2}Materiales}{17}
+\contentsline {subsubsection}{\numberline {6.4.1.3}Superficies}{17}
+\contentsline {subsection}{\numberline {6.4.2}Detecci\'on}{17}
+\contentsline {subsubsection}{\numberline {6.4.2.1}Asignaci\'on de superficies sensibles}{17}
+\contentsline {subsubsection}{\numberline {6.4.2.2}Criterio de detecci\'on}{17}
+\contentsline {subsection}{\numberline {6.4.3}Generaci\'on de evento}{17}
+\contentsline {subsubsection}{\numberline {6.4.3.1}Procesos f\'isicos}{17}
+\contentsline {subsubsection}{\numberline {6.4.3.2}Posici\'on y direcci\'on}{17}
+\contentsline {subsubsection}{\numberline {6.4.3.3}Espectro de energ\'ia de muones}{17}
+\contentsline {subsection}{\numberline {6.4.4}Datos de salida}{17}
+\contentsline {subsubsection}{\numberline {6.4.4.1}Forma del pulso}{17}
+\contentsline {subsubsection}{\numberline {6.4.4.2}Histograma de carga para muones}{17}
+\contentsline {chapter}{\numberline {7}Resultados}{21}
+\contentsline {chapter}{\numberline {8}Discusi\'on}{23}
+\contentsline {chapter}{9\ \ Bibliograf\'ia}{25}
+\contentsline {chapter}{\numberline {10}Anexos}{27}

@@ -1,5 +1,7 @@
 \documentclass{book}
 \usepackage{M.1.0.0}
+\newcommand{\specialcell}[2][c]{%
+  \begin{tabular}[#1]{@{}c@{}}#2\end{tabular}}
 
 %  % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 %
@@ -169,6 +171,36 @@ Para realizar las simulaciones de GEANT4 se siguieron las gu\'ias de desarrollad
 \section{Geant4}
 \subsection{Geometr\'ia}
 \subsubsection{Objetos y colocaci\'on}
+
+Los objetos de la construcci\'on del detector relevantes para la simulaci\'on son los objetos con los que interact\'uan los fot\'ones \'opticos y los secundarios incidentes dentro del tanque. Estos objetos son el recubrimiento de Tyvek, que se toma como un capa cil\'indrica, el agua dentro del Tyvek, la superficie de vidrio borosilicato del fotomultplicador y el fotoc\'atodo de aluminio, ambos tomados como semiesferas. Geant4 permite organizar objetos seg\'un jerarqu\'ias: el cuadro 6.1 describe la forma, dimensiones y colocaci\'on de los objetos y sus jerarqu\'ias bajo los respectivos vol\'umenes madre. Las dimensiones del Tyvek y de las semiesferas que conforman la parte del fotomultiplicador en contacto con el agua fueron medidas directamente del tanque del experimento. Esta geometr\'ia se ve claramente en la figura 6.1.
+
+\begin{table}[ht]
+\caption{ Descripci\'on de los objetos en la simulaci\'on y sus jerarquías lógicas}
+\centering
+\begin{tabular}{l c c c c }
+\hline
+Nombre & \specialcell{Volumen madre\\(posici\'on)} & Material & Tipo & Dimensiones  \\
+
+ \hline
+\hline
+World & ninguno & Aire & G4Box & 1 metro por lado\\
+Tyvek & \specialcell{World\\(0,0,0)} & Tyvek & G4Cons & \specialcell{Radio interno a = 0m\\Radio interno b = 0m\\ Radio externo a = 40.1m\\Radio externo b = 40.1m\\Altura = 57.1cm\\\'Angulo m\'inimo = $0^o$\\\'Angulo m\'aximo = $360^o$}\\
+Agua & \specialcell{Tyvek\\(0,0,0)} & Agua & G4Cons & \specialcell{Radio interno a = 0m\\Radio interno b = 0m\\ Radio externo a = 40.0m\\Radio externo b = 40.0m\\Altura = 57.0cm\\\'Angulo m\'inimo = $0^o$\\\'Angulo m\'aximo = $360^o$}\\
+Vidrio PMT & \specialcell{Agua\\(0,0,57cm)} & Borosilicato & G4Sphere & \specialcell{Radio interno = 0.0m\\Radio externo = 11.4cm\\\'Angulo $\phi$ m\'inimo = $0^o$\\\'Angulo $\phi$ que abarca = $360^o$\\\'Angulo $\theta$ m\'inimo = $0^o$\\\'Angulo $\theta$ que abarca = $360^o$}\\
+Fotocátodo PMT & \specialcell{Vidrio PMT\\(0,0,0)} & Aluminio & G4Sphere & \specialcell{Radio interno = 0.0m\\Radio externo = 11.1cm\\\'Angulo $\phi$ m\'inimo = $0^o$\\\'Angulo $\phi$ que abarca = $360^o$\\\'Angulo $\theta$ m\'inimo = $0^o$\\\'Angulo $\theta$ que abarca = $360^o$}\\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{figure}[ht] %opción h - here pone la imagen aquí en esta posición del documento
+\begin{center}
+ \includegraphics[width = 0.8\linewidth]{GeometriaG4.png}
+ 
+(Fuente propia)
+\caption{Esquema de la geometr\'ia general del detector en la simulaci\'on Geant4, mostrando el recubrimiento Tyvek en forma cil\'indrica y las superficies de vidrio y fotoc\'atodo del fotomultiplicador}
+\end{center}
+\end{figure}
+
 \subsubsection{Materiales}
 \subsubsection{Superficies}
 
