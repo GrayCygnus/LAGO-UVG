@@ -88,14 +88,20 @@ Lo que determina la forma de la cascada es la cantidad de materia atravesada, po
 
 La distribución lateral al eje de la lluvia tiene un máximo en algún lugar sobre el nivel del mar, típicamente entre 4 y 7 km (la cascada tiene una forma como de nabo, gorda enmedio). Luego de este punto de mayor radio de la cascada, la creación de partículas secundarias disminuye y la densidad de partículas también. Se caracteriza la edad de la cascada (S) alrededor de este punto máximo (S<1 para antes de ese máximo, S=1 cuando ocurre ese máximo y S=2 para luego del máximo). \citep{SUAREZ}
 
-\subsection{Distribuci\'on de energ\'ia de muones a nivel del suelo}
+\subsection{Distribuci\'on de energ\'ias a nivel del suelo}
+Para el observatorio de Pierre Auger, es importante conocer la distribuci\'on de energ\'ia de muones ya que los de energ\'ias mayores a 0.3 GeV son los que atraviesan los tanques y se usan para calibraci\'on. Otro tipo de part\'icula que alcanzan detectores son los rayos gamma de 100 MeV, sin embargo, el flujo de rayos gamma disminuye luego del m\'aximo de la cascada as\'i que \'unicamente detectores de gran altitud los detectan apreciablemente. \citep{WATSON}
+
 La fórmula estándar de Geisser describe la distribución energética de muones a nivel del suelo cuando la curvatura de la Tierra puede ser obviada y cuando el decaimiento de muones es negligible. Estas condiciones son equivalentes a tomar \'unicamente eventos con \'angulo cenitar menor a 70 grados y considerar muones con energ\'ias mayores a $100/\cos\theta GeV$. Sin embargo, la mayor\'ia de muones encontradas a nivel del suelo tienen energ\'ias menores a este l\'mite. El trabajo de Guan et al. extiende la f\'ormula de Geisser agreg\'ando par\'ametros ajustados por datos experimentales. La distribuci\'on energ\'etica dada es entonces
 
 \begin{equation}
 \frac{dN}{dE}=p_{0}0.14E^{-2.7}\Bigg[\frac{115}{1.1E}ln\Bigg[\frac{1+\frac{1.1E}{115}}{1+0.342\frac{1.1E}{115}}\Bigg]+\frac{45.9}{1.1E}ln\Bigg[\frac{1+\frac{1.1E}{850}}{1+0.342\frac{1.1E}{850}}\Bigg]\Bigg]
 \end{equation}
 
-donde $\theta$ es el ángulo polar y $E$ es la energía en $GeV$. Esta f\'ormula representa la distribuci\'on de muones de cascadas extensas a nivel del suelo. Los par\'ametros mencionados se ajustaron usando CORSIKA usando una densidad atmosf\'erica de $114.8 g/cm^3$. \citep{GUAN}
+donde $\theta$ es el \'angulo polar y $E$ es la energía en $GeV$. Esta f\'ormula representa la distribuci\'on de muones de cascadas extensas a nivel del suelo. Los par\'ametros mencionados se ajustaron usando CORSIKA usando una densidad atmosf\'erica de $114.8 g/cm^3$. La figura 4.1 muestra esta distribuci\'on. Un ajuste de potencia a esta gr\'afica arroja la siguiente distribuci\'on m\'as manejable \citep{GUAN}
+
+\begin{equation}
+d(E)=(4.114\pm0.003)\times10^{10}E^{-3.07143\pm0.00004}
+\end{equation}
 
 \begin{figure}[ht] %opción h - here pone la imagen aquí en esta posición del documento
 \begin{center}
@@ -121,7 +127,32 @@ La radiaci\'on Cherenkov presenta una diferenciaci\'on marcada en relaci\'on a l
 
 \section{Geant4}
 
-El modelo f\'isico que se utiliza para WCD es el de procesos de fotones \'opticos, bajo el modelo UNIFIED. Este modelo integra las principales caracter\'isticas de modelos \'opticos geom\'etricos y f\'isicos para reflexi\'on en superficies en diferentes longitudes de onda y aspereza.
+\subsection{Modelos f\'isicos}
+
+\subsection{Efectos en los bordes de volumen}
+Los modelos \textit{UNIFIED} y \textit{GLISUR} son modelos que integran las principales caracter\'isticas de modelos \'opticos geom\'etricos y f\'isicos para reflexi\'on en superficies en diferentes longitudes de onda y aspereza. La diferencia entre los modelos est\'a en c\'omo dan la distribuci\'on de la direcci\'on de la reflexi\'on de fotones.
+
+\begin{itemize}
+\item \textit{UNIFIED} modela esta distribuci\'on como proporcional a la gaussiana de un par\'ametro de aspereza (llamado \textit{sigma\_alpha} y medido en radianes). En la figura 4.1.
+\item \textit{GLISUR}	toma un par\'ametro de aspereza diferente \textit{polish}, que toma valores de 0 (m\'axima aspereza) a 1 (m\'inima aspereza), crea una esfera con radio \textit{polish}, escoge un punto al azar en su superficie y agrega el vector de la normal en ese punto a la direcci\'on de reflexi\'on.
+\end{itemize}
+
+\begin{figure}[h] %opción h - here pone la imagen aquí en esta posición del documento
+\begin{center}
+ \includegraphics[width = 0.8\linewidth]{UNIFIED.png}
+ 
+ $C_bsR$: Reflexi\'on por retrodispersi\'on\\
+ $C_dlR$: Reflexi\'on Lambertiana interna\\
+ $C_ssR$: Reflexi\'on con la normal de la superficie promedio\\
+ $C_slR$: Reflexi\'on con la normal de la rugosidad\\
+ $\theta_i$: \'Angulo de incidencia\\
+ $T$: Transmisi\'on\\
+ $\theta_r$: \'Angulo de transmisi\'on\\
+ $\sigma_\alpha$: Aspereza\\
+ Extra\'ido y modificado de \citep{GUMP}
+\caption{Ilustriaci\'on de las posibles reflexiones que el modelo \textit{UNIFIED} calcula para la direcci\'on de reflexi\'on de fotones \'opticos incidentes a superficies \'asperas. Las \'areas sombreadas ilustran la probabilidad gaussiana de cada reflexi\'on.}
+\end{center}
+\end{figure}
 
 Geant4 incluye la radiaci\'on Cherenkov como un proceso f\'isico que puede implementarse desde los archivos de procesos f\'isicos. Calcula las secciones eficaces a partir de la descripci\'on molecular del material refractor. 
 
@@ -182,30 +213,180 @@ Los objetos de la construcci\'on del detector relevantes para la simulaci\'on so
  \includegraphics[width = 0.5\linewidth]{GeometriaG4.png}
  
 (Fuente propia)
-\caption{Esquema de la geometr\'ia general del detector en la simulaci\'on Geant4, mostrando el recubrimiento Tyvek en forma cil\'indrica y las superficies de vidrio y fotoc\'atodo del fotomultiplicador}
+\caption{Ilustraci\'on de la geometr\'ia general del detector en la simulaci\'on Geant4, mostrando el recubrimiento Tyvek en forma cil\'indrica y las superficies de vidrio y fotoc\'atodo del fotomultiplicador}
 \end{center}
 \end{figure}
 
 \subsubsection{Materiales}
-Los materiales se tomaron del cat\'alogo de NIST de Geant4, y con la clase G4MaterialsPropertiesTable se asignaron valores de \'indices de refracci\'on y largo de atenuaci\'on al agua correspondientes a una lista de energ\'ia de fot\'on (para las tablas completas, ver el cuadro 10.2 en Anexos) y el \'indice de refracci\'on del borosilicato que se tom\'o como 1.50. El vac\'io se model\'o como gas hidr\'ogeno a una temperatura de 0.1 kelvin y con la densidad promedio del universo.
+Los materiales se tomaron del cat\'alogo de NIST de Geant4, y con la clase G4MaterialsPropertiesTable se asignaron valores de \'indices de refracci\'on y largo de atenuaci\'on al agua correspondientes a una lista de energ\'ia de fot\'on (para las tablas completas, ver el cuadro 10.2 en Anexos) y el \'indice de refracci\'on del borosilicato se tom\'o como 1.50. El vac\'io se model\'o como gas hidr\'ogeno a una temperatura de 0.1 kelvin y con la densidad promedio del universo.
 
 \subsubsection{Superficies}
+Se especificaron dos superficies: la superficie entre el agua y el recubrimiento de Tyvek, y el borde del fotoc\'atodo. Ambos bordes se crearon con la clase G4OpticalSurface, y son 
+\begin{itemize}
+\item Agua-Tyvek: El tyvek se coloc\'o como volumen madre del agua para que ambos estuvieran completamente en contacto en el borde del volumen del agua (a excepci\'on del contacto del agua con el vidrio de borosilicato). Esta superficie es de tipo diel\'ectrico-metal (reflexi\'on o absorci\'on), terminado \textit{ground} por la aspereza del Tyvek, y se le asign\'o el modelo \textit{unified} de Geant4. Los detalles de las propiedades que se especificaron para esta superficie usando una tabla de propiedades de material, que se resumen en el cuadro 6.1.
+\item Fotoc\'atodo: El fotoc\'atodo es el volumen de detecci\'on de la simulaci\'on, por lo que en su superficie se especific\'o una eficiencia de 1. Se cre\'o de tipo diel\'ectrico-metal (reflexi\'on o absorci\'on), con terminado \textit{polished} y se le asign\'o el modelo \textit{glisur} de Geant4 (sin embargo, debido a que se tom\'o como superficie lisa, los efectos de superficie no son relevantes y el modelo no es usado)
+\end{itemize}
+
+\begin{table}[h]
+\caption{ Descripci\'on de las propiedades de la superficie Agua-Tyvek asignadas para dos energ\'ias de fot\'on}
+\centering
+\begin{tabular}{l c c c c c }
+\hline
+\specialcell{Energ\'ia del\\fot\'on(eV)} & Reflectividad & Eficiencia & \specialcell{Coeficiente de\\refracci\'on} & \specialcell{Constante\\especular} & \specialcell{Constante\\retrodispersi\'on}  \\ \hline
+2.034 & 0.2534 & 0 & 1.35 & 0.3 & 0.2 \\
+4.136 & 0.2534 & 0 & 1.40 & 0.3 & 0.2 \\
+
+\hline
+\end{tabular}
+\end{table}
+
+Los valores de reflectividad del Tyvek fueron obtenidos por Karen Gu\'arcax para este megaproyecto en el m\'odulo de "Medio de distribuci\'on de detector de radiaci\'on Vavilov-Cherenkov" mediante un experimento de reflectividad del Tyvek sumergido en jarras con agua.
 
 \subsection{Detecci\'on}
-\subsubsection{Asignaci\'on de superficies sensibles}
-\subsubsection{Criterio de detecci\'on}
+Se defini\'o al fotoc\'atodo como detector asign\'andolo como el \textit{SensitiveDetector}. Con la clase \textit{ProcessHits} se registr\'o cada vez que un fot\'on entra en contacto con el fotoc\'atodo y se guard\'o el tiempo de detecci\'on de cada fot\'on y el conteo total.
 
 \subsection{Generaci\'on de evento}
+
 \subsubsection{Procesos f\'isicos}
 \subsubsection{Posici\'on y direcci\'on}
-\subsubsection{Espectro de energ\'ia de muones}
+La simulaci\'on consisti\'o en dos partes, una para obtener los pulsos caracter\'isticos de cada tipo de part\'icula incidente y otra parte para obtener la distribuci\'on de carga integrada (ADCq) simulada de muones verticales. Para la primera se definieron la posici\'on y direcci\'on de las part\'iculas incidentes como constantes de tal manera que atravesaran el tanque completo verticalmente.
+
+En la segunda parte del experimento se utiliz\'o una distribuci\'on uniforme sobre la tapa superior del tanque para definir la posici\'on, una distribuci\'on uniforme para el \'angulo azimutal (medido paralelo a la horizontal), y una distribuci\'on dada por $cos^2(\theta)$ para el \'angulo polar (medido respecto a la vertical). Para definir $\theta$, se utiliz\'o muestreo por rechazo para obtener valores de theta seg\'un la distribuci\'on.
+
+\begin{figure}[h] %opción h - here pone la imagen aquí en esta posición del documento
+\begin{center}
+ \includegraphics[width=0.8\linewidth]{ThetaDist.png}
+
+(Fuente propia)
+\caption{Distribuci\'on para el \'angulo $\theta$ generadas por el algoritmo del muestreo por rechazo (histograma) y la curva $\cos^2(\theta)$}
+\end{center}
+\end{figure}
 
 \subsection{Datos de salida}
-\subsubsection{Forma del pulso}
-\subsubsection{Histograma de carga para muones}
+
+Los tres tipos de salida principales fueron el n\'umero total de fotones producidos por evento, el n\'umero total de fotones detectados por evento, y el tiempo de cada detecci\'on. Los primeros dos tipos de datos de salida se utilizaron para investigar c\'omo son sus distribuciones para eventos repetidos y para determinar si la energ\'ia de muones verticales incidentes est\'a correlacionada con la cantidad de fotones detectados. La literatura predice que la se\~nal obtenida del fototubo para muones verticales que atraviesan depende principalmente de la longitud del tanque.
+
+El tercer tipo de salida se utiliz\'o para la caracterizaci\'on de los pulsos generados por a) muones verticales que atraviesan (4GeV), b) part\'icula gamma de 100 MeV (detectable a grandes altitudes) y c) electrones de Michael producidos por el decaimiento de muones en el tanque (37 MeV). Cada fot\'on excita una cantidad de electrones en el fotoc\'atodo, produciendo coriente en el fotomultiplicador. Esta cantidad de electrones est\'a dada por la eficiencia cu\'antica, que para la longitud de onda de inter\'es es de 25 (medidos en amperios sobre milivatios). Cada detecci\'on carga al multiplicador y esta carga decae como en un circuito RC,
+
+\begin{equation}
+Q(t)=Q_0e^{t/\tau}
+\end{equation}
+
+Donde $Tau$ se determin\'o experimentalmente alimentando el osciloscopio directamente del fotomultiplicador, arrojando un valor $18.76\pm0.03$. Se encontraron pulsos promedio para cada tipo de evento y se realizaron gr\'aficas de amplitud versus \textit{rise time} para cada tipo de evento, ya que se espera que haya una diferencia visible en las gr\'aficas de cada uno seg\'un \citep{}.
+
 %%%%%%%%%%%%%%%%Cap\'itulo nuevo
 
 \Chapter{Resultados}
+
+\section{Distribuciones de fotones para un evento en la simulaci\'on}
+
+\subsection{Normalidad}
+
+Primero se investig\'o la normalidad de los fotones producidos, detectados y el cociente de estos valores para el evento de un mu\'on vertical de 4GeV.
+
+\begin{figure}[h] %opción h - here pone la imagen aquí en esta posición del documento
+\begin{center}
+ \includegraphics[width=0.8\linewidth]{FotonesMuonVerticalG4.png}
+\caption{Histogramas de los fotones producidos, fotones detectados y el cociente de los fotones detectados sobre los producidos para un mu\'on vertical de 4GeV en la simulaci\'on, con un tama\~no muestral de 1000 eventos}
+\end{center}
+\end{figure}
+
+Los histogramas en la figura 7.1 sugieren que las distribuciones no siguen una distribuci\'on normal. Como complemento se us\'o la prueba Shapiro-Wilk para las hip\'otesis:
+
+Fotones producidos
+\begin{itemize}
+\item $H_1o$: La distribuci\'on de fotones producidos para el evento de un mu\'on vertical tiene normalidad
+\item $H_1a$: La distribuci\'on de fotones producidos para el evento de un mu\'on vertical no tiene normalidad
+\end{itemize}
+
+Fotones detectados
+\begin{itemize}
+\item $H_2o$: La distribuci\'on de fotones detectados para el evento de un mu\'on vertical tiene normalidad
+\item $H_2a$: La distribuci\'on de fotones detectados para el evento de un mu\'on vertical no tiene normalidad
+\end{itemize}
+
+Cociente de fotones detectados sobre fotones producidos
+\begin{itemize}
+\item $H_3o$: La distribuci\'on del cociente de fotones detectados sobre fotones producidos para el evento de un mu\'on vertical tiene normalidad
+\item $H_3a$: La distribuci\'on del cociente de fotones detectados sobre fotones producidos para el evento de un mu\'on vertical no tiene normalidad
+\end{itemize}
+
+\begin{table}[h]
+\caption{ Valores p para la prueba Shapiro-Wilk de normalidad de las distribuciones de los fotones producidos, detectados y el cociente}
+\centering
+\begin{tabular}{l | c}
+\hline
+Distribuci\'on & valor p de la prueba \\ \hline
+Fotones producidos & 5.922653054979643e-32 \\
+Fotones detectados & 1.7184711613370248e-39 \\
+$\frac{Fotones detectados}{Fotones producidos}$ & 9.682787576723116e-34 \\
+
+\hline
+\end{tabular}
+\end{table}
+
+Por los valores dados en el cuadro 7.1 por la prueba Shapiro-Wilk y por la forma de los histogramas en la figura 7.1, se concluye que ninguna de las distribuciones tiene normalidad.
+
+\subsection{Fotones detectados para diferentes energ\'ias}
+Segundo, se compararon las cantidades de fotones detectados para diferentes energ\'ias de muones verticales. Para poner a prueba las hip\'otesis:
+
+\begin{itemize}
+\item $H_4o$: No hay relaci\'on entre la energ\'ia de un muon vertical que atraviesa y el n\'umero de fotones detectados.
+\item $H_4a$: Hay relaci\'on entre la energ\'ia de un muon vertical que atraviesa y el n\'umero de fotones detectados
+\end{itemize}
+
+La secci\'on anterior revela que la distribuci\'on de los fotones detectados para una energ\'ia no sigue una distribuci\'on normal, sin embargo, el an\'alisis ANOVA para la diferencia de dos medias es robusto ante la suposici\'on de normalidad, en especial porque el tama\~no muestral es grande (n=1000 o 500). Por lo tanto, se prosigi\'o a calcular la media de fotones detectados para diferentes energ\'ias. Su representaci\'on gr\'afica se muestra en la figura 7.2
+
+\begin{figure}[h] %opción h - here pone la imagen aquí en esta posición del documento
+\begin{center}
+ \includegraphics[width=0.8\linewidth]{DetectadosVsEnergia.png}
+\caption{Promedio del n\'umero de fotones detectados respecto a la energ\'ia del mu\'on vertical incidente. Las barras de error representan el intervalo de un 95\% de confianza}
+\end{center}
+\end{figure}
+
+\begin{table}[h]
+\centering
+\caption{ Resultados de la regresi\'on lineal de los valores del promedio de fotones detectados respecto a energ\'ia de mu\'on vertical incidente}
+\begin{tabular}{l | c}
+\hline
+Pendiente & 10.3 $(GeV)^{-1}$ \\
+Intercepto & 320 \\
+Coeficiente de correlaci\'on ($r^2$) & 0.876 \\
+Valor p & 0.006006693 \\
+
+\hline
+\end{tabular}
+\end{table}
+
+Debido a que el valor p es menor a $\alpha=0.05$, se acepta la hip\'otesis alterna con un 95\% de confianza.
+
+\section{Pulsos caracter\'isticos de part\'iculas incidentes}
+
+\begin{figure}[h] %opción h - here pone la imagen aquí en esta posición del documento
+\begin{center}
+ \includegraphics[width=0.8\linewidth]{1000PulsosMu.png}
+\caption{1000 pulsos sobrepuestos de las detecciones de fotones para mu\'on vertical de 4GeV}
+\end{center}
+\end{figure}
+
+\begin{figure}[h] %opción h - here pone la imagen aquí en esta posición del documento
+\begin{center}
+ \includegraphics[width=0.8\linewidth]{1000PulsosMu.png}
+\caption{1000 pulsos sobrepuestos de las detecciones de fotones para electr\'on vertical de 4GeV}
+\end{center}
+\end{figure}
+
+\begin{table}[h]
+\caption{ Intervalos de confianza para los valores medios de amplitud y \textit{rise time} para cada tipo de part\'icula incidente}
+\centering
+\begin{tabular}{l | c c}
+\hline
+Tipo de part\'icula & Amplitud (A/mW) & \textit{Rise time} (ns) \\ \hline
+Mu\'on vertical 4GeV & (4802, 4950) & (10.15, 10.19) \\
+
+\hline
+\end{tabular}
+\end{table}
 
 %%%%%%%%%%%%%%%%Cap\'itulo nuevo
 
@@ -238,6 +419,8 @@ Los materiales se tomaron del cat\'alogo de NIST de Geant4, y con la clase G4Mat
 
 \bibitem[Guan et al. (2006)]{GUAN} Guan, M. et al. 2006.  \textit{Muon Simulation at the Daya Bay site}. Disponible en: \\http://www.osti.gov/scitech/servlets/purl/1006397 [con acceso el 17 de octubre del 2016]
 
+\bibitem[Gumplinger (2002)]{GUMP} Gumplinger, P. 2002.  \textit{Optical Photon Processes in GEANT4}. Users' Workshop en SLAC, Universidad de Stanford. Disponible en: http://geant4.slac.stanford.edu/UsersWorkshop/PDF/Peter/OpticalPhoton.pdf [con acceso el 19 de octubre del 2016]
+
 \bibitem[Heck, D. et al (1998)]{HECK} Heck, D. 1998. \textit{CORSIKA: A Monte Carlo code to simulate Extensive Air Showers}. Disponible en: https://web.ikp.kit.edu/corsika/physics\_description/corsika\_phys.pdf [con acceso el 18 de marzo del 2016]
 
 \bibitem[Lukens, J., B. Reid y A. Tuggle (2010)]{LUKENS} Lukens, J., B. Reid y A. Tuggle.  2010. \textit{Experiment in muon Decay}. Universidad de Alabama.
@@ -247,6 +430,8 @@ Los materiales se tomaron del cat\'alogo de NIST de Geant4, y con la clase G4Mat
 \bibitem[Suarez (2014)]{SUAREZ} Suarez, M. 2014. \textit{Seminario Cascadas A\'ereas Extensas (EAS) para la colaboraci\'on LAGO, Sesi\'on 2}. Disponible en: https://www.youtube.com/watch?v=AP9i5pdbJNc [con acceso el 2 de septiembre del 2015]
 
 \bibitem[Villase\~nor et al (2011)]{VILLASENOR} Villase\~nor, L. y et al. 2011. \textit{Search for Gamma Ray Bursts and Forbush Decreases in the LAGO Observatory}. International Cosmic Ray Conference, Beijing. $(10)$: 314.
+
+\bibitem[Watson, A (2002)]{WATSON} Watson, A. 2002. \textit{Extensive Air Shower and Ultra High Energy Cosmic Rays}. Disponible en: http://www.ast.leeds.ac.uk/Auger/augerthesis/mexlects3.pdf [con acceso el 21 de octubre del 2016]
 
 % \bibitem[Como aparece al citar]{referencia} Datos Bibliogr\'aficos
 
@@ -277,7 +462,7 @@ Vac\'io dentro PMT & \specialcell{Fotoc\'atodo PMT\\(0,0,0)} & Vac\'io & G4Spher
 \end{table}
 
 \begin{table}[h]
-\caption{ Propiedades de material asignadas al agua en la simulaci\'on a trav\'es de la clase G4MaterialsPropertiesTable}
+\caption{ Propiedades de material asignadas al agua en la simulaci\'on a trav\'es de la clase G4MaterialsPropertiesTable y asignadas a 32 energ\'ias de fot\'on}
 \centering
 \begin{tabular}{c c c | c c c}
 \hline

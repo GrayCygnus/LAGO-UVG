@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.11.2)  20 OCT 2016 12:24
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.11.2)  21 OCT 2016 21:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -291,13 +291,15 @@ Missing character: There is no ³ in font cmr10!
 Missing character: There is no Ã in font cmr10!
 Missing character: There is no © in font cmr10!
 Missing character: There is no Ã in font cmr10!
-Missing character: There is no ¡ in font cmr10!
-Missing character: There is no Ã in font cmr10!
 Missing character: There is no ­ in font cmr10!
- <GeisserMuon.png, id=66, 403.5075pt x 272.01625pt>
+
+Underfull \vbox (badness 3907) has occurred while \output is active []
+
+ [9]
+<GeisserMuon.png, id=73, 403.5075pt x 272.01625pt>
 File: GeisserMuon.png Graphic file (type png)
  <use GeisserMuon.png>
-Package pdftex.def Info: GeisserMuon.png used on input line 102.
+Package pdftex.def Info: GeisserMuon.png used on input line 108.
 (pdftex.def)             Requested size: 403.50652pt x 272.01558pt.
 Missing character: There is no Ã in font cmr10!
 Missing character: There is no ³ in font cmr10!
@@ -323,10 +325,6 @@ Missing character: There is no Ã in font cmr10!
 Missing character: There is no ­ in font cmr10!
 Missing character: There is no Ã in font cmr10!
 Missing character: There is no ³ in font cmr10!
-
-Underfull \vbox (badness 3907) has occurred while \output is active []
-
- [9]
 Missing character: There is no Ã in font cmr10!
 Missing character: There is no © in font cmr10!
 Missing character: There is no Ã in font cmr10!
@@ -365,6 +363,8 @@ Missing character: There is no Ã in font cmr10!
 Missing character: There is no ­ in font cmr10!
 Missing character: There is no Ã in font cmr10!
 Missing character: There is no ³ in font cmr10!
+
+[10 <./GeisserMuon.png>]
 Missing character: There is no Ã in font cmr10!
 Missing character: There is no ³ in font cmr10!
 Missing character: There is no Ã in font cmr10!
@@ -389,49 +389,102 @@ Missing character: There is no Ã in font cmr10!
 Missing character: There is no © in font cmr10!
 Missing character: There is no Ã in font cmr10!
 Missing character: There is no ¡ in font cmr10!
+ <UNIFIED.png, id=77, 462.72874pt x 441.65pt>
+File: UNIFIED.png Graphic file (type png)
 
-Underfull \vbox (badness 1117) has occurred while \output is active []
+<use UNIFIED.png>
+Package pdftex.def Info: UNIFIED.png used on input line 142.
+(pdftex.def)             Requested size: 341.11533pt x 325.58263pt.
 
- [10 <./GeisserMuon.png>] [11] [12
 
-]
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[11] [12 <./UNIFIED.png>]
 Cap\'itulo 5.
-<ASOREY2015.png, id=82, 593.21625pt x 391.4625pt>
+<ASOREY2015.png, id=86, 593.21625pt x 391.4625pt>
 File: ASOREY2015.png Graphic file (type png)
  <use ASOREY2015.png>
-Package pdftex.def Info: ASOREY2015.png used on input line 138.
+Package pdftex.def Info: ASOREY2015.png used on input line 169.
 (pdftex.def)             Requested size: 341.11533pt x 225.1071pt.
- [13 <./ASOREY2015.png>]
+ [13
 
-Package natbib Warning: Citation `Yunior' on page 14 undefined on input line 15
-1.
+ <./ASOREY2015.png>]
+
+Package natbib Warning: Citation `Yunior' on page 14 undefined on input line 18
+2.
 
 
-Package natbib Warning: Citation `Yunior' on page 14 undefined on input line 15
-3.
+Package natbib Warning: Citation `Yunior' on page 14 undefined on input line 18
+4.
 
 [14] [15] [16
 
 ]
 Cap\'itulo 6.
-<GeometriaG4.png, id=96, 445.665pt x 377.41pt>
+<GeometriaG4.png, id=100, 445.665pt x 377.41pt>
 File: GeometriaG4.png Graphic file (type png)
  <use GeometriaG4.png>
-Package pdftex.def Info: GeometriaG4.png used on input line 182.
+Package pdftex.def Info: GeometriaG4.png used on input line 213.
 (pdftex.def)             Requested size: 213.19627pt x 180.5443pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[17] [18 <./GeometriaG4.png>]
-Cap\'itulo 7.
-[19
+[17]
+Overfull \hbox (9.53874pt too wide) in paragraph at lines 243--244
+[]\OT1/cmr/m/n/10 Los val-ores de re-flec-tivi-dad del Tyvek fueron obtenidos p
+or Karen Gu^^Sarcax para este megaproyecto
+ []
 
-] [20
+[18 <./GeometriaG4.png>] <ThetaDist.png, id=108, 578.16pt x 433.62pt>
+File: ThetaDist.png Graphic file (type png)
+
+<use ThetaDist.png>
+Package pdftex.def Info: ThetaDist.png used on input line 258.
+(pdftex.def)             Requested size: 341.11533pt x 255.83359pt.
+ [19 <./ThetaDist.png>] [20]
+Cap\'itulo 7.
+<FotonesMuonVerticalG4.png, id=116, 578.16pt x 590.4459pt>
+File: FotonesMuonVerticalG4.png Graphic file (type png)
+
+<use FotonesMuonVerticalG4.png>
+Package pdftex.def Info: FotonesMuonVerticalG4.png used on input line 289.
+(pdftex.def)             Requested size: 341.11533pt x 348.36006pt.
+ [21
+
+ <./FotonesMuonVerticalG4.png>] [22]
+<DetectadosVsEnergia.png, id=125, 578.16pt x 433.62pt>
+File: DetectadosVsEnergia.png Graphic file (type png)
+
+<use DetectadosVsEnergia.png>
+Package pdftex.def Info: DetectadosVsEnergia.png used on input line 342.
+(pdftex.def)             Requested size: 341.11533pt x 255.83359pt.
+ <1000PulsosMu.png, id=126, 578.16pt x 433.62pt>
+File: 1000PulsosMu.png Graphic file (type png)
+
+<use 1000PulsosMu.png>
+Package pdftex.def Info: 1000PulsosMu.png used on input line 367.
+(pdftex.def)             Requested size: 341.11533pt x 255.83359pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: 1000PulsosMu.png Graphic file (type png)
+<use 1000PulsosMu.png>
+Package pdftex.def Info: 1000PulsosMu.png used on input line 374.
+(pdftex.def)             Requested size: 341.11533pt x 255.83359pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[23 <./DetectadosVsEnergia.png>] [24 <./1000PulsosMu.png>] [25] [26
 
 ]
 Cap\'itulo 8.
-[21] [22
+[27] [28
 
 ]
 Missing character: There is no Ã in font cmr10!
@@ -439,10 +492,21 @@ Missing character: There is no ³ in font cmr10!
 Missing character: There is no â in font cmti10!
 Missing character: There is no € in font cmti10!
 Missing character: There is no “ in font cmti10!
- [23] [24]
+
+Underfull \hbox (badness 10000) in paragraph at lines 422--423
+[]\OT1/cmr/m/n/10 Gumplinger, P. 2002. \OT1/cmr/m/it/10 Op-ti-cal Pho-ton Pro-c
+esses in GEANT4\OT1/cmr/m/n/10 . Users'
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 422--423
+\OT1/cmr/m/n/10 Work-shop en SLAC, Uni-ver-si-dad de Stan-ford. Disponible en:
+ []
+
+[29] [30]
 Cap\'itulo 10.
 
-Overfull \hbox (10.361pt too wide) in paragraph at lines 263--277
+Overfull \hbox (10.361pt too wide) in paragraph at lines 448--462
  [][] 
  []
 
@@ -452,17 +516,17 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 Package natbib Warning: There were undefined citations.
 
-[25
+[31
 
-] [26] (./tesisconpaquete.aux) ) 
+] [32] (./tesisconpaquete.aux) ) 
 Here is how much of TeX's memory you used:
- 2377 strings out of 494966
- 32347 string characters out of 6179559
- 98852 words of memory out of 5000000
- 5577 multiletter control sequences out of 15000+600000
+ 2408 strings out of 494966
+ 32960 string characters out of 6179559
+ 98913 words of memory out of 5000000
+ 5603 multiletter control sequences out of 15000+600000
  6110 words of font info for 22 fonts, out of 8000000 for 9000
  40 hyphenation exceptions out of 8191
- 38i,14n,49p,1342b,266s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,14n,45p,1342b,324s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/publ
 ic/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
 fonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
@@ -473,10 +537,10 @@ share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/te
 xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-d
 ist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on tesisconpaquete.pdf (36 pages, 355926 bytes).
+Output written on tesisconpaquete.pdf (42 pages, 690415 bytes).
 PDF statistics:
- 165 PDF objects out of 1000 (max. 8388607)
- 111 compressed objects within 2 object streams
+ 196 PDF objects out of 1000 (max. 8388607)
+ 126 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 41 words of extra memory for PDF output out of 10000 (max. 10000000)
 

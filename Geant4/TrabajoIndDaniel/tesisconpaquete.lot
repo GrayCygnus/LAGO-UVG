@@ -4,8 +4,12 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {table}{\numberline {6.1}{\ignorespaces Descripci\'on de las propiedades de la superficie Agua-Tyvek asignadas para dos energ\'ias de fot\'on}}{18}
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {7.1}{\ignorespaces Valores p para la prueba Shapiro-Wilk de normalidad de las distribuciones de los fotones producidos, detectados y el cociente}}{22}
+\contentsline {table}{\numberline {7.2}{\ignorespaces Resultados de la regresi\'on lineal de los valores del promedio de fotones detectados respecto a energ\'ia de mu\'on vertical incidente}}{23}
+\contentsline {table}{\numberline {7.3}{\ignorespaces Intervalos de confianza para los valores medios de amplitud y \textit {rise time} para cada tipo de part\'icula incidente}}{24}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\addvspace {10\p@ }
-\contentsline {table}{\numberline {10.1}{\ignorespaces Descripci\'on de los objetos en la simulaci\'on y sus jerarqu\'ias l\'ogicas}}{25}
-\contentsline {table}{\numberline {10.2}{\ignorespaces Propiedades de material asignadas al agua en la simulaci\'on a trav\'es de la clase G4MaterialsPropertiesTable}}{26}
+\contentsline {table}{\numberline {10.1}{\ignorespaces Descripci\'on de los objetos en la simulaci\'on y sus jerarqu\'ias l\'ogicas}}{31}
+\contentsline {table}{\numberline {10.2}{\ignorespaces Propiedades de material asignadas al agua en la simulaci\'on a trav\'es de la clase G4MaterialsPropertiesTable y asignadas a 32 energ\'ias de fot\'on}}{32}

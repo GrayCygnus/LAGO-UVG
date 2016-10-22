@@ -3,10 +3,16 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Distribuci\'on de la energ\'ia de muones generada con n\'umeros aleatorios basado en la f\'ormula de Geisser}}{10}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Ilustriaci\'on de las posibles reflexiones que el modelo \textit {UNIFIED} calcula para la direcci\'on de reflexi\'on de fotones \'opticos incidentes a superficies \'asperas. Las \'areas sombreadas ilustran la probabilidad gaussiana de cada reflexi\'on.}}{12}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {5.1}{\ignorespaces Distribuci\'on geogr\'afica de los detectores de LAGO operacionales (tri\'angulos azules), y los que comenzar\'an a funcionar entre 2016 y 2017 (cuadrados rojos), y a la izquierda el umbral de rigidez vertical (vertical rigidity cutoff) del campo geomagn\'etico para cada estaci\'on.}}{13}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Esquema de la geometr\'ia general del detector en la simulaci\'on Geant4, mostrando el recubrimiento Tyvek en forma cil\'indrica y las superficies de vidrio y fotoc\'atodo del fotomultiplicador}}{18}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Ilustraci\'on de la geometr\'ia general del detector en la simulaci\'on Geant4, mostrando el recubrimiento Tyvek en forma cil\'indrica y las superficies de vidrio y fotoc\'atodo del fotomultiplicador}}{18}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Distribuci\'on para el \'angulo $\theta $ generadas por el algoritmo del muestreo por rechazo (histograma) y la curva $\mathop {\mathgroup \symoperators cos}\nolimits ^2(\theta )$}}{19}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Histogramas de los fotones producidos, fotones detectados y el cociente de los fotones detectados sobre los producidos para un mu\'on vertical de 4GeV en la simulaci\'on, con un tama\~no muestral de 1000 eventos}}{21}
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Promedio del n\'umero de fotones detectados respecto a la energ\'ia del mu\'on vertical incidente. Las barras de error representan el intervalo de un 95\% de confianza}}{23}
+\contentsline {figure}{\numberline {7.3}{\ignorespaces 1000 pulsos sobrepuestos de las detecciones de fotones para mu\'on vertical de 4GeV}}{24}
+\contentsline {figure}{\numberline {7.4}{\ignorespaces 1000 pulsos sobrepuestos de las detecciones de fotones para electr\'on vertical de 4GeV}}{25}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
