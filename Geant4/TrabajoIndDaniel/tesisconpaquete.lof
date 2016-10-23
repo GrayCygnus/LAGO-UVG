@@ -10,9 +10,10 @@
 \contentsline {figure}{\numberline {6.1}{\ignorespaces Ilustraci\'on de la geometr\'ia general del detector en la simulaci\'on Geant4, mostrando el recubrimiento Tyvek en forma cil\'indrica y las superficies de vidrio y fotoc\'atodo del fotomultiplicador}}{18}
 \contentsline {figure}{\numberline {6.2}{\ignorespaces Distribuci\'on para el \'angulo $\theta $ generadas por el algoritmo del muestreo por rechazo (histograma) y la curva $\mathop {\mathgroup \symoperators cos}\nolimits ^2(\theta )$}}{19}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {7.1}{\ignorespaces Histogramas de los fotones producidos, fotones detectados y el cociente de los fotones detectados sobre los producidos para un mu\'on vertical de 4GeV en la simulaci\'on, con un tama\~no muestral de 1000 eventos}}{21}
-\contentsline {figure}{\numberline {7.2}{\ignorespaces Promedio del n\'umero de fotones detectados respecto a la energ\'ia del mu\'on vertical incidente. Las barras de error representan el intervalo de un 95\% de confianza}}{23}
-\contentsline {figure}{\numberline {7.3}{\ignorespaces 1000 pulsos sobrepuestos de las detecciones de fotones para mu\'on vertical de 4GeV}}{24}
-\contentsline {figure}{\numberline {7.4}{\ignorespaces 1000 pulsos sobrepuestos de las detecciones de fotones para electr\'on vertical de 4GeV}}{25}
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Promedio del n\'umero de fotones detectados respecto a la energ\'ia del mu\'on vertical incidente. Las barras de error representan el intervalo de un 95\% de confianza}}{22}
+\contentsline {figure}{\numberline {7.2}{\ignorespaces El promedio de todos los pulsos para cada tipo de part\'icula calculados con intervalos de 95\% de confianza}}{23}
+\contentsline {figure}{\numberline {7.3}{\ignorespaces Representaci\'on gr\'afica de la relaci\'on entre amplitud y \textit {rise time} para los diferentes tipos de part\'iculas que generaron los pulsos en la simulaci\'on}}{23}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {10.1}{\ignorespaces Histogramas de los fotones producidos, fotones detectados y el cociente de los fotones detectados sobre los producidos para un mu\'on vertical de 4GeV en la simulaci\'on, con un tama\~no muestral de 1000 eventos}}{31}
+\contentsline {figure}{\numberline {10.2}{\ignorespaces a) 1000 pulsos sobrepuestos de las detecciones de fotones para mu\'on vertical de 4GeV, b) 500 pulsos sobrepuestos de las detecciones de fotones para part\'iculas gamma de 100 MeV, c) 500 pulsos sobrepuestos de las detecciones de fotones para electr\'on de Michael de 37 MeV}}{32}

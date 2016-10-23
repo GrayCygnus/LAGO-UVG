@@ -111,8 +111,8 @@ d(E)=(4.114\pm0.003)\times10^{10}E^{-3.07143\pm0.00004}
 \end{center}
 \end{figure}
 
-\subsection{CORSIKA}
-Para realizar simulaciones de cómo se vería una cascada de área extensa se utiliza el programa CORSIKA. Éste simula las distintas interacciones de las distintas partículas que se van generando a partir de una primera partícula de alta energía (partícula primaria) para así construir la cascada. Éste fue creado por el Instituto de Física Nuclear de Karlsruhe (IKP) y es gratuito. Debido a la cantidad de procesos que ocurren en una simulación se necesitan supercomputadoras para realizar las simulaciones. \citep{HECK}
+\subsection{Simulaci\'on de cascadas de \'area extensa}
+Para realizar simulaciones cascadas de área extensa se puede utilizar el programa CORSIKA, desarrollado por el Instituto de Física Nuclear de Karlsruhe (IKP). Éste simula las distintas interacciones de las distintas partículas que se van generando a partir de una primera partícula de alta energía (partícula primaria) para así construir la cascada. \citep{HECK}
 
 El modelo de Heitler es un modelo simplificado que predice el comportamiento del canal electromagnético de la cascada. Los dos mecanismos de interacción que describe son el de frenado (bremsstrahlung) y de pares: el primero es un electrón que al encontrarse con un átomo de la atmósfera desprende un electrón de menor energía y una partícula gamma, el segundo es la generación de un electrón y positrón cuando una partícula gamma se encuentra un átomo en la atmósfera. Estas interacciones cesan cuando la energía perdida por ionización del electrón es igual a su energía en reposo (otros criterios existen para para detener el proceso dentro de una simulación). \citep{SUAREZ}
 
@@ -125,11 +125,24 @@ La radiaci\'on Cherenkov presenta una diferenciaci\'on marcada en relaci\'on a l
 
 \section{Detectores Cherenkov en agua (WCD)}
 
-\section{Geant4}
+\subsection{Simulaci\'on Geant4 de detectores Chernkov en agua}
 
-\subsection{Modelos f\'isicos}
+\subsubsection{Modelos f\'isicos}
 
-\subsection{Efectos en los bordes de volumen}
+Los procesos f\'isicos que se incluyen para modelar la radiaci\'on Cherenkov los maneja Geant4 por distintas clases, desglosadas en el cuadro 4.1.
+
+\begin{table}[h]
+\caption{ Procesos f\'isicos para la simulaci\'on de radiaci\'on Cherenkov}
+\centering
+\begin{tabular}{l c c}
+\hline
+Nombre & Clase en G4 & Descripci\'on\\ \hline
+
+\hline
+\end{tabular}
+\end{table}
+
+\subsubsection{Efectos en los bordes de volumen}
 Los modelos \textit{UNIFIED} y \textit{GLISUR} son modelos que integran las principales caracter\'isticas de modelos \'opticos geom\'etricos y f\'isicos para reflexi\'on en superficies en diferentes longitudes de onda y aspereza. La diferencia entre los modelos est\'a en c\'omo dan la distribuci\'on de la direcci\'on de la reflexi\'on de fotones.
 
 \begin{itemize}
@@ -177,15 +190,15 @@ Este proyecto tiene como objetivo observar Gamma Ray Bursts (GRB) (destellos de 
 
 \subsection{Calibraci\'on de datos en LAGO}
 
-Las referencias \citep{ALLISON} y \citep{ALARCON} describen c\'omo utilizar informaci\'on de eventos de muones secundarios en el tanque para calibrar los datos a partir de eventos de muones verticales equivalentes (VEM). El VEM es la medida de la se\~nal m\'axima obtenida de la distribuci\'on de carga de muones que cruzan verticalmente. Esta medida se puede obtener de los histogramas de carga integrada obtenidos de los programas cal.cc y sol.cc aplicados a datos obtenidos de ACQUA. El valor de VEM es el valor de carga integrada (medida en ADCq) que corresponde al segundo m\'aximo de figura obtenida. Dos m\'etodos para obtener este valor es a trav\'es de regresi\'on cuadr\'atica o diferenciaci\'on finita. Este valor se obtendr\'a tambi\'en con la simulaci\'on, de manera directa.
+Las referencias \citep{ALLISON} y \citep{ALARCON} describen c\'omo utilizar informaci\'on de eventos de muones secundarios en el tanque para calibrar los datos a partir de eventos de muones verticales equivalentes (VEM). El VEM es la medida de la se\~nal m\'axima obtenida de la distribuci\'on de carga de muones que cruzan verticalmente. Esta medida se puede determinar a partir de los histogramas de carga integrada obtenidos de los programas cal.cc aplicados a datos obtenidos de ACQUA. El valor de VEM es el de la de carga integrada (medida en ADCq) que corresponde al segundo m\'aximo de figura. Este m\'aximo, a su vez, corresponde a la energ\'ia de un mu\'on vertical. Dos m\'etodos para obtener este valor es a trav\'es de regresi\'on cuadr\'atica o diferenciaci\'on finita. Este valor se puede comparar con el obtenido directamente de la simulaci\'on de un mu\'on vertical incidente.
 
-En los histogramas de carga arrojados por sol.cc y cal.cc, se revela adem\'as el tipo de part\'icula de la lluvia que inciden en el detector. En \citep{ASOREY} estos histogramas se utilizaron para dividir las se\~nales en cuatro bandas: la electromagn\'etica (para valores de ADCq menores al valor de transici\'on), la mu\'onica (que incluye el valor de VEM), las part\'iculas de mini-lluvias (arriba del l\'imite del mu\'on de m\'axima trayectoria), y una cuarta banda que re\'une muones desde el VEM hasta el resto de part\'iculas sobre este valor. \citep{Yunior}
+En los histogramas de carga arrojados por sol.cc y cal.cc, se revela adem\'as el tipo de part\'icula de la lluvia que inciden en el detector. En el modo histograma, estos seusan para dividir las se\~nales en cuatro bandas: la electromagn\'etica (para valores de ADCq menores al valor de transici\'on), la mu\'onica (que incluye el valor de VEM), las part\'iculas de mini-lluvias (arriba del l\'imite del mu\'on de m\'axima trayectoria), y una cuarta banda que re\'une muones desde el VEM hasta el resto de part\'iculas sobre este valor. \citep{Yunior}
 
-Para el monitore, los datos del WCD deben deben de corregirse por la anticorrelaci\'on entre presi\'on atmosf\'erica y conteo de part\'iculas secundarias para el monitoreo de clima solar. Esta correcci\'on es de tipo multiplicativa ya que la variaci\'on de la presi\'on atmosf\'erica es local. \citep{Yunior} \citep{ASOREY}
+Para el monitoreo de la modulaci\'on solar de los rayos c\'osmicos, los datos del WCD deben de corregirse por la anticorrelaci\'on entre presi\'on atmosf\'erica y conteo de part\'iculas secundarias. Esta correcci\'on es de tipo multiplicativa ya que la variaci\'on de la presi\'on atmosf\'erica es local. \citep{Yunior} \citep{ASOREY}
 
 \section{Observatorio Pierre Auger}
 
-Por otro lado, la instalaci\'on m\'as grande de detectores de agua de radiaci\'on Cherenkov es Pierre Auger, en Argentina. Consiste en 1660 tanques de agua dispuestos en una regi\'on triangular de 3000 kil\'ometros cuadrados, espaciados a 1500 metros. El arreglo en Pierre Auger tiene un \'area total de $16000m^{2}$ y funciona a $10^8$ conteos por minuto. Algunas especificaciones del modelo Scaler en Pierre Auger: Muestreo de 40MHz por seis 10-bit flash analog-to-digital converter (FADC), enlace de radio al CDAS (central data acquisition system), sistema GPS para sincronizar los 1660 tanques. Un \'area total de 16000m2 y mil millones de conteos por minuto. La respuesta del detector est\'a hecha de un conjunto de simulaciones de showers de baja energ\'ia usando CORSIKA 6.980 modelo QGSJET-II para hadrones alta energ\'ia y GHEISHA para bajas. El flujo de part\'iculas primarias a 100 km se simula como una ley de poder, cuyo exponente se obtuvo de mediciones de espectro de energ\'ias de la part\'icula primaria. \citep{VILLASENOR}
+La instalaci\'on m\'as grande de detectores de agua de radiaci\'on Cherenkov es Pierre Auger, en Argentina. Consiste en 1660 tanques de agua dispuestos en una regi\'on triangular de 3000 kil\'ometros cuadrados, espaciados a 1500 metros. El arreglo en Pierre Auger tiene un \'area total de $16000m^{2}$ y funciona a $10^8$ conteos por minuto. Algunas especificaciones del modelo Scaler en Pierre Auger: Muestreo de 40MHz por seis 10-bit flash analog-to-digital converter (FADC), enlace de radio al CDAS (central data acquisition system), sistema GPS para sincronizar los 1660 tanques. Un \'area total de 16000m2 y mil millones de conteos por minuto. La respuesta del detector est\'a hecha de un conjunto de simulaciones de showers de baja energ\'ia usando CORSIKA 6.980 modelo QGSJET-II para hadrones alta energ\'ia y GHEISHA para bajas. El flujo de part\'iculas primarias a 100 km se simula como una ley de poder, cuyo exponente se obtuvo de mediciones de espectro de energ\'ias de la part\'icula primaria. \citep{VILLASENOR}
 
 \section{Uso de Geant4 en LAGO y otros experimentos}
 
@@ -233,14 +246,14 @@ Se especificaron dos superficies: la superficie entre el agua y el recubrimiento
 \begin{tabular}{l c c c c c }
 \hline
 \specialcell{Energ\'ia del\\fot\'on(eV)} & Reflectividad & Eficiencia & \specialcell{Coeficiente de\\refracci\'on} & \specialcell{Constante\\especular} & \specialcell{Constante\\retrodispersi\'on}  \\ \hline
-2.034 & 0.2534 & 0 & 1.35 & 0.3 & 0.2 \\
-4.136 & 0.2534 & 0 & 1.40 & 0.3 & 0.2 \\
+2.034 & 0.2534 & 0 & 1.333 & 0.3 & 0.2 \\
+4.136 & 0.2534 & 0 & 1.333 & 0.3 & 0.2 \\
 
 \hline
 \end{tabular}
 \end{table}
 
-Los valores de reflectividad del Tyvek fueron obtenidos por Karen Gu\'arcax para este megaproyecto en el m\'odulo de "Medio de distribuci\'on de detector de radiaci\'on Vavilov-Cherenkov" mediante un experimento de reflectividad del Tyvek sumergido en jarras con agua.
+Los valores de reflectividad del Tyvek y el \'indice de refracci\'on del agua fueron obtenidos por Karen Gu\'arcax para este megaproyecto en el m\'odulo de "Medio de distribuci\'on de detector de radiaci\'on Vavilov-Cherenkov" mediante un experimento de reflectividad del Tyvek sumergido en jarras con agua y con la refracci\'on en agua de la luz de una l\'ampara de sodio.
 
 \subsection{Detecci\'on}
 Se defini\'o al fotoc\'atodo como detector asign\'andolo como el \textit{SensitiveDetector}. Con la clase \textit{ProcessHits} se registr\'o cada vez que un fot\'on entra en contacto con el fotoc\'atodo y se guard\'o el tiempo de detecci\'on de cada fot\'on y el conteo total.
@@ -248,6 +261,8 @@ Se defini\'o al fotoc\'atodo como detector asign\'andolo como el \textit{Sensiti
 \subsection{Generaci\'on de evento}
 
 \subsubsection{Procesos f\'isicos}
+Se utiliz\'o el modelo de fotones \'opticos. Los procesos f\'isicos que se incluyeron en la simulaci\'on se desglosaron en el cuadro ? en el marco te\'orico y las clases respectivas se incluyeron en el archivo "KinichAhauPhysicsList".
+
 \subsubsection{Posici\'on y direcci\'on}
 La simulaci\'on consisti\'o en dos partes, una para obtener los pulsos caracter\'isticos de cada tipo de part\'icula incidente y otra parte para obtener la distribuci\'on de carga integrada (ADCq) simulada de muones verticales. Para la primera se definieron la posici\'on y direcci\'on de las part\'iculas incidentes como constantes de tal manera que atravesaran el tanque completo verticalmente.
 
@@ -278,64 +293,16 @@ Donde $Tau$ se determin\'o experimentalmente alimentando el osciloscopio directa
 
 \Chapter{Resultados}
 
-\section{Distribuciones de fotones para un evento en la simulaci\'on}
+\section{Distribuciones de fotones para un evento por simulaci\'on}
 
-\subsection{Normalidad}
-
-Primero se investig\'o la normalidad de los fotones producidos, detectados y el cociente de estos valores para el evento de un mu\'on vertical de 4GeV.
-
-\begin{figure}[h] %opción h - here pone la imagen aquí en esta posición del documento
-\begin{center}
- \includegraphics[width=0.8\linewidth]{FotonesMuonVerticalG4.png}
-\caption{Histogramas de los fotones producidos, fotones detectados y el cociente de los fotones detectados sobre los producidos para un mu\'on vertical de 4GeV en la simulaci\'on, con un tama\~no muestral de 1000 eventos}
-\end{center}
-\end{figure}
-
-Los histogramas en la figura 7.1 sugieren que las distribuciones no siguen una distribuci\'on normal. Como complemento se us\'o la prueba Shapiro-Wilk para las hip\'otesis:
-
-Fotones producidos
-\begin{itemize}
-\item $H_1o$: La distribuci\'on de fotones producidos para el evento de un mu\'on vertical tiene normalidad
-\item $H_1a$: La distribuci\'on de fotones producidos para el evento de un mu\'on vertical no tiene normalidad
-\end{itemize}
-
-Fotones detectados
-\begin{itemize}
-\item $H_2o$: La distribuci\'on de fotones detectados para el evento de un mu\'on vertical tiene normalidad
-\item $H_2a$: La distribuci\'on de fotones detectados para el evento de un mu\'on vertical no tiene normalidad
-\end{itemize}
-
-Cociente de fotones detectados sobre fotones producidos
-\begin{itemize}
-\item $H_3o$: La distribuci\'on del cociente de fotones detectados sobre fotones producidos para el evento de un mu\'on vertical tiene normalidad
-\item $H_3a$: La distribuci\'on del cociente de fotones detectados sobre fotones producidos para el evento de un mu\'on vertical no tiene normalidad
-\end{itemize}
-
-\begin{table}[h]
-\caption{ Valores p para la prueba Shapiro-Wilk de normalidad de las distribuciones de los fotones producidos, detectados y el cociente}
-\centering
-\begin{tabular}{l | c}
-\hline
-Distribuci\'on & valor p de la prueba \\ \hline
-Fotones producidos & 5.922653054979643e-32 \\
-Fotones detectados & 1.7184711613370248e-39 \\
-$\frac{Fotones detectados}{Fotones producidos}$ & 9.682787576723116e-34 \\
-
-\hline
-\end{tabular}
-\end{table}
-
-Por los valores dados en el cuadro 7.1 por la prueba Shapiro-Wilk y por la forma de los histogramas en la figura 7.1, se concluye que ninguna de las distribuciones tiene normalidad.
-
-\subsection{Fotones detectados para diferentes energ\'ias}
-Segundo, se compararon las cantidades de fotones detectados para diferentes energ\'ias de muones verticales. Para poner a prueba las hip\'otesis:
+Primero se investig\'o la normalidad de los fotones producidos, detectados y el cociente de estos valores para el evento de un mu\'on vertical de 4GeV. Los detalles de este an\'alisis se encuentran en anexos. Se compararon las cantidades de fotones detectados para diferentes energ\'ias de muones verticales. Para poner a prueba las hip\'otesis:
 
 \begin{itemize}
 \item $H_4o$: No hay relaci\'on entre la energ\'ia de un muon vertical que atraviesa y el n\'umero de fotones detectados.
 \item $H_4a$: Hay relaci\'on entre la energ\'ia de un muon vertical que atraviesa y el n\'umero de fotones detectados
 \end{itemize}
 
-La secci\'on anterior revela que la distribuci\'on de los fotones detectados para una energ\'ia no sigue una distribuci\'on normal, sin embargo, el an\'alisis ANOVA para la diferencia de dos medias es robusto ante la suposici\'on de normalidad, en especial porque el tama\~no muestral es grande (n=1000 o 500). Por lo tanto, se prosigi\'o a calcular la media de fotones detectados para diferentes energ\'ias. Su representaci\'on gr\'afica se muestra en la figura 7.2
+El an\'alisis de la normalidad de las distribuciones revela que la distribuci\'on de los fotones detectados para una energ\'ia no sigue una distribuci\'on normal, sin embargo, el an\'alisis ANOVA para la diferencia de dos medias es robusto ante la suposici\'on de normalidad, en especial porque el tama\~no muestral es grande (n=1000 o 500). Por lo tanto, se prosigi\'o a calcular la media de fotones detectados para diferentes energ\'ias. Su representaci\'on gr\'afica se muestra en la figura 7.2
 
 \begin{figure}[h] %opción h - here pone la imagen aquí en esta posición del documento
 \begin{center}
@@ -360,21 +327,19 @@ Valor p & 0.006006693 \\
 
 Debido a que el valor p es menor a $\alpha=0.05$, se acepta la hip\'otesis alterna con un 95\% de confianza.
 
-\section{Pulsos caracter\'isticos de part\'iculas incidentes}
+\section{Pulsos caracter\'isticos de part\'iculas incidentes por simulaci\'on}
+
+Se calcularon los pulsos para 1000 eventos de muones, 500 eventos de part\'iculas gamma y 500 eventos de electrones de Michael. Las gr\'aficas de los 2000 pulsos se pueden encontrar en la secci\'on de anexos. La forma caracter\'istica del pulso de cada tipo de part\'icula se ilustra en la figura 7.2.
+
 
 \begin{figure}[h] %opción h - here pone la imagen aquí en esta posición del documento
 \begin{center}
- \includegraphics[width=0.8\linewidth]{1000PulsosMu.png}
-\caption{1000 pulsos sobrepuestos de las detecciones de fotones para mu\'on vertical de 4GeV}
+ \includegraphics[width=0.8\linewidth]{PulsosCaracteristicos.png}
+\caption{El promedio de todos los pulsos para cada tipo de part\'icula calculados con intervalos de 95\% de confianza}
 \end{center}
 \end{figure}
 
-\begin{figure}[h] %opción h - here pone la imagen aquí en esta posición del documento
-\begin{center}
- \includegraphics[width=0.8\linewidth]{1000PulsosMu.png}
-\caption{1000 pulsos sobrepuestos de las detecciones de fotones para electr\'on vertical de 4GeV}
-\end{center}
-\end{figure}
+El cuadro 7.2 y la figura 7.3 exponen los resultados de analizar la amplitud m\'axima (valor discreto m\'as grande en los datos) y \textit{rise time} (tiempo en que la se\~nal toma desde 0\% hasta su amplitud m\'axima) para los pulsos generados de cada part\'icula en la simulaci\'on
 
 \begin{table}[h]
 \caption{ Intervalos de confianza para los valores medios de amplitud y \textit{rise time} para cada tipo de part\'icula incidente}
@@ -383,10 +348,19 @@ Debido a que el valor p es menor a $\alpha=0.05$, se acepta la hip\'otesis alter
 \hline
 Tipo de part\'icula & Amplitud (A/mW) & \textit{Rise time} (ns) \\ \hline
 Mu\'on vertical 4GeV & (4802, 4950) & (10.15, 10.19) \\
+Electr\'on de Michael 37MeV & (3201, 3631) & (6.63, 6.94) \\
+Part\'icula Gamma 100 MeV & (1393, 1830) & (8.66, 9.19)\\
 
 \hline
 \end{tabular}
 \end{table}
+
+\begin{figure}[h] %opción h - here pone la imagen aquí en esta posición del documento
+\begin{center}
+ \includegraphics[width=0.8\linewidth]{RiseTimeAmp.png}
+\caption{Representaci\'on gr\'afica de la relaci\'on entre amplitud y \textit{rise time} para los diferentes tipos de part\'iculas que generaron los pulsos en la simulaci\'on}
+\end{center}
+\end{figure}
 
 %%%%%%%%%%%%%%%%Cap\'itulo nuevo
 
@@ -490,5 +464,60 @@ Vac\'io dentro PMT & \specialcell{Fotoc\'atodo PMT\\(0,0,0)} & Vac\'io & G4Spher
 \hline
 \end{tabular}
 \end{table}
+
+\section{Normalidad de fotones producidos y detectados en la simulaci\'on}
+
+\begin{figure}[h] %opción h - here pone la imagen aquí en esta posición del documento
+\begin{center}
+ \includegraphics[width=0.8\linewidth]{FotonesMuonVerticalG4.png}
+\caption{Histogramas de los fotones producidos, fotones detectados y el cociente de los fotones detectados sobre los producidos para un mu\'on vertical de 4GeV en la simulaci\'on, con un tama\~no muestral de 1000 eventos}
+\end{center}
+\end{figure}
+
+Los histogramas en la figura 7.1 sugieren que las distribuciones no siguen una distribuci\'on normal. Como complemento se us\'o la prueba Shapiro-Wilk para las hip\'otesis:
+
+Fotones producidos
+\begin{itemize}
+\item $H_1o$: La distribuci\'on de fotones producidos para el evento de un mu\'on vertical tiene normalidad
+\item $H_1a$: La distribuci\'on de fotones producidos para el evento de un mu\'on vertical no tiene normalidad
+\end{itemize}
+
+Fotones detectados
+\begin{itemize}
+\item $H_2o$: La distribuci\'on de fotones detectados para el evento de un mu\'on vertical tiene normalidad
+\item $H_2a$: La distribuci\'on de fotones detectados para el evento de un mu\'on vertical no tiene normalidad
+\end{itemize}
+
+Cociente de fotones detectados sobre fotones producidos
+\begin{itemize}
+\item $H_3o$: La distribuci\'on del cociente de fotones detectados sobre fotones producidos para el evento de un mu\'on vertical tiene normalidad
+\item $H_3a$: La distribuci\'on del cociente de fotones detectados sobre fotones producidos para el evento de un mu\'on vertical no tiene normalidad
+\end{itemize}
+
+\begin{table}[h]
+\caption{ Valores p para la prueba Shapiro-Wilk de normalidad de las distribuciones de los fotones producidos, detectados y el cociente}
+\centering
+\begin{tabular}{l | c}
+\hline
+Distribuci\'on & valor p de la prueba \\ \hline
+Fotones producidos & 5.922653054979643e-32 \\
+Fotones detectados & 1.7184711613370248e-39 \\
+$\frac{Fotones detectados}{Fotones producidos}$ & 9.682787576723116e-34 \\
+
+\hline
+\end{tabular}
+\end{table}
+
+Por los valores dados en el cuadro 7.1 por la prueba Shapiro-Wilk y por la forma de los histogramas en la figura 7.1, se concluye que ninguna de las distribuciones tiene normalidad.
+
+\section{Gr\'aficas de los 2000 pulsos analizados para la caracterizaci\'on de la simulaci\'on}
+
+\begin{figure}[h] %opción h - here pone la imagen aquí en esta posición del documento
+\begin{center}
+ \includegraphics[width=\linewidth]{2000Pulsos.png}
+\caption{a) 1000 pulsos sobrepuestos de las detecciones de fotones para mu\'on vertical de 4GeV, b) 500 pulsos sobrepuestos de las detecciones de fotones para part\'iculas gamma de 100 MeV, c) 500 pulsos sobrepuestos de las detecciones de fotones para electr\'on de Michael de 37 MeV}
+\end{center}
+\end{figure}
+
 \end{document}
 
