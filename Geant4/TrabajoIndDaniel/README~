@@ -1,5 +1,17 @@
 Apuntes sobre tesis:
 
+Modificacion de resultados:
+Para generar las direcciones, posiciones y energías aleatorias, genero el archivazo macro con python y yapp!
+En lugar de hacer gamma y electron 37, usar la idea de macros para generar muones de baja eenrgía
+Tengo que agregar lo de C2>C1 al clasificador.
+
+Observaciones 24/10:
+- Al correr la simulación con muones de 500 MeV, la carga integrada sí siguió disminuyendo
+- sin embargo, al disminuir la energía hasta 50, la carga integrada comenzaba a subir dramáticamente para algunos eventos
+- luego de un umbral entre 50 y 100, la carga integrada sigue disminuyendo, pero aún así es mayor que los obtenidos para incluso 30GeV
+
+Todo lo siguiente está desactualizado, je
+
 Quite esto del aux: \providecommand\NAT@force@numbers{}\NAT@force@numbers
 antes de \@writefile{toc}{\contentsline {chapter}{\numberline {10}Anexos}{21}}
 
@@ -64,7 +76,6 @@ Resultados:
 \bibitem[Asorey, H. y S. Dasso (2015)]{ASOREY2015} Asorey, H. y S. Dasso. 2015. \textit{LAGO: the Latin American Giant Observatory}. The 34th International Cosmic Ray Conference. The Hague, Pa\'ses Bajos.
 
 \bibitem[Calderon, R., H. Asorey y L. N\'u\~nez (2005)]{CALDERON} Calderon, R, H. Asorey y L. N\'u\~nez \textit{Geant4 based simulation of the Water Cherenkov Detectors of the LAGO project}. Disponible en: http://arxiv.org/pdf/1503.07270.pdf [consultado el 4 de julio 2016]
-
 
 \bibitem[Chen, M. et al. (2006)]{CHEN} Chen, M. et al. 2006. \textit{A study of the water Cherenkov calorimeter}. Preimpresión presentada a Eliver Science. Disponible en: http://arxiv.org/pdf/physics/0602169.pdf [consultado el 15 de marzo del 2016]
 

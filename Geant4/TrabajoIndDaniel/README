@@ -1,5 +1,21 @@
 Apuntes sobre tesis:
 
+Modificacion de resultados:
+Para generar las direcciones, posiciones y energías aleatorias, genero el archivazo macro con python y yapp!
+En lugar de hacer gamma y electron 37, usar la idea de macros para generar muones de baja eenrgía
+Tengo que agregar lo de C2>C1 al clasificador.
+
+Observaciones 24/10:
+- Al correr la simulación con muones de 500 MeV, la carga integrada sí siguió disminuyendo
+- sin embargo, al disminuir la energía hasta 50, la carga integrada comenzaba a subir dramáticamente para algunos eventos
+- luego de un umbral entre 50 y 100, la carga integrada sigue disminuyendo, pero aún así es mayor que los obtenidos para incluso 30GeV
+- Este límite divide a eventos de muones en energías bajas que producen mayor carga y energías altas que producen menores cargas
+- Los eventoss de energías altas además tienen una estructura diferente: un primer pico más pequeño seguido por uno grande.
+- Es decir, está ocurriendo exactamente lo contrario de lo esperado: energías bajas producen un par de eventos de muon-electron
+	mientras que energías altas producen un único evento de mayor carga.
+
+Todo lo siguiente está desactualizado, je
+
 Quite esto del aux: \providecommand\NAT@force@numbers{}\NAT@force@numbers
 antes de \@writefile{toc}{\contentsline {chapter}{\numberline {10}Anexos}{21}}
 
