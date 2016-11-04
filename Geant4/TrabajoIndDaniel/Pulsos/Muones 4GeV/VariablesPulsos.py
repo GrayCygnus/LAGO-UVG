@@ -24,7 +24,7 @@ def V(x,t,photons):
 # tiempo dado por inductancia total
 t = 18.76
 # eficiencia cuántica para 405 nm en milivatios
-qe = 25
+qe = 80
 
 infile = open('1000muones.txt', 'r')
 
@@ -42,7 +42,7 @@ for line in infile:
     
 #per_column = zip(per_row)
 
-x = linspace(0,100)
+x = linspace(0,100,500)
 
 y = []
 for i in range(0,len(pulsos)-1): # -1 corrige por el último # del archivo
@@ -57,7 +57,6 @@ for k in y:
     mean = stat.nanmean(k)
     std  = stat.tstd(k)
     amp.append(a)
-    print(a)
     #ancho.append(x[k.index()])
 #    for i in range(0,len(k)):
 #        if i > 0*a:
@@ -72,5 +71,5 @@ for k in y:
 plt.plot(rise_time,amp,'*',label="Muon 4GeV")
 plt.legend()
 plt.xlabel("Rise time (ns)")
-plt.ylabel("Amplitud (A/mW)")
+plt.ylabel("Amplitud (mA/W)")
 plt.show()

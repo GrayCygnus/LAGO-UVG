@@ -1,6 +1,6 @@
-\contentsline {chapter}{Lista de Figuras}{x}
-\contentsline {chapter}{Lista de Cuadros}{xi}
-\contentsline {chapter}{T\'itulo del resumen}{xiii}
+\contentsline {chapter}{Lista de Figuras}{viii}
+\contentsline {chapter}{Lista de Cuadros}{ix}
+\contentsline {chapter}{Resumen}{xi}
 \contentsline {chapter}{\numberline {1}Introducci\'on}{1}
 \contentsline {chapter}{\numberline {2}Objetivos}{3}
 \contentsline {section}{\numberline {2.1}Objetivo general del megaproyecto}{3}
@@ -9,49 +9,52 @@
 \contentsline {chapter}{\numberline {3}Justificaci\'on}{5}
 \contentsline {chapter}{\numberline {4}Rayos c\'osmicos}{7}
 \contentsline {section}{\numberline {4.1}Generalidades y descubrimiento de los rayos c\'osmicos}{7}
-\contentsline {section}{\numberline {4.2}Espectro de rayos c\'osmicos}{7}
-\contentsline {section}{\numberline {4.3}Or\'igenes de los rayos c\'osmicos de ultra alta energ\'ia}{8}
-\contentsline {section}{\numberline {4.4}Modulaci\'on solar de rayos c\'osmicos}{8}
-\contentsline {section}{\numberline {4.5}Cascadas de \'area extensa de rayos c\'osmicos}{9}
-\contentsline {subsection}{\numberline {4.5.1}Distribuci\'on de energ\'ias a nivel del suelo}{10}
-\contentsline {subsection}{\numberline {4.5.2}Simulaci\'on de cascadas de \'area extensa}{10}
+\contentsline {section}{\numberline {4.2}Or\'igenes de los rayos c\'osmicos de ultra alta energ\'ia}{8}
+\contentsline {section}{\numberline {4.3}Modulaci\'on solar de rayos c\'osmicos}{8}
+\contentsline {section}{\numberline {4.4}Cascadas de \'area extensa de rayos c\'osmicos}{9}
+\contentsline {subsection}{\numberline {4.4.1}Distribuci\'on de energ\'ias a nivel del suelo}{10}
+\contentsline {subsection}{\numberline {4.4.2}Simulaci\'on de cascadas de \'area extensa}{12}
 \contentsline {chapter}{\numberline {5}Detectores de superficie}{13}
-\contentsline {subsection}{\numberline {5.0.3}Detectores en sondas y globos}{13}
-\contentsline {subsection}{\numberline {5.0.4}Detectores de superficie}{13}
-\contentsline {section}{\numberline {5.1}Radiaci\'on de Vavilov-Cherenkov}{14}
-\contentsline {section}{\numberline {5.2}Latin American Giant Observatory}{16}
-\contentsline {subsection}{\numberline {5.2.1}Sitios de LAGO}{16}
-\contentsline {subsection}{\numberline {5.2.2}Detectores Cherenkov de LAGO}{17}
-\contentsline {subsection}{\numberline {5.2.3}Tubo fotomultiplicador}{18}
-\contentsline {subsection}{\numberline {5.2.4}Electr\'onica de LAGO}{20}
-\contentsline {section}{\numberline {5.3}Simulaci\'on Geant4 de detectores Chernkov en agua}{20}
-\contentsline {subsubsection}{\numberline {5.3.0.1}Modelos f\'isicos}{20}
-\contentsline {subsubsection}{\numberline {5.3.0.2}Efectos en los bordes de volumen}{20}
-\contentsline {chapter}{\numberline {6}Metodolog\'ia}{23}
-\contentsline {section}{\numberline {6.1}Simulaci\'on}{23}
-\contentsline {subsection}{\numberline {6.1.1}Geometr\'ia}{23}
-\contentsline {subsubsection}{\numberline {6.1.1.1}Objetos y colocaci\'on}{23}
-\contentsline {subsubsection}{\numberline {6.1.1.2}Materiales}{23}
-\contentsline {subsubsection}{\numberline {6.1.1.3}Superficies}{24}
-\contentsline {subsection}{\numberline {6.1.2}Detecci\'on}{25}
-\contentsline {subsection}{\numberline {6.1.3}Generaci\'on de evento}{25}
-\contentsline {subsubsection}{\numberline {6.1.3.1}Procesos f\'isicos}{25}
-\contentsline {subsubsection}{\numberline {6.1.3.2}Posici\'on y direcci\'on}{25}
-\contentsline {subsection}{\numberline {6.1.4}Datos de salida}{25}
-\contentsline {section}{\numberline {6.2}Instalaci\'on del WCD}{27}
-\contentsline {section}{\numberline {6.3}Calibraci\'on por histograma de datos de Kinich Ahau}{27}
-\contentsline {chapter}{\numberline {7}Resultados y discusi\'on}{29}
-\contentsline {section}{\numberline {7.1}N\'umero de fotones prodcidos y detectados con un mu\'on que atraviesa en la simulaci\'on}{29}
-\contentsline {section}{\numberline {7.2}Pulsos caracter\'isticos de part\'iculas incidentes por simulaci\'on}{31}
-\contentsline {section}{\numberline {7.3}Calibraci\'on de Kinich Ahau}{33}
-\contentsline {chapter}{\numberline {8}Conclusiones}{37}
-\contentsline {chapter}{9\ \ Bibliograf\'ia}{39}
-\contentsline {chapter}{\numberline {10}Anexos}{43}
-\contentsline {section}{\numberline {10.1}M\'as detalle de la geometr\'ia en la simulaci\'on}{43}
-\contentsline {section}{\numberline {10.2}Programa utilizado para las distribuciones de fotones producidos, detectados y su cociente en la simulaci\'on}{44}
-\contentsline {section}{\numberline {10.3}Normalidad de fotones producidos y detectados en la simulaci\'on}{47}
-\contentsline {section}{\numberline {10.4}Programa utilizado para la obtenci\'on de los pulsos caracter\'isticos}{48}
-\contentsline {section}{\numberline {10.5}Gr\'aficas de los 2000 pulsos analizados para la caracterizaci\'on de la simulaci\'on}{51}
-\contentsline {section}{\numberline {10.6}Programa utilizado para el c\'alculo de apmlitudes y tiempo de subida}{52}
-\contentsline {section}{\numberline {10.7}Programa utilizado para la clasificaci\'on de muones, desarrollado por Miguel Novella}{53}
-\contentsline {section}{\numberline {10.8}Programa utilizado para el c\'alculos de los m\'aximos en los histogramas}{56}
+\contentsline {section}{\numberline {5.1}Detectores en sondas y globos}{13}
+\contentsline {section}{\numberline {5.2}Detectores de superficie}{13}
+\contentsline {section}{\numberline {5.3}Radiaci\'on de Vavilov-Cherenkov}{14}
+\contentsline {section}{\numberline {5.4}Latin American Giant Observatory}{16}
+\contentsline {subsection}{\numberline {5.4.1}Sitios de LAGO}{16}
+\contentsline {subsection}{\numberline {5.4.2}Detectores Cherenkov de LAGO}{17}
+\contentsline {subsection}{\numberline {5.4.3}Tubo fotomultiplicador}{18}
+\contentsline {subsection}{\numberline {5.4.4}Electr\'onica de LAGO}{20}
+\contentsline {subsection}{\numberline {5.4.5}ACQUA y ANNA de LAGO}{21}
+\contentsline {section}{\numberline {5.5}Identificaci\'on de part\'iculas en detectores de Cherenkov terrestres}{22}
+\contentsline {subsection}{\numberline {5.5.1}Relaci\'on entre tiempo de subida y amplitud}{22}
+\contentsline {subsection}{\numberline {5.5.2}Modo Histograma en LAGO}{23}
+\contentsline {section}{\numberline {5.6}Simulaci\'on Geant4 de detectores Cherenkov en agua}{25}
+\contentsline {subsection}{\numberline {5.6.1}Modelos f\'isicos y fotones \'opticos}{25}
+\contentsline {subsection}{\numberline {5.6.2}Efectos en los bordes de volumen}{25}
+\contentsline {chapter}{\numberline {6}Metodolog\'ia}{27}
+\contentsline {section}{\numberline {6.1}Simulaci\'on}{27}
+\contentsline {subsection}{\numberline {6.1.1}Geometr\'ia}{27}
+\contentsline {subsubsection}{\numberline {6.1.1.1}Objetos y colocaci\'on}{27}
+\contentsline {subsubsection}{\numberline {6.1.1.2}Materiales}{27}
+\contentsline {subsubsection}{\numberline {6.1.1.3}Superficies}{28}
+\contentsline {subsection}{\numberline {6.1.2}Detecci\'on}{29}
+\contentsline {subsection}{\numberline {6.1.3}Generaci\'on de evento}{29}
+\contentsline {subsubsection}{\numberline {6.1.3.1}Procesos f\'isicos}{29}
+\contentsline {subsubsection}{\numberline {6.1.3.2}Posici\'on y direcci\'on}{29}
+\contentsline {subsection}{\numberline {6.1.4}Datos de salida}{29}
+\contentsline {section}{\numberline {6.2}Instalaci\'on del WCD "Kinich Ahau"}{31}
+\contentsline {section}{\numberline {6.3}Calibraci\'on por histograma de datos de Kinich Ahau}{31}
+\contentsline {chapter}{\numberline {7}Resultados y discusi\'on}{35}
+\contentsline {section}{\numberline {7.1}Pulsos caracter\'isticos de part\'iculas incidentes por simulaci\'on}{35}
+\contentsline {section}{\numberline {7.2}N\'umero de fotones prodcidos y detectados con un mu\'on que atraviesa en la simulaci\'on}{37}
+\contentsline {section}{\numberline {7.3}Calibraci\'on de Kinich Ahau}{39}
+\contentsline {chapter}{\numberline {8}Conclusiones}{43}
+\contentsline {chapter}{9\ \ Bibliograf\'ia}{45}
+\contentsline {chapter}{\numberline {10}Anexos}{49}
+\contentsline {section}{\numberline {10.1}M\'as detalle de la geometr\'ia en la simulaci\'on}{49}
+\contentsline {section}{\numberline {10.2}Programa utilizado para las distribuciones de fotones producidos, detectados y su cociente en la simulaci\'on}{50}
+\contentsline {section}{\numberline {10.3}Normalidad de fotones producidos y detectados en la simulaci\'on}{53}
+\contentsline {section}{\numberline {10.4}Programa utilizado para la obtenci\'on de los pulsos caracter\'isticos}{54}
+\contentsline {section}{\numberline {10.5}Gr\'aficas de los 2000 pulsos analizados para la caracterizaci\'on de la simulaci\'on}{57}
+\contentsline {section}{\numberline {10.6}Programa utilizado para el c\'alculo de apmlitudes y tiempo de subida}{58}
+\contentsline {section}{\numberline {10.7}Programa utilizado para la clasificaci\'on de muones, desarrollado por Miguel Novella}{59}
+\contentsline {section}{\numberline {10.8}Programa utilizado para el c\'alculos de los m\'aximos en los histogramas}{62}

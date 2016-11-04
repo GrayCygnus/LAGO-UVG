@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.11.2)  25 OCT 2016 03:43
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.11.2)  4 NOV 2016 14:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -195,37 +195,35 @@ e
 ))
 \c@lstlisting=\count104
 
-[5
-
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [6
-
-]
 (./tesisconpaquete.toc
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 6.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 6.
- [7])
+ [5
+
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}])
 \tf@toc=\write3
 \openout3 = `tesisconpaquete.toc'.
 
- [8] (./tesisconpaquete.lof [9
+
+[6] (./tesisconpaquete.lof [7
 
 ])
 \tf@lof=\write4
 \openout4 = `tesisconpaquete.lof'.
 
- [10]
-(./tesisconpaquete.lot)
+ [8] (./tesisconpaquete.lot)
 \tf@lot=\write5
 \openout5 = `tesisconpaquete.lot'.
 
- [11
+ [9
 
-] [12
+] [10
 
-] [13] [14
+] [11]
+[12
 
 ]
 Cap\'itulo 1.
@@ -233,16 +231,12 @@ Cap\'itulo 1.
 
 ]
 Cap\'itulo 2.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 49.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 45.
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 49.
-Missing character: There is no √ in font cmr10!
-Missing character: There is no ≠ in font cmr10!
-Missing character: There is no √ in font cmr10!
-Missing character: There is no ≠ in font cmr10!
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 45.
  [3] [4
 
 ]
@@ -251,7 +245,10 @@ Cap\'itulo 3.
 
 ]
 Cap\'itulo 4.
-[7]
+
+Underfull \vbox (badness 4479) has occurred while \output is active []
+
+ [7]
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ú in font cmr10!
@@ -265,215 +262,180 @@ Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ù in font cmr10!
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 1817) has occurred while \output is active []
 
  [8]
-Missing character: There is no √ in font cmr10!
-Missing character: There is no ≥ in font cmr10!
-Missing character: There is no √ in font cmr10!
-Missing character: There is no ≠ in font cmr10!
-Missing character: There is no √ in font cmr10!
-Missing character: There is no ≠ in font cmr10!
-Missing character: There is no √ in font cmr10!
-Missing character: There is no © in font cmr10!
-Missing character: There is no √ in font cmr10!
-Missing character: There is no ° in font cmr10!
-Missing character: There is no √ in font cmr10!
-Missing character: There is no ° in font cmr10!
-Missing character: There is no √ in font cmr10!
-Missing character: There is no ° in font cmr10!
-Missing character: There is no √ in font cmr10!
-Missing character: There is no ° in font cmr10!
+<ForbushYunior.png, id=62, 600.2425pt x 335.2525pt>
+File: ForbushYunior.png Graphic file (type png)
+ <use ForbushYunior.png>
+Package pdftex.def Info: ForbushYunior.png used on input line 82.
+(pdftex.def)             Requested size: 298.47348pt x 166.71014pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+[9 <./ForbushYunior.png>] <Cascadas.png, id=68, 797.98125pt x 525.965pt>
+File: Cascadas.png Graphic file (type png)
 
- [9]
-Missing character: There is no √ in font cmr10!
-Missing character: There is no ≥ in font cmr10!
-Missing character: There is no √ in font cmr10!
-Missing character: There is no ° in font cmr10!
-Missing character: There is no √ in font cmr10!
-Missing character: There is no ≥ in font cmr10!
-Missing character: There is no √ in font cmr10!
-Missing character: There is no © in font cmr10!
-Missing character: There is no √ in font cmr10!
-Missing character: There is no ≠ in font cmr10!
-
-<GeisserMuon.png, id=74, 403.5075pt x 272.01625pt>
+<use Cascadas.png>
+Package pdftex.def Info: Cascadas.png used on input line 106.
+(pdftex.def)             Requested size: 298.47348pt x 196.73077pt.
+ [10 <./Cascadas.png>]
+<GeisserMuon.png, id=72, 403.5075pt x 272.01625pt>
 File: GeisserMuon.png Graphic file (type png)
  <use GeisserMuon.png>
-Package pdftex.def Info: GeisserMuon.png used on input line 123.
-(pdftex.def)             Requested size: 403.50652pt x 272.01558pt.
-Missing character: There is no √ in font cmr10!
-Missing character: There is no ° in font cmr10!
-Missing character: There is no √ in font cmr10!
-Missing character: There is no ≠ in font cmr10!
-Missing character: There is no √ in font cmr10!
-Missing character: There is no â in font cmr10!
-Missing character: There is no √ in font cmr10!
-Missing character: There is no ≠ in font cmr10!
-Missing character: There is no √ in font cmr10!
-Missing character: There is no ≠ in font cmr10!
-Missing character: There is no √ in font cmr10!
-Missing character: There is no ≠ in font cmr10!
-Missing character: There is no √ in font cmr10!
-Missing character: There is no ≠ in font cmr10!
-Missing character: There is no √ in font cmr10!
-Missing character: There is no ≠ in font cmr10!
-Missing character: There is no √ in font cmr10!
-Missing character: There is no © in font cmr10!
-Missing character: There is no √ in font cmr10!
-Missing character: There is no ≥ in font cmr10!
-Missing character: There is no √ in font cmr10!
-Missing character: There is no ≥ in font cmr10!
-Missing character: There is no √ in font cmr10!
-Missing character: There is no ° in font cmr10!
-Missing character: There is no √ in font cmr10!
-Missing character: There is no ≥ in font cmr10!
-Missing character: There is no √ in font cmr10!
-Missing character: There is no ≥ in font cmr10!
-Missing character: There is no √ in font cmr10!
-Missing character: There is no ≠ in font cmr10!
-Missing character: There is no √ in font cmr10!
-Missing character: There is no ≠ in font cmr10!
-Missing character: There is no √ in font cmr10!
-Missing character: There is no ≥ in font cmr10!
-Missing character: There is no √ in font cmr10!
-Missing character: There is no ≥ in font cmr10!
-Missing character: There is no √ in font cmr10!
-Missing character: There is no ≥ in font cmr10!
-Missing character: There is no √ in font cmr10!
-Missing character: There is no ≠ in font cmr10!
-Missing character: There is no √ in font cmr10!
-Missing character: There is no ° in font cmr10!
-Missing character: There is no √ in font cmr10!
-Missing character: There is no ≥ in font cmr10!
-Missing character: There is no √ in font cmr10!
-Missing character: There is no ≠ in font cmr10!
-Missing character: There is no √ in font cmr10!
-Missing character: There is no ≥ in font cmr10!
-Missing character: There is no √ in font cmr10!
-Missing character: There is no ≥ in font cmr10!
-Missing character: There is no √ in font cmr10!
-Missing character: There is no ≠ in font cmr10!
-Missing character: There is no √ in font cmr10!
-Missing character: There is no ≥ in font cmr10!
-Missing character: There is no √ in font cmr10!
-Missing character: There is no ≥ in font cmr10!
-Missing character: There is no √ in font cmr10!
-Missing character: There is no ≠ in font cmr10!
-Missing character: There is no √ in font cmr10!
-Missing character: There is no ≥ in font cmr10!
-Missing character: There is no √ in font cmr10!
-Missing character: There is no ≠ in font cmr10!
-Missing character: There is no √ in font cmr10!
-Missing character: There is no ∫ in font cmr10!
-Missing character: There is no √ in font cmr10!
-Missing character: There is no ≥ in font cmr10!
-Missing character: There is no √ in font cmr10!
-Missing character: There is no ≥ in font cmr10!
-Missing character: There is no √ in font cmr10!
-Missing character: There is no ≥ in font cmr10!
-Missing character: There is no √ in font cmr10!
-Missing character: There is no ° in font cmr10!
-Missing character: There is no √ in font cmr10!
-Missing character: There is no ≥ in font cmr10!
-Missing character: There is no √ in font cmr10!
-Missing character: There is no © in font cmr10!
-Missing character: There is no √ in font cmr10!
-Missing character: There is no ° in font cmr10!
+Package pdftex.def Info: GeisserMuon.png used on input line 134.
+(pdftex.def)             Requested size: 298.47348pt x 201.21pt.
 
-[10] [11 <./GeisserMuon.png>] [12
-
-]
+[11 <./GeisserMuon.png>] [12]
 Cap\'itulo 5.
-[13] <Pol1.png, id=87, 353.32pt x 246.9225pt>
+[13
+
+] <Pol1.png, id=83, 353.32pt x 246.9225pt>
 File: Pol1.png Graphic file (type png)
  <use Pol1.png>
-Package pdftex.def Info: Pol1.png used on input line 160.
+Package pdftex.def Info: Pol1.png used on input line 172.
 (pdftex.def)             Requested size: 213.19627pt x 148.99483pt.
-
+ [14 <./Pol1.png>]
 <GeometriaCherenkov.png, id=89, 385.44pt x 345.29pt>
 File: GeometriaCherenkov.png Graphic file (type png)
 
 <use GeometriaCherenkov.png>
-Package pdftex.def Info: GeometriaCherenkov.png used on input line 177.
-(pdftex.def)             Requested size: 213.19627pt x 190.98488pt.
- [14 <./Pol1.png>] [15 <./GeometriaCherenkov.png>]
-<ASOREY2015.png, id=98, 295.1025pt x 389.455pt>
+Package pdftex.def Info: GeometriaCherenkov.png used on input line 189.
+(pdftex.def)             Requested size: 170.55441pt x 152.78685pt.
+ [15 <./GeometriaCherenkov.png>]
+<ASOREY2015.png, id=93, 295.1025pt x 389.455pt>
 File: ASOREY2015.png Graphic file (type png)
  <use ASOREY2015.png>
-Package pdftex.def Info: ASOREY2015.png used on input line 218.
+Package pdftex.def Info: ASOREY2015.png used on input line 230.
 (pdftex.def)             Requested size: 213.19627pt x 281.36414pt.
 
-Underfull \vbox (badness 3954) has occurred while \output is active []
+Underfull \vbox (badness 2020) has occurred while \output is active []
 
  [16]
-<DetectorLAGO.png, id=102, 296.10625pt x 284.06125pt>
+<DetectorLAGO.png, id=97, 296.10625pt x 284.06125pt>
 File: DetectorLAGO.png Graphic file (type png)
  <use DetectorLAGO.png>
-Package pdftex.def Info: DetectorLAGO.png used on input line 233.
+Package pdftex.def Info: DetectorLAGO.png used on input line 245.
 (pdftex.def)             Requested size: 213.19627pt x 204.52826pt.
-Missing character: There is no √ in font cmr10!
-Missing character: There is no ≥ in font cmr10!
-Missing character: There is no √ in font cmr10!
-Missing character: There is no ≥ in font cmr10!
 
-[17 <./ASOREY2015.png>] <Hamamatsu.png, id=107, 548.0475pt x 235.88126pt>
+Underfull \vbox (badness 1838) has occurred while \output is active []
+
+ [17 <./ASOREY2015.png>] <Hamamatsu.png, id=103, 548.0475pt x 235.88126pt>
 File: Hamamatsu.png Graphic file (type png)
 
 <use Hamamatsu.png>
-Package pdftex.def Info: Hamamatsu.png used on input line 250.
+Package pdftex.def Info: Hamamatsu.png used on input line 262.
 (pdftex.def)             Requested size: 341.11533pt x 146.82074pt.
  [18 <./DetectorLAGO.png>]
-<PhotonisXP1802.png, id=111, 760.8425pt x 430.60875pt>
+<PhotonisXP1802.png, id=107, 760.8425pt x 430.60875pt>
 File: PhotonisXP1802.png Graphic file (type png)
 
 <use PhotonisXP1802.png>
-Package pdftex.def Info: PhotonisXP1802.png used on input line 263.
+Package pdftex.def Info: PhotonisXP1802.png used on input line 275.
 (pdftex.def)             Requested size: 341.11533pt x 193.06252pt.
- [19 <./Hamamatsu.png> <./PhotonisXP1802.png>]
-<UNIFIED.png, id=117, 462.72874pt x 441.65pt>
-File: UNIFIED.png Graphic file (type png)
- <use UNIFIED.png>
-Package pdftex.def Info: UNIFIED.png used on input line 306.
-(pdftex.def)             Requested size: 213.19627pt x 203.48492pt.
+ [19 <./Hamamatsu.png>]
+<ElectronicaLAGO.png, id=112, 685.56125pt x 331.2375pt>
+File: ElectronicaLAGO.png Graphic file (type png)
+
+<use ElectronicaLAGO.png>
+Package pdftex.def Info: ElectronicaLAGO.png used on input line 309.
+(pdftex.def)             Requested size: 341.11533pt x 164.81976pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[20] [21 <./UNIFIED.png>] [22
+[20 <./PhotonisXP1802.png>] <PulsoADC.png, id=117, 344.28625pt x 269.005pt>
+File: PulsoADC.png Graphic file (type png)
 
-]
+<use PulsoADC.png>
+Package pdftex.def Info: PulsoADC.png used on input line 321.
+(pdftex.def)             Requested size: 213.19627pt x 166.58023pt.
+ [21 <./ElectronicaLAGO.png> <./PulsoADC.png>]
+<WCDSalazar.png, id=121, 544.0325pt x 329.23pt>
+File: WCDSalazar.png Graphic file (type png)
+ <use WCDSalazar.png>
+Package pdftex.def Info: WCDSalazar.png used on input line 340.
+(pdftex.def)             Requested size: 341.11533pt x 206.4414pt.
+
+Underfull \vbox (badness 3078) has occurred while \output is active []
+
+ [22 <./WCDSalazar.png>] <RiseTimeAmpSalazar.png, id=125, 388.45125pt x 272.016
+25pt>
+File: RiseTimeAmpSalazar.png Graphic file (type png)
+
+<use RiseTimeAmpSalazar.png>
+Package pdftex.def Info: RiseTimeAmpSalazar.png used on input line 353.
+(pdftex.def)             Requested size: 341.11533pt x 238.8728pt.
+
+<HistogramaNahuelito.png, id=126, 595.22375pt x 443.6575pt>
+File: HistogramaNahuelito.png Graphic file (type png)
+
+<use HistogramaNahuelito.png>
+Package pdftex.def Info: HistogramaNahuelito.png used on input line 365.
+(pdftex.def)             Requested size: 341.11533pt x 254.25487pt.
+ [23 <./RiseTimeAmpSalazar.png>] [24 <./HistogramaNahuelito.png>] [25] <UNIFIED
+.png, id=137, 462.72874pt x 441.65pt>
+File: UNIFIED.png Graphic file (type png)
+
+<use UNIFIED.png>
+Package pdftex.def Info: UNIFIED.png used on input line 407.
+(pdftex.def)             Requested size: 213.19627pt x 203.48492pt.
+ [26 <./UNIFIED.png>]
 Cap\'itulo 6.
-<GeometriaG4.png, id=129, 445.665pt x 377.41pt>
+<GeometriaG4.png, id=142, 445.665pt x 377.41pt>
 File: GeometriaG4.png Graphic file (type png)
  <use GeometriaG4.png>
-Package pdftex.def Info: GeometriaG4.png used on input line 338.
+Package pdftex.def Info: GeometriaG4.png used on input line 439.
 (pdftex.def)             Requested size: 341.11533pt x 288.87318pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[23] [24 <./GeometriaG4.png>] <ThetaDist.png, id=137, 578.16pt x 433.62pt>
+[27
+
+] [28 <./GeometriaG4.png>] <ThetaDist.png, id=150, 578.16pt x 433.62pt>
 File: ThetaDist.png Graphic file (type png)
 
 <use ThetaDist.png>
-Package pdftex.def Info: ThetaDist.png used on input line 385.
+Package pdftex.def Info: ThetaDist.png used on input line 486.
 (pdftex.def)             Requested size: 426.39255pt x 319.79529pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[25] [26 <./ThetaDist.png>] [27] [28
+[29] [30 <./ThetaDist.png>] <Talishte.jpg, id=159, 525.965pt x 754.82pt>
+File: Talishte.jpg Graphic file (type jpg)
+
+<use Talishte.jpg>
+Package pdftex.def Info: Talishte.jpg used on input line 512.
+(pdftex.def)             Requested size: 149.23999pt x 214.16997pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<ConfiguracionFinal.jpg, id=160, 803.0pt x 1069.9975pt>
+File: ConfiguracionFinal.jpg Graphic file (type jpg)
+
+<use ConfiguracionFinal.jpg>
+Package pdftex.def Info: ConfiguracionFinal.jpg used on input line 523.
+(pdftex.def)             Requested size: 213.19627pt x 284.08678pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[31] [32 <./Talishte.jpg>] [33 <./ConfiguracionFinal.jpg>] [34
 
 ]
 Cap\'itulo 7.
-<DetectadosVsEnergia.png, id=152, 578.16pt x 433.62pt>
-File: DetectadosVsEnergia.png Graphic file (type png)
+<PulsosCaracteristicos.png, id=173, 578.16pt x 433.62pt>
+File: PulsosCaracteristicos.png Graphic file (type png)
 
-<use DetectadosVsEnergia.png>
-Package pdftex.def Info: DetectadosVsEnergia.png used on input line 432.
+<use PulsosCaracteristicos.png>
+Package pdftex.def Info: PulsosCaracteristicos.png used on input line 545.
+(pdftex.def)             Requested size: 426.39255pt x 319.79529pt.
+ [35 <./PulsosCaracteristicos.png>]
+<RiseTimeAmp.png, id=179, 578.16pt x 433.62pt>
+File: RiseTimeAmp.png Graphic file (type png)
+ <use RiseTimeAmp.png>
+Package pdftex.def Info: RiseTimeAmp.png used on input line 570.
 (pdftex.def)             Requested size: 426.39255pt x 319.79529pt.
 
 
@@ -482,119 +444,121 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [29]
-Missing character: There is no √ in font cmr10!
-Missing character: There is no ∫ in font cmr10!
-Missing character: There is no √ in font cmr10!
-Missing character: There is no ≠ in font cmr10!
-Missing character: There is no √ in font cmr10!
-Missing character: There is no ≥ in font cmr10!
+ [36]
+[37 <./RiseTimeAmp.png>]
+<DetectadosVsEnergia.png, id=187, 578.16pt x 433.62pt>
+File: DetectadosVsEnergia.png Graphic file (type png)
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [30 <./DetectadosVsEnergia.png>]
-<PulsosCaracteristicos.png, id=160, 578.16pt x 433.62pt>
-File: PulsosCaracteristicos.png Graphic file (type png)
-
-<use PulsosCaracteristicos.png>
-Package pdftex.def Info: PulsosCaracteristicos.png used on input line 462.
+<use DetectadosVsEnergia.png>
+Package pdftex.def Info: DetectadosVsEnergia.png used on input line 594.
 (pdftex.def)             Requested size: 426.39255pt x 319.79529pt.
- [31 <./PulsosCaracteristicos.png>]
-<RiseTimeAmp.png, id=165, 578.16pt x 433.62pt>
-File: RiseTimeAmp.png Graphic file (type png)
- <use RiseTimeAmp.png>
-Package pdftex.def Info: RiseTimeAmp.png used on input line 487.
-(pdftex.def)             Requested size: 426.39255pt x 319.79529pt.
- [32 <./RiseTimeAmp.png>] <ADCqCorrida1.png, id=170, 578.16pt x 433.62pt>
+ [38 <./DetectadosVsEnergia.png>]
+<ADCqCorrida1.png, id=192, 578.16pt x 433.62pt>
 File: ADCqCorrida1.png Graphic file (type png)
-
-<use ADCqCorrida1.png>
-Package pdftex.def Info: ADCqCorrida1.png used on input line 499.
+ <use ADCqCorrida1.png>
+Package pdftex.def Info: ADCqCorrida1.png used on input line 620.
 (pdftex.def)             Requested size: 298.47348pt x 223.84943pt.
- [33 <./ADCqCorrida1.png>]
-<HistogramasAll.png, id=176, 594.0594pt x 590.4459pt>
+ [39 <./ADCqCorrida1.png>] <HistogramasAll.png, id=197, 594.0594pt x 590.4459pt
+>
 File: HistogramasAll.png Graphic file (type png)
- <use HistogramasAll.png>
-Package pdftex.def Info: HistogramasAll.png used on input line 510.
+
+<use HistogramasAll.png>
+Package pdftex.def Info: HistogramasAll.png used on input line 631.
 (pdftex.def)             Requested size: 383.75069pt x 381.4248pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[34] [35 <./HistogramasAll.png>] [36
+[40] [41 <./HistogramasAll.png>] [42
 
 ]
 Cap\'itulo 8.
-[37] [38
+[43] [44
 
 ]
-Missing character: There is no √ in font cmr10!
-Missing character: There is no ≥ in font cmr10!
 Missing character: There is no ¬ in font cmti10!
 Missing character: There is no Æ in font cmti10!
 
-Underfull \hbox (badness 4927) in paragraph at lines 569--570
+Underfull \hbox (badness 4927) in paragraph at lines 698--699
 \OT1/cmr/m/n/10 dos Unidos. Disponible en: http://www.dupont.com/content/dam/as
 sets/products-and-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 569--570
+Underfull \hbox (badness 10000) in paragraph at lines 698--699
 \OT1/cmr/m/n/10 services/construction-materials/assets/DuPont[]Tyvek[]Spunbond[
 ]Polyethylene[]MSDS[]2009-04-
  []
 
-[39]
+[45]
 Missing character: There is no ‚ in font cmti10!
 Missing character: There is no Ä in font cmti10!
 Missing character: There is no ì in font cmti10!
 
-Underfull \hbox (badness 10000) in paragraph at lines 577--578
+Underfull \hbox (badness 10000) in paragraph at lines 706--707
 []\OT1/cmr/m/n/10 Gumplinger, P. 2002. \OT1/cmr/m/it/10 Op-ti-cal Pho-ton Pro-c
 esses in GEANT4\OT1/cmr/m/n/10 . Users'
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 577--578
+Underfull \hbox (badness 10000) in paragraph at lines 706--707
 \OT1/cmr/m/n/10 Work-shop en SLAC, Uni-ver-si-dad de Stan-ford. Disponible en:
  []
 
-[40]
-Underfull \hbox (badness 10000) in paragraph at lines 593--594
+[46]
+Underfull \hbox (badness 10000) in paragraph at lines 722--723
 []\OT1/cmr/m/n/10 Photonis. (SF). \OT1/cmr/m/it/10 Pho-to-mul-ti-plier XP1802 D
 atasheet\OT1/cmr/m/n/10 . Disponible en:
  []
 
 
-Underfull \hbox (badness 2245) in paragraph at lines 593--594
+Underfull \hbox (badness 2245) in paragraph at lines 722--723
 \OT1/cmr/m/n/10 http://www.qsl.net/k0ff/016%20Manuals/PMT/Photonis/XP1802.pdf [
 con ac-ceso el 2 de
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 595--596
+Underfull \hbox (badness 10000) in paragraph at lines 724--725
 []\OT1/cmr/m/n/10 Seo, E. et al. 2004. \OT1/cmr/m/it/10 Cosmis-ray en-er-get-ic
 s and mass (CREAM) bal-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 595--596
+Underfull \hbox (badness 10000) in paragraph at lines 724--725
 \OT1/cmr/m/it/10 loon project\OT1/cmr/m/n/10 . Ad-vances in Space Re-search 33.
  Disponible en:
  []
 
 
-Underfull \hbox (badness 5119) in paragraph at lines 595--596
+Underfull \hbox (badness 5119) in paragraph at lines 724--725
 \OT1/cmr/m/n/10 http://cosmicray.umd.edu/cream/images/stories/files/frontpage/s
 eo.pdf [con ac-ceso el 24
  []
 
-[41] [42
+
+Underfull \hbox (badness 10000) in paragraph at lines 726--727
+[]\OT1/cmr/m/n/10 Salazar, H. y L. Vil-lase~nor (2005) \OT1/cmr/m/it/10 Cosmis-
+ray en-er-get-ics and mass
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 726--727
+\OT1/cmr/m/it/10 (CREAM) bal-loon project\OT1/cmr/m/n/10 . Ad-vances in Space R
+e-search 33. Disponible en:
+ []
+
+
+Underfull \hbox (badness 5119) in paragraph at lines 726--727
+\OT1/cmr/m/n/10 http://cosmicray.umd.edu/cream/images/stories/files/frontpage/s
+eo.pdf [con ac-ceso el 24
+ []
+
+[47] [48
 
 ]
 Cap\'itulo 10.
 
-Overfull \hbox (10.361pt too wide) in paragraph at lines 617--631
+Overfull \hbox (10.361pt too wide) in paragraph at lines 750--764
  [][] 
  []
 
@@ -604,7 +568,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [43]
+ [49]
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2013/08/26 1.5b listings language file
 )
@@ -614,7 +578,7 @@ File: lstlang1.sty 2013/08/26 1.5b listings language file
 (./DistFotonesPres.py
 LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 1.
- [44]
+ [50]
 Overfull \hbox (17.61197pt too wide) in paragraph at lines 21--22
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
@@ -633,7 +597,7 @@ Overfull \hbox (47.61227pt too wide) in paragraph at lines 43--44
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [45]
+ [51]
 Missing character: There is no √ in font cmti10!
 Missing character: There is no ≠ in font cmti10!
 
@@ -647,21 +611,21 @@ Overfull \hbox (47.61227pt too wide) in paragraph at lines 79--80
  []
 
 )
-Overfull \hbox (41.61221pt too wide) in paragraph at lines 81--666
+Overfull \hbox (41.61221pt too wide) in paragraph at lines 81--799
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [46]
-<FotonesMuonVerticalG4.png, id=220, 578.16pt x 590.4459pt>
+ [52]
+<FotonesMuonVerticalG4.png, id=241, 578.16pt x 590.4459pt>
 File: FotonesMuonVerticalG4.png Graphic file (type png)
 
 <use FotonesMuonVerticalG4.png>
-Package pdftex.def Info: FotonesMuonVerticalG4.png used on input line 673.
+Package pdftex.def Info: FotonesMuonVerticalG4.png used on input line 806.
 (pdftex.def)             Requested size: 341.11533pt x 348.36006pt.
- [47 <./FotonesMuonVerticalG4.png>]
+ [53 <./FotonesMuonVerticalG4.png>]
 (./PulsosCaract.py
 Missing character: There is no √ in font cmti10!
 Missing character: There is no ≥ in font cmti10!
@@ -675,7 +639,7 @@ Overfull \hbox (47.61227pt too wide) in paragraph at lines 14--15
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[48]
+[54]
 Missing character: There is no √ in font cmti10!
 Missing character: There is no ° in font cmti10!
 Missing character: There is no √ in font cmti10!
@@ -714,7 +678,7 @@ Overfull \hbox (29.61209pt too wide) in paragraph at lines 46--47
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [49]
+ [55]
 Missing character: There is no √ in font cmti10!
 Missing character: There is no ∫ in font cmti10!
 Missing character: There is no √ in font cmti10!
@@ -732,21 +696,21 @@ Overfull \hbox (23.61203pt too wide) in paragraph at lines 58--59
 )
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [50]
-<2000Pulsos.png, id=234, 578.16pt x 590.4459pt>
+ [56]
+<2000Pulsos.png, id=256, 578.16pt x 590.4459pt>
 File: 2000Pulsos.png Graphic file (type png)
  <use 2000Pulsos.png>
-Package pdftex.def Info: 2000Pulsos.png used on input line 723.
+Package pdftex.def Info: 2000Pulsos.png used on input line 856.
 (pdftex.def)             Requested size: 426.39255pt x 435.45457pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [51 <./2000Pulsos.png>] (./VariablesPulsos.py
+ [57 <./2000Pulsos.png>] (./VariablesPulsos.py
 Overfull \hbox (47.61227pt too wide) in paragraph at lines 27--29
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-) [52] (./clasificadorMuones.py
+) [58] (./clasificadorMuones.py
 LaTeX Font Info:    Font shape `OML/cmr/m/it' in size <10> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 20.
 
@@ -759,7 +723,7 @@ Overfull \hbox (65.61246pt too wide) in paragraph at lines 22--24
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[53]
+[59]
 Overfull \hbox (71.61252pt too wide) in paragraph at lines 39--40
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
  []
@@ -767,7 +731,7 @@ Overfull \hbox (71.61252pt too wide) in paragraph at lines 39--40
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [54]
+ [60]
 Overfull \hbox (101.61282pt too wide) in paragraph at lines 95--97
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
@@ -775,21 +739,21 @@ Overfull \hbox (101.61282pt too wide) in paragraph at lines 95--97
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [55])
+ [61])
 (./Picos.py
 Missing character: There is no √ in font cmti10!
 Missing character: There is no ° in font cmti10!
 Missing character: There is no √ in font cmti10!
 Missing character: There is no ° in font cmti10!
- [56]) [57] (./tesisconpaquete.aux) ) 
+ [62]) [63] (./tesisconpaquete.aux) ) 
 Here is how much of TeX's memory you used:
- 3966 strings out of 494966
- 55347 string characters out of 6179559
- 159536 words of memory out of 5000000
- 7115 multiletter control sequences out of 15000+600000
+ 4023 strings out of 494966
+ 56429 string characters out of 6179559
+ 160135 words of memory out of 5000000
+ 7162 multiletter control sequences out of 15000+600000
  6110 words of font info for 22 fonts, out of 8000000 for 9000
  40 hyphenation exceptions out of 8191
- 38i,14n,52p,1342b,1607s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,14n,52p,1739b,1607s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1
 /public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
@@ -802,10 +766,10 @@ ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/
 type1/public/amsfonts/cm/cmti10.pfb>
-Output written on tesisconpaquete.pdf (67 pages, 1113256 bytes).
+Output written on tesisconpaquete.pdf (71 pages, 2432557 bytes).
 PDF statistics:
- 300 PDF objects out of 1000 (max. 8388607)
- 187 compressed objects within 2 object streams
+ 321 PDF objects out of 1000 (max. 8388607)
+ 195 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 86 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 131 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -2,25 +2,34 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Distribuci\'on de la energ\'ia de muones generada con n\'umeros aleatorios basado en la f\'ormula de Geisser}}{11}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Conteo en el detector Nahuelito durante un decrecimiento Forbush entre enero y febrero, graficado junto al conteo por el monitor de neutrones Rome}}{9}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Desarrollo longitudinal y lateral de cascadas de \'area extensa producidas por un fot\'on (izquierda), un prot\'on (centro) y un \'atomo de hierro (derecha). Los colores indican las tres cascadas principales: la parte electromagn\'etica (rojo), mu\'onica (verde) y hadr\'onica (azul).}}{10}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Distribuci\'on de la energ\'ia de muones generada con n\'umeros aleatorios basado en la f\'ormula de Geisser}}{11}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {5.1}{\ignorespaces a) paso de una part\'icula cargada en un medio transparente con velocidades bajas. b) paso de una part\'icula cargada en un material transparente con velocidad mayor a la velocidad de la luz en ese material}}{14}
 \contentsline {figure}{\numberline {5.2}{\ignorespaces Geometr\'ia relevante en la radiaci\'on Cherenkov}}{15}
 \contentsline {figure}{\numberline {5.3}{\ignorespaces Distribuci\'on geogr\'afica de los detectores de LAGO operacionales (tri\'angulos), y los que comenzar\'an a funcionar entre 2016 y 2017 (cuadrados)}}{17}
 \contentsline {figure}{\numberline {5.4}{\ignorespaces Diagrama de un detector t\'ipico de la colaboraci\'on LAGO}}{18}
 \contentsline {figure}{\numberline {5.5}{\ignorespaces Construcci\'on b\'asica de un PMT}}{19}
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Diagramas de a) la construcci\'on b\'asica de Photonis XP1802 con dimensiones dadas en mm y b) su espectro de radiaci\'on}}{19}
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Ilustriaci\'on de las posibles reflexiones que el modelo \textit {UNIFIED} calcula para la direcci\'on de reflexi\'on de fotones \'opticos incidentes a superficies \'asperas. Las \'areas sombreadas ilustran la probabilidad gaussiana de cada reflexi\'on.}}{21}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Diagramas de a) la construcci\'on b\'asica de Photonis XP1802 con dimensiones dadas en mm y b) su espectro de radiaci\'on}}{20}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Diagrama de bloques de la electr\'onica LAGO para tres tanques, mostrando el kit de desarrollo Nexys 2 conectada a una fuente externa y la targeta digitalizadora}}{21}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Formato de un pulso en el archivo crudo producido con el sistema de adquisici\'on ACQUA}}{21}
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Diagrama esquem\'atico del WCD y del sistema de adquisici\'on usado en \citep {Salazar}, mostrando el uso de hodoscopio para la identificaci\'on de muones verticales}}{22}
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Amplitud respecto al tiempo de subida 10 a 90\% para la clasificaci\'on de muones arbitrarios}}{23}
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Histograma de carga integrada en ADCq (en el eje horizontal) t\'ipico para un WCD, tomado con datos de Nahuelito}}{24}
+\contentsline {figure}{\numberline {5.12}{\ignorespaces Ilustriaci\'on de las posibles reflexiones que el modelo \textit {UNIFIED} calcula para la direcci\'on de reflexi\'on de fotones \'opticos incidentes a superficies \'asperas. Las \'areas sombreadas ilustran la probabilidad gaussiana de cada reflexi\'on.}}{26}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Ilustraci\'on de la geometr\'ia general del detector en la simulaci\'on Geant4, mostrando el recubrimiento Tyvek en forma cil\'indrica y las superficies de vidrio y fotoc\'atodo del fotomultiplicador}}{24}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Distribuci\'on para el \'angulo $\theta $ generadas por el algoritmo del muestreo por rechazo (histograma) y la curva $\mathop {\mathgroup \symoperators cos}\nolimits ^2(\theta )$}}{26}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Ilustraci\'on de la geometr\'ia general del detector en la simulaci\'on Geant4, mostrando el recubrimiento Tyvek en forma cil\'indrica y las superficies de vidrio y fotoc\'atodo del fotomultiplicador}}{28}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Distribuci\'on para el \'angulo $\theta $ generadas por el algoritmo del muestreo por rechazo (histograma) y la curva $\mathop {\mathgroup \symoperators cos}\nolimits ^2(\theta )$}}{30}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Tanque de polietileno, de 600L marca Talishte utilizado como base del detector}}{32}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Tanque de polietileno, de 600L marca Talishte utilizado como base del detector}}{33}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {7.1}{\ignorespaces Promedio del n\'umero de fotones detectados respecto a la energ\'ia del mu\'on vertical incidente. Las barras de error representan el intervalo de un 95\% de confianza}}{30}
-\contentsline {figure}{\numberline {7.2}{\ignorespaces El promedio de todos los pulsos para cada tipo de part\'icula}}{31}
-\contentsline {figure}{\numberline {7.3}{\ignorespaces Representaci\'on gr\'afica de la relaci\'on entre amplitud y tiempo de subida para los diferentes tipos de part\'iculas que generaron los pulsos en la simulaci\'on}}{32}
-\contentsline {figure}{\numberline {7.4}{\ignorespaces Histogramas ADCq de 4 horas de funcionamiento del detector, con el segundo pico identificado con una regresi\'on cuadr\'atica entre 140 ADCq y 240 ADCq y el punto de transici\'on con el mismo m\'etodo entre 50ADCq y 140 ADCq}}{33}
-\contentsline {figure}{\numberline {7.5}{\ignorespaces Histogramas ADCq de 4 horas de funcionamiento del detector para a) eventos con diferencia de 8 a 11 $\mu $s del anterior que corresponden a muones que cruzan el tanque, b) primero de los eventos con diferencia de 1 a 3 $\mu $s que corresponden a muones que decaen y c) segundo de los eventos con diferencia de 1 a 3 $\mu $s que corresponden a electrones de Michael}}{35}
+\contentsline {figure}{\numberline {7.1}{\ignorespaces El promedio de todos los pulsos para cada tipo de part\'icula}}{35}
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Representaci\'on gr\'afica de la relaci\'on entre amplitud y tiempo de subida para los diferentes tipos de part\'iculas que generaron los pulsos en la simulaci\'on}}{37}
+\contentsline {figure}{\numberline {7.3}{\ignorespaces Promedio del n\'umero de fotones detectados respecto a la energ\'ia del mu\'on vertical incidente. Las barras de error representan el intervalo de un 95\% de confianza}}{38}
+\contentsline {figure}{\numberline {7.4}{\ignorespaces Histogramas ADCq de 4 horas de funcionamiento del detector, con el segundo pico identificado con una regresi\'on cuadr\'atica entre 140 ADCq y 240 ADCq y el punto de transici\'on con el mismo m\'etodo entre 50ADCq y 140 ADCq}}{39}
+\contentsline {figure}{\numberline {7.5}{\ignorespaces Histogramas ADCq de 4 horas de funcionamiento del detector para a) eventos con diferencia de 8 a 11 $\mu $s del anterior que corresponden a muones que cruzan el tanque, b) primero de los eventos con diferencia de 1 a 3 $\mu $s que corresponden a muones que decaen y c) segundo de los eventos con diferencia de 1 a 3 $\mu $s que corresponden a electrones de Michael}}{41}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {10.1}{\ignorespaces Histogramas de los fotones producidos, fotones detectados y el cociente de los fotones detectados sobre los producidos para un mu\'on vertical de 4GeV en la simulaci\'on, con un tama\~no muestral de 1000 eventos}}{47}
-\contentsline {figure}{\numberline {10.2}{\ignorespaces a) 1000 pulsos sobrepuestos de las detecciones de fotones para mu\'on vertical de 4GeV, b) 500 pulsos sobrepuestos de las detecciones de fotones para part\'iculas gamma de 100 MeV, c) 500 pulsos sobrepuestos de las detecciones de fotones para electr\'on de Michael de 37 MeV}}{51}
+\contentsline {figure}{\numberline {10.1}{\ignorespaces Histogramas de los fotones producidos, fotones detectados y el cociente de los fotones detectados sobre los producidos para un mu\'on vertical de 4GeV en la simulaci\'on, con un tama\~no muestral de 1000 eventos}}{53}
+\contentsline {figure}{\numberline {10.2}{\ignorespaces a) 1000 pulsos sobrepuestos de las detecciones de fotones para mu\'on vertical de 4GeV, b) 500 pulsos sobrepuestos de las detecciones de fotones para part\'iculas gamma de 100 MeV, c) 500 pulsos sobrepuestos de las detecciones de fotones para electr\'on de Michael de 37 MeV}}{57}

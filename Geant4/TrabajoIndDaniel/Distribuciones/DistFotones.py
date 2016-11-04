@@ -66,7 +66,7 @@ for i in IC:
 plt.figure()
 
 plt.xlabel("Energia (GeV)")
-plt.ylabel("Fotones producidos")
+plt.ylabel("Fotones detectados")
 plt.xlim(0,6)
 plt.ylim(0,400)
 

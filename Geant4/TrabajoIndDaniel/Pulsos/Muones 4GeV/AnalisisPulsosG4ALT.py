@@ -8,6 +8,7 @@ Created on Tue Oct 11 12:31:45 2016
 from numpy import *
 import re
 import matplotlib.pyplot as plt
+from scipy.interpolate import UnivariateSpline
 import scipy.stats as stat
 
 def step(x,a):
@@ -17,16 +18,16 @@ def V(x,t,photons):
     V = 0
     for i in photons:
         if i!="#":
-            V = V + qe*step(x,i)*exp(-x/t)
+            V = V + step(x,i)
     return(V)
 
 ## Parámetros ##
 # tiempo dado por inductancia total
 t = 18.76
-# eficiencia cuántica para 405 nm en miliamperios/vatios
-qe = 80
+# respuesta espectral para 405 nm en miliamperios por milivatios
+r = 80
 
-infile = open('500electrones.txt', 'r')
+infile = open('1000muones.txt', 'r')
 
 pulsos = [[]]
 npulso = 0
@@ -42,11 +43,13 @@ for line in infile:
     
 #per_column = zip(per_row)
 
-x = linspace(0,100,1000)
+n = 1000
+s = n - sqrt(2*n)   # smoothinig factor
+x = linspace(0,100,n)
 
 y = []
 for i in range(0,len(pulsos)-1):
-    y.append(V(x,t,pulsos[i]))
+    y.append((UnivariateSpline(x,V(x,t,pulsos[i]),k=5,s=s).derivative(n=1))(x))
 
 yins = map(list,zip(*y)) 
 shapiros = []
@@ -63,16 +66,14 @@ for i in yins:
     yins_max.append(mean(i)+std(i)/(npulso)**(0.5))
     yins_min.append(mean(i)-std(i)/(npulso)**(0.5))
     
-#fig3 = plt.subplot(313)
-plt.plot(x,yins_means,label='Electron 37 MeV')
+#fig1 = plt.subplot(311)
+plt.plot(x,yins_means,label='Muon 4 GeV')
 plt.ylabel("mA")
 plt.plot(x,yins_max,'--',color="grey")
 plt.plot(x,yins_min,'--',color="grey")
 plt.legend()
-#fig3.plot(x,yins)
-#fig3.legend()
-#fig3.set_title("Electrones 37MeV")
-#fig3.set_ylabel("Amplitud (A/mW)")
-#fig3.plot(x,yins_max,'--',color="grey")
-#fig3.plot(x,yins_min,'--',color="grey")
+#fig1.plot(x,yins)
+#fig1.legend()
+#fig1.set_title("Muones 4GeV")
+#fig1.set_ylabel("Amplitud (mA/W)")
 plt.show()

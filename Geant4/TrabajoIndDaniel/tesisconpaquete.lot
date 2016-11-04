@@ -3,15 +3,14 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {5.1}{\ignorespaces Procesos f\'isicos para la simulaci\'on de radiaci\'on Cherenkov}}{20}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {6.1}{\ignorespaces Descripci\'on de las propiedades de la superficie Agua-Tyvek asignadas para dos energ\'ias de fot\'on}}{25}
+\contentsline {table}{\numberline {6.1}{\ignorespaces Descripci\'on de las propiedades de la superficie Agua-Tyvek asignadas para dos energ\'ias de fot\'on}}{29}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {7.1}{\ignorespaces Resultados de la regresi\'on lineal de los valores del promedio de fotones detectados respecto a energ\'ia de mu\'on vertical incidente}}{30}
-\contentsline {table}{\numberline {7.2}{\ignorespaces Intervalos de confianza para los valores medios de amplitud y tiempo de subida para cada tipo de part\'icula incidente}}{32}
-\contentsline {table}{\numberline {7.3}{\ignorespaces Posici\'on de los picos de los histogramas de muones que cruzan, muones que decaen y electrones de Michael, encontrados con regresiones cuadr\'aticas alrededor de los picos}}{34}
+\contentsline {table}{\numberline {7.1}{\ignorespaces Intervalos de confianza para los valores medios de amplitud y tiempo de subida para cada tipo de part\'icula incidente}}{36}
+\contentsline {table}{\numberline {7.2}{\ignorespaces Resultados de la regresi\'on lineal de los valores del promedio de fotones detectados respecto a energ\'ia de mu\'on vertical incidente}}{38}
+\contentsline {table}{\numberline {7.3}{\ignorespaces Posici\'on de los picos de los histogramas de muones que cruzan, muones que decaen y electrones de Michael, encontrados con regresiones cuadr\'aticas alrededor de los picos}}{40}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {10.1}{\ignorespaces Descripci\'on de los objetos en la simulaci\'on y sus jerarqu\'ias l\'ogicas}}{43}
-\contentsline {table}{\numberline {10.2}{\ignorespaces Propiedades de material asignadas al agua en la simulaci\'on a trav\'es de la clase G4MaterialsPropertiesTable y asignadas a 32 energ\'ias de fot\'on}}{44}
-\contentsline {table}{\numberline {10.3}{\ignorespaces Valores p para la prueba Shapiro-Wilk de normalidad de las distribuciones de los fotones producidos, detectados y el cociente}}{48}
+\contentsline {table}{\numberline {10.1}{\ignorespaces Descripci\'on de los objetos en la simulaci\'on y sus jerarqu\'ias l\'ogicas}}{49}
+\contentsline {table}{\numberline {10.2}{\ignorespaces Propiedades de material asignadas al agua en la simulaci\'on a trav\'es de la clase G4MaterialsPropertiesTable y asignadas a 32 energ\'ias de fot\'on}}{50}
+\contentsline {table}{\numberline {10.3}{\ignorespaces Valores p para la prueba Shapiro-Wilk de normalidad de las distribuciones de los fotones producidos, detectados y el cociente}}{54}

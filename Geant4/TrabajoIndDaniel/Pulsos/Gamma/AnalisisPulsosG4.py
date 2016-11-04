@@ -23,8 +23,8 @@ def V(x,t,photons):
 ## Parámetros ##
 # tiempo dado por inductancia total
 t = 18.76
-# eficiencia cuántica para 405 nm en milivatios
-qe = 25
+# eficiencia cuántica para 405 nm en miliamperios/vatios
+qe = 80
 
 infile = open('MacroGamma.txt', 'r')
 
@@ -42,7 +42,7 @@ for line in infile:
     
 #per_column = zip(per_row)
 
-x = linspace(0,100)
+x = linspace(0,100,1000)
 
 y = []
 for i in range(0,len(pulsos)-1):
@@ -63,12 +63,16 @@ for i in yins:
     yins_max.append(mean(i)+std(i)/(npulso)**(0.5))
     yins_min.append(mean(i)-std(i)/(npulso)**(0.5))
 
-fig2 = plt.subplot(312)
-#plt.plot(x,yins_means,label='Muon GeV')
-fig2.plot(x,yins)
-fig2.legend()
-fig2.set_title("Gammas 100MeV")
-fig2.set_ylabel("Amplitud (A/mW)")
-fig2.plot(x,yins_max,'--',color="grey")
-fig2.plot(x,yins_min,'--',color="grey")
+#fig2 = plt.subplot(312)
+plt.plot(x,yins_means,label='Gamma 100 MeV')
+plt.ylabel("mA")
+plt.plot(x,yins_max,'--',color="grey")
+plt.plot(x,yins_min,'--',color="grey")
+plt.legend()
+#fig2.plot(x,yins)
+#fig2.legend()
+#fig2.set_title("Gammas 100MeV")
+#fig2.set_ylabel("Amplitud (A/mW)")
+#fig2.plot(x,yins_max,'--',color="grey")
+#fig2.plot(x,yins_min,'--',color="grey")
 plt.show()

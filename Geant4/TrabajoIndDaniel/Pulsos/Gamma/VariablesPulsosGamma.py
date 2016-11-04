@@ -24,7 +24,7 @@ def V(x,t,photons):
 # tiempo dado por inductancia total
 t = 18.76
 # eficiencia cuántica para 405 nm en milivatios
-qe = 25
+qe = 80
 
 infile = open('MacroGamma.txt', 'r')
 
@@ -42,7 +42,7 @@ for line in infile:
     
 #per_column = zip(per_row)
 
-x = linspace(0,100)
+x = linspace(0,100,500)
 
 y = []
 for i in range(0,len(pulsos)-1): # -1 corrige por el último # del archivo

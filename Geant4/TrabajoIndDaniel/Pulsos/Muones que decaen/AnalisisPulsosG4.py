@@ -23,10 +23,10 @@ def V(x,t,photons):
 ## Parámetros ##
 # tiempo dado por inductancia total
 t = 18.76
-# eficiencia cuántica para 405 nm en milivatios
-qe = 25
+# eficiencia cuántica para 405 nm en miliamperios por vatio
+qe = 80
 
-infile = open('50Muones500KeV.txt', 'r')
+infile = open('50Muones275MeV.txt', 'r')
 
 pulsos = [[]]
 npulso = 0
@@ -42,7 +42,7 @@ for line in infile:
     
 #per_column = zip(per_row)
 
-x = linspace(0,100)
+x = linspace(0,100,5000)
 
 y = []
 for i in range(0,len(pulsos)-1):
@@ -64,7 +64,7 @@ for i in yins:
     yins_min.append(mean(i)-std(i)/(npulso)**(0.5))
 
 #fig2 = plt.subplot(312)
-plt.plot(x,yins_means,label='500KeV')
+plt.plot(x,yins_means,label='275MeV')
 #fig2.plot(x,yins)
 #fig2.legend()
 #fig2.set_title("Gammas 100MeV")

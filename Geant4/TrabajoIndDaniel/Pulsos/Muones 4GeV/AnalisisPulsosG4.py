@@ -23,8 +23,8 @@ def V(x,t,photons):
 ## Parámetros ##
 # tiempo dado por inductancia total
 t = 18.76
-# eficiencia cuántica para 405 nm en milivatios
-qe = 25
+# eficiencia cuántica para 405 nm en miliamperios/vatios
+qe = 80
 
 infile = open('1000muones.txt', 'r')
 
@@ -42,7 +42,7 @@ for line in infile:
     
 #per_column = zip(per_row)
 
-x = linspace(0,100)
+x = linspace(0,100,1000)
 
 y = []
 for i in range(0,len(pulsos)-1):
@@ -63,12 +63,14 @@ for i in yins:
     yins_max.append(mean(i)+std(i)/(npulso)**(0.5))
     yins_min.append(mean(i)-std(i)/(npulso)**(0.5))
     
-fig1 = plt.subplot(311)
-#plt.plot(x,yins_means,label='Muon GeV')
-fig1.plot(x,yins)
-fig1.legend()
-fig1.set_title("Muones 4GeV")
-fig1.set_ylabel("Amplitud (A/mW)")
-fig1.plot(x,yins_max,'--',color="grey")
-fig1.plot(x,yins_min,'--',color="grey")
+#fig1 = plt.subplot(311)
+plt.plot(x,yins_means,label='Muon 4 GeV')
+plt.ylabel("mA/W")
+plt.plot(x,yins_max,'--',color="grey")
+plt.plot(x,yins_min,'--',color="grey")
+plt.legend()
+#fig1.plot(x,yins)
+#fig1.legend()
+#fig1.set_title("Muones 4GeV")
+#fig1.set_ylabel("Amplitud (mA/W)")
 plt.show()

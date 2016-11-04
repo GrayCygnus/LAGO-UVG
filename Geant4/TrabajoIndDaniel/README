@@ -1,5 +1,8 @@
 Apuntes sobre tesis:
 
+HIpótesis sobre problema en simulación de decaimiento:
+En cuanto al problema que tengo con la simulación, lo que explica lo que está sucediendo es que estoy imprimiendo el tiempo desde que comienza alguno de los pulsos, entonces aparecen superpuestos (esto explicaría el porqué al haber decaimiento "se intensifica" el pulso, y por qué hay una gradita antes, pero es solo que están superpuestos). Aún estoy diagnosticando en detalle qué parte del programa causaría esto. Una buena consecuencia de esta hipótesis es que todos los resultados que tengo ahorita son de un solo pulso, así que no deberían de estar afectados, pero veré. Lo que sí es que el decaimiento sí lo logro ver claro en la visualización así que ahí no está el problema. Bueno, divago :P
+
 Modificacion de resultados:
 Para generar las direcciones, posiciones y energías aleatorias, genero el archivazo macro con python y yapp!
 En lugar de hacer gamma y electron 37, usar la idea de macros para generar muones de baja eenrgía
