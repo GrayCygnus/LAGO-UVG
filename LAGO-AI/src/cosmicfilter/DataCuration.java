@@ -35,13 +35,19 @@ import java.util.List;
  */
 
 public class DataCuration {
+	static int totalEM = 0;
+	static int totalMUON = 0;
+	static int totalVMUON = 0;
+	static int totalLLUVIAS = 0;
 	
 	public static void main(String[] args) throws IOException
 	{
-		analizeCorpus("C:\\Users\\Anai\\Desktop\\Miguel\\LAGO\\LAGO-AI\\src\\cosmicfilter\\CosmicCorpus.txt");
-		//splitCorpusPro("C:\\Users\\Anai\\Desktop\\Miguel\\LAGO\\LAGO-AI\\src\\cosmicfilter\\CosmicCorpus.txt");
+		//analizeCorpus("C:\\Users\\Anai\\Desktop\\Miguel\\LAGO\\LAGO-AI\\src\\cosmicfilter\\CosmicCorpus6.txt");
+		//splitCorpusPro("C:\\Users\\Anai\\Desktop\\Miguel\\LAGO\\LAGO-AI\\src\\cosmicfilter\\CosmicCorpus6.txt");
+		splitCorpus("C:\\Users\\Anai\\Desktop\\Miguel\\LAGO\\LAGO-AI\\src\\cosmicfilter\\CosmicCorpus6.txt");
 	}
 	
+	/*
 	public static void splitCorpusPro(String path) throws IOException{
 		//Dado son muchos datos se debe optimizar el algoritmo
 		//Se buscara recorrer una sola vez el Corpus
@@ -50,11 +56,12 @@ public class DataCuration {
 		int cantEM = 0;
 		int cantMUON = 0;
 		int cantRAINS = 0;
+		int cantVMUON = 0;
 		
 		//escritores de corpus
-		PrintWriter outTrain = new PrintWriter(new BufferedWriter(new FileWriter("C:\\Users\\Anai\\Desktop\\Miguel\\LAGO\\LAGO-AI\\src\\cosmicfilter\\CosmicTrain.txt", true)));
-		PrintWriter outCV = new PrintWriter(new BufferedWriter(new FileWriter("C:\\Users\\Anai\\Desktop\\Miguel\\LAGO\\LAGO-AI\\src\\cosmicfilter\\CosmicCV.txt", true)));
-		PrintWriter outTest = new PrintWriter(new BufferedWriter(new FileWriter("C:\\Users\\Anai\\Desktop\\Miguel\\LAGO\\LAGO-AI\\src\\cosmicfilter\\CosmicTest.txt", true)));
+		PrintWriter outTrain = new PrintWriter(new BufferedWriter(new FileWriter("C:\\Users\\Anai\\Desktop\\Miguel\\LAGO\\LAGO-AI\\src\\cosmicfilter\\CosmicTrain3.txt", true)));
+		PrintWriter outCV = new PrintWriter(new BufferedWriter(new FileWriter("C:\\Users\\Anai\\Desktop\\Miguel\\LAGO\\LAGO-AI\\src\\cosmicfilter\\CosmicCV3.txt", true)));
+		PrintWriter outTest = new PrintWriter(new BufferedWriter(new FileWriter("C:\\Users\\Anai\\Desktop\\Miguel\\LAGO\\LAGO-AI\\src\\cosmicfilter\\CosmicTest3.txt", true)));
 		
 		//Lector de datos
 		BufferedReader reader = new BufferedReader(new FileReader(path));
@@ -134,29 +141,39 @@ public class DataCuration {
 	    System.out.println("FIN");
 		
 	}
-	
+	*/
 	public static void splitCorpus(String path) throws IOException{
 		//Crear tres archivos para train, cv y test
 		Writer writer = null;
 		int count = 0;
 		int cantEM = 0;
 		int cantMUON = 0;
+		int cantVMUON = 0;
 		int cantRAINS = 0;
+		
+		analizeCorpus(path);
 		
 		BufferedReader reader = new BufferedReader(new FileReader(path));
 	    String line;
 	    System.out.println("Leyendo EM");
+	    
+	    int ochenta = (int) (totalEM*0.8);
+	    int diez = (int) (totalEM*0.1);
+	    if(ochenta + diez + diez < totalEM){
+	    	diez += (totalEM - (ochenta + 2*diez));	//sumar lo que falta
+	    }
+	    
 	    while ((line = reader.readLine()) != null)	//DIVIDIR LOS eventos EM correspondientemente
-	    {
+	    {	
 	    	//System.out.println(line);
 	    	if(line.contains("EM")){
 	    		//verificar a que archivo irá a parar
-	    		if(cantEM < 3331674)
+	    		if(cantEM < ochenta)
 	    		{
 	    			//primer 80% para train
 	    			//System.out.println("Train");
 	    			try {
-	    			    PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("C:\\Users\\Anai\\Desktop\\Miguel\\LAGO\\LAGO-AI\\src\\cosmicfilter\\CosmicTrain.txt", true)));
+	    			    PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("CosmicTrain5.txt", true)));
 	    			    out.println(line);
 	    			    out.close();
 	    			} catch (IOException e) {
@@ -165,11 +182,11 @@ public class DataCuration {
 	    			}
 	    			
 	    		}
-	    		else if(cantEM >= 3331674 && cantEM < 416459 + 3331674)
+	    		else if(cantEM >= ochenta && cantEM < diez + ochenta)
 	    		{
 	    			//segundo 10% para cv
 	    			try {
-	    			    PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("C:\\Users\\Anai\\Desktop\\Miguel\\LAGO\\LAGO-AI\\src\\cosmicfilter\\CosmicCV.txt", true)));
+	    			    PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("CosmicCV5.txt", true)));
 	    			    out.println(line);
 	    			    out.close();
 	    			} catch (IOException e) {
@@ -181,7 +198,7 @@ public class DataCuration {
 	    		{
 	    			//10% test
 	    			try {
-	    			    PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("C:\\Users\\Anai\\Desktop\\Miguel\\LAGO\\LAGO-AI\\src\\cosmicfilter\\CosmicTest.txt", true)));
+	    			    PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("CosmicTest5.txt", true)));
 	    			    out.println(line);
 	    			    out.close();
 	    			} catch (IOException e) {
@@ -196,17 +213,23 @@ public class DataCuration {
 	    
 	    System.out.println("Leyendo Lluvias");
 	    
+	    ochenta = (int) (totalLLUVIAS*0.8);
+	    diez = (int) (totalLLUVIAS*0.1);
+	    if(ochenta + diez + diez < totalLLUVIAS){
+	    	diez += (totalLLUVIAS - (ochenta + 2*diez));	//sumar lo que falta
+	    }
+	    
 	    reader = new BufferedReader(new FileReader(path)); //Dividirlos por Lluvias
 	    while ((line = reader.readLine()) != null)
 	    {
 	    	//System.out.println(line);
 	    	if(line.contains("Lluvias")){
 	    		//verificar a que archivo irá a parar
-	    		if(cantRAINS < 3331674)
+	    		if(cantRAINS < ochenta)
 	    		{
 	    			//primer 80% para train
 	    			try {
-	    			    PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("CosmicTrain.txt", true)));
+	    			    PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("CosmicTrain5.txt", true)));
 	    			    out.println(line);
 	    			    out.close();
 	    			} catch (IOException e) {
@@ -215,11 +238,11 @@ public class DataCuration {
 	    			}
 	    			
 	    		}
-	    		else if(cantRAINS >= 3331674 && cantRAINS < 416459 + 3331674)
+	    		else if(cantRAINS >= ochenta && cantRAINS < diez + ochenta)
 	    		{
 	    			//segundo 10% para cv
 	    			try {
-	    			    PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("CosmicCV.txt", true)));
+	    			    PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("CosmicCV5.txt", true)));
 	    			    out.println(line);
 	    			    out.close();
 	    			} catch (IOException e) {
@@ -231,7 +254,7 @@ public class DataCuration {
 	    		{
 	    			//10% test
 	    			try {
-	    			    PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("CosmicTest.txt", true)));
+	    			    PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("CosmicTest5.txt", true)));
 	    			    out.println(line);
 	    			    out.close();
 	    			} catch (IOException e) {
@@ -246,17 +269,23 @@ public class DataCuration {
 	    
 	    System.out.println("Leyendo Muones");
 	    
+	    ochenta = (int) (totalMUON*0.8);
+	    diez = (int) (totalMUON*0.1);
+	    if(ochenta + diez + diez < totalMUON){
+	    	diez += (totalMUON - (ochenta + 2*diez));	//sumar lo que falta
+	    }
+	    
 	    reader = new BufferedReader(new FileReader(path)); //Dividirlo por muones
 	    while ((line = reader.readLine()) != null)
 	    {
 	    	//System.out.println(line);
-	    	if(line.contains("Muon")){
+	    	if(line.contains("Muon") && !line.contains("Vertical")){
 	    		//verificar a que archivo irá a parar
-	    		if(cantMUON < 1084732)
+	    		if(cantMUON < ochenta)
 	    		{
 	    			//primer 80% para train
 	    			try {
-	    			    PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("CosmicTrain.txt", true)));
+	    			    PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("CosmicTrain5.txt", true)));
 	    			    out.println(line);
 	    			    out.close();
 	    			} catch (IOException e) {
@@ -265,11 +294,11 @@ public class DataCuration {
 	    			}
 	    			
 	    		}
-	    		else if(cantMUON >= 1084732 && cantMUON < 135991 + 1084732)
+	    		else if(cantMUON >= ochenta && cantMUON < diez + ochenta)
 	    		{
 	    			//segundo 10% para cv
 	    			try {
-	    			    PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("CosmicCV.txt", true)));
+	    			    PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("CosmicCV5.txt", true)));
 	    			    out.println(line);
 	    			    out.close();
 	    			} catch (IOException e) {
@@ -281,7 +310,51 @@ public class DataCuration {
 	    		{
 	    			//10% test
 	    			try {
-	    			    PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("CosmicTest.txt", true)));
+	    			    PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("CosmicTest5.txt", true)));
+	    			    out.println(line);
+	    			    out.close();
+	    			} catch (IOException e) {
+	    			    //exception handling left as an exercise for the reader lol
+	    				e.printStackTrace();
+	    			}
+	    		}
+	    		cantMUON++;
+			}			
+	    }
+	    reader.close();
+	    
+	    System.out.println("Leyendo Muones Verticales");
+	    
+	    ochenta = (int) (totalVMUON*0.8);
+	    diez = (int) (totalVMUON*0.1);
+	    if(ochenta + diez + diez < totalVMUON){
+	    	diez += (totalVMUON - (ochenta + 2*diez));	//sumar lo que falta
+	    }
+	    
+	    reader = new BufferedReader(new FileReader(path)); //Dividirlo por muones
+	    while ((line = reader.readLine()) != null)
+	    {
+	    	//System.out.println(line);
+	    	if(line.contains("Vertical")){
+	    		//verificar a que archivo irá a parar
+	    		if(cantVMUON < ochenta)
+	    		{
+	    			//primer 80% para train
+	    			try {
+	    			    PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("CosmicTrain5.txt", true)));
+	    			    out.println(line);
+	    			    out.close();
+	    			} catch (IOException e) {
+	    			    //exception handling left as an exercise for the reader
+	    				e.printStackTrace();
+	    			}
+	    			
+	    		}
+	    		else if(cantVMUON >= ochenta && cantVMUON < diez + ochenta)
+	    		{
+	    			//segundo 10% para cv
+	    			try {
+	    			    PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("CosmicCV5.txt", true)));
 	    			    out.println(line);
 	    			    out.close();
 	    			} catch (IOException e) {
@@ -289,7 +362,19 @@ public class DataCuration {
 	    				e.printStackTrace();
 	    			}
 	    		}
-	    		cantMUON++;
+	    		else
+	    		{
+	    			//10% test
+	    			try {
+	    			    PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("CosmicTest5.txt", true)));
+	    			    out.println(line);
+	    			    out.close();
+	    			} catch (IOException e) {
+	    			    //exception handling left as an exercise for the reader
+	    				e.printStackTrace();
+	    			}
+	    		}
+	    		cantVMUON++;
 			}			
 	    }
 	    reader.close();
@@ -313,19 +398,25 @@ public class DataCuration {
 	    	//System.out.println(line);
 	    	if(line.contains("EM")){
 				cantEM++;
-			}
-			else if(line.contains("Muon")){
-				cantMUON++;
-			}
-			else if(line.contains("VMuon")){
+			}			
+			else if(line.contains("Vertical")){
 				cantVMUON++;
 			}
 			else if(line.contains("Lluvias")){
 				cantRAINS++;
 			}
+			else
+			{
+				cantMUON++;
+			}
 	    	total++;
 	    }
-	    reader.close();				
+	    reader.close();	
+	    
+	    totalEM = cantEM;
+	    totalMUON = cantMUON;
+	    totalLLUVIAS = cantRAINS;
+	    totalVMUON = cantVMUON;
 		System.out.println("EM: "+((float)cantEM)+" MUON: "+((float)cantMUON)+" VMUON: "+((float)cantVMUON)+" Lluvias: "+((float)cantRAINS)+" Total: "+total);
 	}
 

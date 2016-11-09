@@ -76,10 +76,12 @@ public class CosmicLog {
 			//obtener clasificacion
 			String[] taggedEvent = line.split("-"); //separar
 			String type = taggedEvent[1].trim();	//obtener tipo de evento
+			String[] types = type.split(" ");
+			type = types[0];
 			String[] rawEvent = taggedEvent[0].split("\\s+");	//separar puslo del evento
 			String[] event = Arrays.copyOfRange(rawEvent, 0, rawEvent.length);
 			
-			if(type.equals("EM"))
+			if(type.contains("EM"))
 			{
 				for(int i = 0; i < 12; i++)
 				{
@@ -104,7 +106,7 @@ public class CosmicLog {
 					}					
 				}
 			}
-			else if(type.equals("VMUON"))
+			else if(type.contains("Vertical"))
 			{
 				for(int i = 0; i < 12; i++)
 				{
@@ -112,49 +114,24 @@ public class CosmicLog {
 					//si no existe agregar nueva entrada
 					String t = i+"-"+charge;
 					
-					if(!EM.containsKey(t))
+					if(!VMUON.containsKey(t))
 					{
-						EM.put(t, 1);
+						VMUON.put(t, 1);
 						totalEvents++;
 					}
 					else
 					{
 						//incrementar en uno
-						int cant = EM.get(t);
+						int cant = VMUON.get(t);
 						cant++;
 						//remover
-						EM.remove(t);
+						VMUON.remove(t);
 						//reinstertar
-						EM.put(t, cant);						
+						VMUON.put(t, cant);						
 					}					
 				}
-			}
-			else if(type.equals("Muon"))
-			{
-				for(int i = 0; i < 12; i++)
-				{
-					String charge = event[i];
-					//si no existe agregar nueva entrada
-					String t = i+"-"+charge;
-					
-					if(!MUON.containsKey(t))
-					{
-						MUON.put(t, 1);
-						totalEvents++;
-					}
-					else
-					{
-						//incrementar en uno
-						int cant = MUON.get(t);
-						cant++;
-						//remover
-						MUON.remove(t);
-						//reinstertar
-						MUON.put(t, cant);						
-					}					
-				}
-			}
-			else if(type.equals("Lluvias"))
+			}			
+			else if(type.contains("Lluvias"))
 			{
 				for(int i = 0; i < 12; i++)
 				{
@@ -179,6 +156,31 @@ public class CosmicLog {
 					}					
 				}
 			}
+			else //muon
+			{
+				for(int i = 0; i < 12; i++)
+				{
+					String charge = event[i];
+					//si no existe agregar nueva entrada
+					String t = i+"-"+charge;
+					
+					if(!MUON.containsKey(t))
+					{
+						MUON.put(t, 1);
+						totalEvents++;
+					}
+					else
+					{
+						//incrementar en uno
+						int cant = MUON.get(t);
+						cant++;
+						//remover
+						MUON.remove(t);
+						//reinstertar
+						MUON.put(t, cant);						
+					}					
+				}
+			}
 	    }		
 		//sumar totalEM
 		for(Integer i : EM.values())
@@ -189,6 +191,11 @@ public class CosmicLog {
 		for(Integer i : MUON.values())
 		{
 			totalMUON += i;
+		}
+		//sumar totalVMUON
+		for(Integer i : VMUON.values())
+		{
+			totalVMUON += i;
 		}
 		//sumar totalRAINS
 		for(Integer i : RAINS.values())

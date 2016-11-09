@@ -18,13 +18,13 @@ public class BestClassifier {
 		//encontrar K con mejor performace en cross Validation
 		//retornar la K que maximiza el performance
 		double K = 0.0;
-		double deltaK = 1.0;
+		double deltaK = 10.0;
 		double bestK = 0.0;
-		double maxK = 50.0;
+		double maxK = 500.0;
 		double bestScore = 0.0;
 		
 		System.out.println("Creando Diccionario con Train");
-		CosmicLog dictionary = new CosmicLog("C:\\Users\\Anai\\Desktop\\Miguel\\LAGO\\LAGO-AI\\src\\cosmicfilter\\CosmicTrain.txt");
+		CosmicLog dictionary = new CosmicLog("CosmicTrain5.txt");
 		
 		//Corpus de Cross Validation		
 		//Maximizar eficiencia de K
@@ -62,14 +62,17 @@ public class BestClassifier {
 	{
 		double CVScore = 0.0;
 		double CVLines = 0.0;
-		BufferedReader reader = new BufferedReader(new FileReader("C:\\Users\\Anai\\Desktop\\Miguel\\LAGO\\LAGO-AI\\src\\cosmicfilter\\CosmicCV.txt"));
+		BufferedReader reader = new BufferedReader(new FileReader("CosmicCV5.txt"));
 		
 		String line;
 		while ((line = reader.readLine()) != null)	//DIVIDIR LOS eventos EM correspondientemente
 	    {
 			
-			String[] taggedEvent = line.split("-"); //separar
+			String[] taggedEvent = line.split("-"); //separar			
 			String answer = taggedEvent[1].trim();	//obtener tipo de evento
+			String[] answers = answer.split(" ");
+			answer = answers[0];
+			
 			String[] rawEvent = taggedEvent[0].split("\\s+");	//separar puslo del evento
 			String[] event = Arrays.copyOfRange(rawEvent, 0, rawEvent.length);
 			
@@ -94,7 +97,7 @@ public class BestClassifier {
 	{
 		double TestScore = 0.0;
 		double totalTest = 0.0;
-		BufferedReader reader = new BufferedReader(new FileReader("C:\\Users\\Anai\\Desktop\\Miguel\\LAGO\\LAGO-AI\\src\\cosmicfilter\\CosmicTest.txt"));
+		BufferedReader reader = new BufferedReader(new FileReader("CosmicTest5.txt"));
 		
 		String line;
 		while ((line = reader.readLine()) != null)	//DIVIDIR LOS eventos EM correspondientemente
@@ -102,6 +105,10 @@ public class BestClassifier {
 			
 			String[] taggedEvent = line.split("-"); //separar
 			String answer = taggedEvent[1].trim();	//obtener tipo de evento
+			String[] answers = answer.split(" ");
+			answer = answers[0];
+			
+			
 			String[] rawEvent = taggedEvent[0].split("\\s+");	//separar puslo del evento
 			String[] event = Arrays.copyOfRange(rawEvent, 0, rawEvent.length);
 			
