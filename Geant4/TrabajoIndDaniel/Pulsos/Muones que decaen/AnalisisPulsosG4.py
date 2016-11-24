@@ -26,7 +26,7 @@ t = 18.76
 # eficiencia cuántica para 405 nm en miliamperios por vatio
 qe = 80
 
-infile = open('50Muones275MeV.txt', 'r')
+infile = open('10Muon100MeV.txt', 'r')
 
 pulsos = [[]]
 npulso = 0
@@ -36,13 +36,18 @@ for line in infile:
         pulsos.append([])
         npulso = npulso + 1
     elif line.split(' ')[1] == "ps":
+        print(line.split(' ')[1],'ps')
         pulsos[npulso].append(float(line.split(' ')[0])/1000)
+    elif line.split(' ')[1] == "mus\n":
+        print(line.split(' ')[1],'mus')
+        pulsos[npulso].append(float(line.split(' ')[0])*1000)
     else:
+        print(line.split(' ')[1],'ns')
         pulsos[npulso].append(float(line.split(' ')[0]))
     
 #per_column = zip(per_row)
 
-x = linspace(0,100,5000)
+x = linspace(0,1000,5000)
 
 y = []
 for i in range(0,len(pulsos)-1):
@@ -64,7 +69,7 @@ for i in yins:
     yins_min.append(mean(i)-std(i)/(npulso)**(0.5))
 
 #fig2 = plt.subplot(312)
-plt.plot(x,yins_means,label='275MeV')
+plt.plot(x,yins_means,label='50MeV')
 #fig2.plot(x,yins)
 #fig2.legend()
 #fig2.set_title("Gammas 100MeV")

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.11.2)  4 NOV 2016 14:45
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.11.2)  23 NOV 2016 20:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -535,24 +535,9 @@ Underfull \hbox (badness 5119) in paragraph at lines 724--725
 eo.pdf [con ac-ceso el 24
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 726--727
-[]\OT1/cmr/m/n/10 Salazar, H. y L. Vil-lase~nor (2005) \OT1/cmr/m/it/10 Cosmis-
-ray en-er-get-ics and mass
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 726--727
-\OT1/cmr/m/it/10 (CREAM) bal-loon project\OT1/cmr/m/n/10 . Ad-vances in Space R
-e-search 33. Disponible en:
- []
-
-
-Underfull \hbox (badness 5119) in paragraph at lines 726--727
-\OT1/cmr/m/n/10 http://cosmicray.umd.edu/cream/images/stories/files/frontpage/s
-eo.pdf [con ac-ceso el 24
- []
-
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no “ in font cmr10!
 [47] [48
 
 ]
@@ -766,7 +751,7 @@ ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/
 type1/public/amsfonts/cm/cmti10.pfb>
-Output written on tesisconpaquete.pdf (71 pages, 2432557 bytes).
+Output written on tesisconpaquete.pdf (71 pages, 2432633 bytes).
 PDF statistics:
  321 PDF objects out of 1000 (max. 8388607)
  195 compressed objects within 2 object streams
